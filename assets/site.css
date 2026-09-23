@@ -36,7 +36,7 @@ nav.toc a.here{color:var(--teal);font-weight:600}
 main section{padding-top:8px;margin-bottom:52px}
 main section:first-child{margin-bottom:44px}
 h2.sh{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--teal);margin:0 0 18px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
-.lede{font-family:var(--serif);font-size:1.45rem;line-height:1.6;font-weight:700;margin:0 0 18px;max-width:34em;text-wrap:balance}
+.lede{font-family:var(--serif);font-size:1.38rem;line-height:1.55;font-weight:700;margin:0 0 20px;max-width:40em;text-wrap:pretty}
 p.body{margin:0 0 14px;max-width:40em;color:var(--ink2)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
 .chips li{font-size:.82rem;padding:3px 10px;border:1px solid var(--rule);background:var(--paper);color:var(--ink2)}
