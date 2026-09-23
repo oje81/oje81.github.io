@@ -91,7 +91,7 @@ footer.site{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:16px;f
 }
 
 /* portrait */
-.portrait{display:block;width:112px;height:150px;object-fit:cover;object-position:50% 12%;border:1px solid var(--rule);background:var(--paper);margin-bottom:16px}
+.portrait{display:block;width:136px;height:182px;object-fit:cover;object-position:50% 12%;border:1px solid var(--rule);background:var(--paper);margin-bottom:16px}
 .posts{margin-top:14px;font-size:.88rem;line-height:1.6;color:var(--ink2)}
 .posts b{color:var(--ink);font-weight:600}
 .posts p{margin:0 0 7px}
@@ -100,7 +100,7 @@ ul.talks li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid
 ul.talks .t{display:block;font-weight:600}
 ul.talks .v{display:block;font-size:.88rem;color:var(--ink2)}
 .oneline{max-width:46em}
-@media (max-width:820px){.portrait{width:84px;height:112px;float:right;margin:0 0 10px 14px}}
+@media (max-width:820px){.portrait{width:100px;height:134px;float:right;margin:0 0 10px 14px}}
 @media (max-width:520px){ul.talks li{grid-template-columns:minmax(0,1fr);gap:2px}ul.pubs li{grid-template-columns:minmax(0,1fr);gap:2px}ul.pubs .yr,ul.talks .yr{font-size:.75rem}}
 
 /* notes */
@@ -120,3 +120,24 @@ ul.talks .v{display:block;font-size:.88rem;color:var(--ink2)}
 .post figure{margin:22px 0}
 .post figure img{width:100%;height:auto;display:block;border:1px solid var(--rule)}
 .post figcaption{margin-top:7px;font-size:.8rem;color:var(--ink3);line-height:1.6}
+
+/* compact card for the home page */
+.brief.tight{padding:18px 20px}
+.brief.tight h3{font-size:1.3rem;margin:4px 0 2px}
+.brief.tight p{font-size:.92rem}
+.brief.tight .issues{margin-top:12px}
+.brief.tight .issues a{grid-template-columns:34px 94px minmax(0,1fr);padding:9px 4px;align-items:baseline}
+.brief.tight .issues .tt{font-weight:600;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brief.tight .issues .tt span{display:none}
+.brief.tight .more{margin-top:12px;font-size:.9rem}
+@media (max-width:520px){
+  .brief.tight .issues a{grid-template-columns:34px minmax(0,1fr)}
+  .brief.tight .issues .dt{grid-column:2;grid-row:1;font-size:.75rem}
+  .brief.tight .issues .tt{grid-column:1/-1;white-space:normal}
+}
+
+/* notes — consistent figure rhythm */
+.post figure.lead{margin:0 0 24px}
+.post figure.lead img{aspect-ratio:3/2;object-fit:cover}
+.post figure+.facts{margin-top:0}
+.post h2+figure{margin-top:16px}

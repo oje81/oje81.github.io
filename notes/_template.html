@@ -1,0 +1,76 @@
+<!doctype html>
+<!--
+============================================================
+현장 노트 템플릿  ·  사용법
+============================================================
+1. 이 파일을 복사해 notes/posts/00N.html 로 저장합니다.
+2. 아래 [[ ]] 로 표시된 자리만 바꿉니다. 나머지 구조는 건드리지 않습니다.
+3. 사진은 assets/notes/ 폴더에 00N-이름.jpg 로 올립니다.
+   - 가로 1200픽셀, 가로형 권장
+   - 대표 사진 1장은 제목 바로 아래(lead), 나머지는 관련 문단 뒤에
+   - 본인 외 인물의 얼굴은 모자이크 처리하거나 뒷모습 사진 사용
+4. 마지막으로 notes/index.html 과 index.html 의 목록에 한 줄을 추가합니다.
+
+글의 구조 (네 덩어리 고정)
+   ① 사실 상자  — 일시·대상·주제·역할 등 4~5줄
+   ② 왜 이렇게 했는가 — 설계 의도
+   ③ 무엇을 바꿨는가 / 무슨 일이 있었는가 — 구체적인 선택
+   ④ 남은 물음 — 확인하지 못한 것, 다음에 할 것
+   중간에 한 번, 핵심 문장을 pull 상자로 뽑습니다.
+글은 '~합니다'체, 분량은 800~1,200자.
+============================================================
+-->
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>[[제목]] · 현장 노트</title>
+<meta name="description" content="[[한 줄 설명]]">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@700;800&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body>
+<nav style="max-width:820px;margin:0 auto;padding:10px 16px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap" class="archive-bar">
+  <a href="../">← 현장 노트</a><a href="../../" style="color:var(--ink3)">오지은 홈</a>
+</nav>
+<div class="wrap" style="grid-template-columns:minmax(0,1fr);max-width:760px">
+<main>
+  <article class="post">
+    <div class="meta">현장 노트 [[번호]] · [[날짜]]</div>
+    <h1>[[제목]]</h1>
+    <p class="sub">[[부제 — 어떤 자리였는지 한 줄]]</p>
+
+    <figure class="lead"><img src="../../assets/notes/[[대표사진.jpg]]" alt="[[사진 설명]]" loading="lazy"><figcaption>[[사진 설명]]</figcaption></figure>
+
+    <ul class="facts">
+      <li><b>일시</b><span>[[ ]]</span></li>
+      <li><b>대상</b><span>[[ ]]</span></li>
+      <li><b>주제</b><span>[[ ]]</span></li>
+      <li><b>역할</b><span>[[ ]]</span></li>
+    </ul>
+
+    <h2>[[왜 이렇게 했는가]]</h2>
+    <p>[[ ]]</p>
+    <p>[[ ]]</p>
+
+    <h2>[[무엇을 바꿨는가]]</h2>
+    <p>[[ ]]</p>
+    <ul>
+      <li><strong>[[선택 1]]</strong> [[이유]]</li>
+      <li><strong>[[선택 2]]</strong> [[이유]]</li>
+    </ul>
+
+    <div class="pull">[[이 글에서 가장 하고 싶은 한 문장]]</div>
+
+    <figure><img src="../../assets/notes/[[둘째사진.jpg]]" alt="[[사진 설명]]" loading="lazy"><figcaption>[[사진 설명]]</figcaption></figure>
+
+    <h2>남은 물음</h2>
+    <p>[[확인하지 못한 것]]</p>
+    <p>[[다음에 해볼 것]]</p>
+  </article>
+</main>
+<footer class="site" style="margin-top:36px">© 2026 Jieun Oh · <a href="../../">오지은 홈</a></footer>
+</div>
+</body>
+</html>
