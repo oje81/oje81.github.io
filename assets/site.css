@@ -102,3 +102,21 @@ ul.talks .v{display:block;font-size:.88rem;color:var(--ink2)}
 .oneline{max-width:46em}
 @media (max-width:820px){.portrait{width:84px;height:112px;float:right;margin:0 0 10px 14px}}
 @media (max-width:520px){ul.talks li{grid-template-columns:minmax(0,1fr);gap:2px}ul.pubs li{grid-template-columns:minmax(0,1fr);gap:2px}ul.pubs .yr,ul.talks .yr{font-size:.75rem}}
+
+/* notes */
+.post{max-width:38em}
+.post .meta{font-family:var(--mono);font-size:.78rem;color:var(--ink3);letter-spacing:.3px;margin-bottom:10px}
+.post h1{font-family:var(--serif);font-size:1.9rem;line-height:1.35;margin:0 0 6px;text-wrap:balance}
+.post .sub{font-size:1rem;color:var(--ink2);margin:0 0 26px}
+.post h2{font-size:1.02rem;margin:30px 0 8px;padding-top:12px;border-top:1px solid var(--rule)}
+.post p{margin:0 0 14px;color:var(--ink2)}
+.post p strong,.post li strong{color:var(--ink);font-weight:600}
+.post ul{margin:0 0 14px;padding-left:18px;color:var(--ink2)}
+.post li{margin-bottom:6px}
+.post .pull{margin:22px 0;padding:14px 16px;background:var(--tint);border:1px solid var(--rule);font-size:.95rem;color:var(--ink)}
+.post .facts{list-style:none;margin:0 0 22px;padding:12px 14px;border:1px solid var(--rule);background:var(--paper);font-size:.87rem;color:var(--ink2)}
+.post .facts li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:10px;margin:0 0 4px}
+.post .facts b{color:var(--ink);font-weight:600}
+.post figure{margin:22px 0}
+.post figure img{width:100%;height:auto;display:block;border:1px solid var(--rule)}
+.post figcaption{margin-top:7px;font-size:.8rem;color:var(--ink3);line-height:1.6}
