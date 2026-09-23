@@ -1,0 +1,277 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>국제개발봉사 브리프 제2호</title><style>
+  :root{
+    --bg:#F2F5F4; --card:#FFFFFF; --ink:#131C1A; --ink2:#4E5F5C; --ink3:#7C8D8A;
+    --accent:#0E6B5D; --label:#8A6516; --rule:#C9D4D1; --tint:#EAEFEE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  /* masthead */
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .rules{margin-top:13px;border-top:2px solid var(--ink);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  /* lead */
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  /* stat strip */
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  /* sections */
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .also{margin-top:12px;padding:12px 14px;background:var(--tint);border:1px solid var(--rule);font-size:11.5px;line-height:1.75;color:var(--ink2);}
+  .also .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;display:block;margin-bottom:5px;}
+  .also a{color:var(--ink2);}
+
+  /* debate */
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:10.5px;font-weight:700;letter-spacing:1.2px;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 7px;font-size:11.5px;line-height:1.72;color:var(--ink2);}
+  .two p:last-child{margin-bottom:0}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:10.5px;letter-spacing:1.2px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 6px;font-size:11.5px;line-height:1.72;color:var(--ink2);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;font-size:11px;}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    section,.item,.two,.hyp,.lead{break-inside:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .also{font-size:7.6pt;line-height:1.5;padding:8px 10px;margin-top:7px;}
+    .also .h{font-size:7pt;margin-bottom:3px;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch{font-size:7pt;margin-bottom:5px;}
+    .two p{font-size:7.7pt;line-height:1.48;margin-bottom:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp .h{font-size:7pt;margin-bottom:5px;}
+    .hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;}
+    .hyp b{font-size:7.5pt;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+  }
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style><style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+.fix{margin-top:7px;padding:8px 11px;border:1px dashed var(--label);font-size:11.5px;line-height:1.7;color:var(--ink2)}
+.fix b{color:var(--label)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101615;--card:#161E1C;--ink:#E8EEEC;--ink2:#B4C2BF;--ink3:#8A9A97;--accent:#5CC1B0;--label:#D9B45B;--rule:#2C3936;--tint:#1C2624}}
+:root[data-theme="dark"]{--bg:#101615;--card:#161E1C;--ink:#E8EEEC;--ink2:#B4C2BF;--ink3:#8A9A97;--accent:#5CC1B0;--label:#D9B45B;--rule:#2C3936;--tint:#1C2624}
+@media print{.fix{font-size:7.6pt;line-height:1.46;padding:5px 8px;margin-top:4px}}
+</style><style>
+.debate .two .ch,.debate .hyp .h{letter-spacing:0;font-size:12px}
+.debate .two p,.debate .hyp p{font-size:12.5px;line-height:1.75;color:var(--ink);margin-bottom:9px}
+.debate .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+.debate .a .pt b{color:var(--accent)}.debate .b .pt b{color:var(--label)}
+.debate .hyp b{font-family:inherit;font-size:12.5px;margin-right:7px}
+.debate .pred{display:block;margin-top:2px;color:var(--accent)}
+@media (max-width:640px){
+ .debate .two p,.debate .hyp p{margin-bottom:10px}
+ .debate .two .col{padding:14px 15px}
+ .debate .two .col.b{margin-top:12px;border-top:1px solid var(--rule)}
+ .debate .two .col:first-child{border-bottom:1px solid var(--rule)}
+}
+@media print{
+ .debate .two .ch,.debate .hyp .h{font-size:7.4pt}
+ .debate .two p,.debate .hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2)}
+ .debate .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px}
+ .debate .hyp b{font-size:7.5pt;margin-right:4px}
+ .debate .pred{display:inline;margin-left:4px}
+}
+</style></head><body>
+<nav style="max-width:820px;margin:0 auto;padding:10px 16px;font:13px 'Apple SD Gothic Neo','Malgun Gothic',sans-serif;display:flex;gap:16px;flex-wrap:wrap" class="archive-bar"><a href="../" style="color:var(--accent,#0E6B5D)">← 브리프 아카이브</a><a href="../../" style="color:var(--ink3,#7C8D8A)">오지은 홈</a><a href="javascript:window.print()" style="color:var(--ink3,#7C8D8A);margin-left:auto">PDF로 저장·인쇄</a></nav><style>@media print{.archive-bar{display:none}}</style>
+<div class="sheet">
+  <div class="eyebrow">국제개발협력학회 국제개발봉사분과 · 격주 발행</div>
+  <div class="title">국제개발봉사 브리프</div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제2호 &nbsp;·&nbsp; 2026. 09. 21. &nbsp;·&nbsp; 연구 3편 · 확장 2편 · 정책 4건</div>
+  <div class="blurb">국제개발봉사의 연구·정책·제도 동향과 인접 분야의 읽을거리를 격주로 정리합니다. 함께 읽고 논의할 분, 공동연구를 찾는 분을 기다립니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>상호성, 일방 파견의 대안인가 수사인가</h2>
+    <p>10월 파리에서 열리는 IVCO 2026은 '상호 교류와 파트너십'을 주제로 내걸었습니다. 이번 호의 연구 세 편은 모두 '받는 쪽'의 자리에서 국제봉사를 다시 봅니다. 상호성이 일방 파견의 대안인지, 기존 구조는 그대로 둔 채 붙인 새 이름인지는 아직 자료로 가려지지 않았습니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">251명 · 40개국</div><div class="c">2019년 프랑스가 상호 파견으로<br>받아들인 외국인 봉사자</div></div>
+    <div class="cell"><div class="n">161 / 238명</div><div class="c">2024년 한국인 UN봉사단원 중<br>한국 정부 재원 파견 인원</div></div>
+    <div class="cell"><div class="n">65%</div><div class="c">프랑스 활동 뒤 귀국해 새 단체에서<br>활동을 이어간 남반구 봉사자</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 2편 + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://koseiu.or.kr/index.php?bo_idx=3&amp;hCode=BOARD&amp;idx=221&amp;page=view&amp;pg=1">국제자원활동 경험의 생애사적 이해: 라오스의 두 현지 자원활동가를 중심으로</a></h3>
+      <div class="cite">고권혁(2025), 『국제이해교육연구』 20(1), 69–120. 링크는 학회 홈페이지 해당 호(원문 PDF 무료)</div>
+      <div class="body">국제자원활동 논의에서 비켜나 있던 <b>현지 자원활동가</b>의 경험을 다룬다. 국제자원활동의 모델로 기능해 온 라오스 쏨쏜 청년센터를 사례로, 센터의 역사와 정체성을 공유하는 1세대 현지 활동가 두 사람(무안, 콘왕)의 생애사를 세 차례 현지조사의 참여관찰과 면담으로 재현했다. 두 사람의 정체성은 '영어를 배우려는 소년 → 자원활동가 → 청년센터 대표'로 옮겨 갔고, 저자는 이 과정을 자기이해와 주체성 형성을 통한 실천적 지식의 구축으로 읽는다. 연구 과정의 성찰이 두 사람의 센터 재운영 결심으로 이어졌다는 점에서 생애사 연구의 교육과정적 의미도 제시한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;두 사람은 센터 대표까지 오른 이들이어서 '현지 활동가' 일반의 경험이라기보다 성공 경로의 서사일 가능성이 있다. 연구자와의 성찰이 재운영 결심을 낳았다는 대목은 이 연구의 성과이면서, 동시에 연구자 개입이 서사 자체를 빚었을 수 있다는 뜻이기도 하다. 저자도 밝히듯 두 사람의 변화에는 국제자원활동 밖의 경험이 겹쳐 있어 국제자원활동의 몫을 따로 떼어 말하기 어렵다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1177/14649934231202665">Weaving a Dense Web: A (Decolonial) Study into the Contributions of Host Organizations of Development Volunteers in Jalisco, Mexico</a></h3>
+      <div class="cite">Jablonska-Bayro, J. &amp; Haas, B.(2024), <i>Progress in Development Studies</i> 24(1), 11–26. DOI 10.1177/14649934231202665 · 아래 요약은 초록 기준</div>
+      <div class="body">독일 weltwärts 프로그램으로 멕시코 할리스코에 온 봉사자를 받는 <b>수용기관이 실제로 무슨 일을 하는지</b>를 질적으로 추적했다. 탈식민 이론과 돌봄의 정치·윤리를 렌즈로 삼아, 수용기관이 봉사자 주위에 촘촘한 지원·안전망을 '짜고' 있음을 보인다. 이 지원은 대개 금전으로 환산되지 않고 개발봉사 논의에서도 보이지 않는다. 저자들은 이를 근거로 개발 담론과 그 안에서 북반구 봉사자가 차지하는 위치를 되묻는다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;돕는 쪽과 도움받는 쪽이 현장에서는 뒤집혀 있을 수 있다는 관찰은 상호성 논의의 출발점으로 쓸 만하다. 다만 단일 프로그램·단일 지역 사례이고, 수용기관의 자기서술에 기댄 만큼 돌봄 노동이 과대 보고됐을 여지가 있다. 봉사자가 수용기관에 남긴 것은 측정하지 않았으므로 '누가 더 주는가'에 대한 답은 아니다. 본문은 확인하지 못했다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1177/1464993417713275">Revisiting reciprocity in international volunteering</a></h3>
+      <div class="cite">Lough, B. J. &amp; Oppenheim, W.(2017), <i>Progress in Development Studies</i> 17(3), 197–213. DOI 10.1177/1464993417713275 · 아래 요약은 초록 기준</div>
+      <div class="body">상호성을 당연한 선(善)으로 두지 않고 따져 묻는 글이다. 먼저 수용국 파트너와 봉사자·파견기관 사이에서 상호적 관계를 추구할 때 생기는 <b>긴장과 의도치 않은 결과</b>를 짚고, 한쪽의 편익은 물질적이고 다른 쪽은 무형일 때 '공정한 분배'를 어떻게 판정할 것인지를 다시 묻는다. 이어 오늘날 국제봉사기관이 실천하거나 지향하는 상호성의 양식을 유형화하고, 어떤 조건에서 어떤 상호성이 가능하며 바람직한지를 더 섬세하게 보자고 제안한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;개념 정리이지 경험 연구가 아니어서 유형별 효과는 여전히 빈칸이다. 무형의 편익을 어떻게 셀 것인가 하는 문제는 제1호의 쟁점(봉사자가 얻는 것)과 같은 자리로 돌아온다. IVCO가 상호성을 전면에 세운 지금, 이 글의 물음에 실무가 얼마나 답했는지가 파리에서 확인할 대목이다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 1건</span></div>
+    <ul class="news">
+      <li><b>[국제] IVCO 2026 미리 읽기.</b> 10월 19–23일 파리, Forum과 France Volontaires 공동 개최. 하위 주제는 ① 지속가능발전에 대한 봉사의 기여 이해 ② 파트너십과 우호적 환경 ③ SDGs와 그 이후를 향한 기여 가속이고, 주최 측이 꼽은 중심 개념은 파트너십과 교차 이동(상호 파견·남남협력)이다. 대회 명칭도 'Global Volunteering Forum(옛 IVCO)'으로 바뀌었다. <span class="src"><a href="https://ivcoforum.org/theme/">ivcoforum.org</a></span>
+        <div class="fix"><b>바로잡습니다</b> &nbsp;제1호는 IVCO 2026의 주제를 "Volunteering for Sustainable Futures: Evidence and Pathways Beyond 2030"으로 적었으나 이는 대회의 틀 문서(Insight Paper) 제목입니다. 공식 주제는 "Global Volunteering Through Mutual Exchange and Partnerships: An Essential Force for Sustainable Development"입니다.</div></li>
+      <li><b>[국제] 개최국 프랑스의 상호 파견 제도.</b> 프랑스는 2011년부터 시민서비스(Service Civique)로 외국인 봉사자를 받아 왔고, 2021년 8월 연대개발법으로 국제연대봉사(VSI)에도 상호 파견을 열었다. 2019년에는 40개국 251명이 프랑스에서 활동했다. France Volontaires의 자체 연구는 귀국한 남반구 봉사자의 50%가 기존 단체로, 65%가 새 단체로 활동을 이어갔다고 보고한다. 기관 자체 조사라는 점은 감안해 읽어야 한다. <span class="src"><a href="https://france-volontaires.org/en/reciprocal-volunteering">France Volontaires</a> · <a href="https://knowledge.unv.org/evidence-library/reciprocity-in-international-exchange-and-solidarity-volunteering-the-effects-of-reciprocity-in-international-volunteering">연구 요약</a></span></li>
+      <li><b>[국제] UNV 아시아 파트너 라운드테이블(5.12–13, 본).</b> 한국은 1986년부터 UNV와 협력해 온 최대 Full Funding 공여국으로, 2024년 한국인 UN봉사단원 238명 중 161명이 정부 재원으로 나갔다. UNV 발표에 따르면 이번 논의의 초점은 한국 청년과 인재 유지였고, 외교부 측은 UNV가 글로벌 인재 양성에 기여해 왔다고 평가했다. 40년 협력의 언어가 '인재 양성'이라는 점은 제1호의 쟁점과 이어진다. <span class="src"><a href="https://www.unv.org/Partners/unv-partnering-republic-korea">UNV</a></span></li>
+      <li><b>[국내] 국제자원봉사의 해(IVY 2026) 한국 이행.</b> 행정안전부와 한국자원봉사협의회·한국중앙자원봉사센터가 '나, 우리 그리고 지구를 위한 K-자원봉사'를 비전으로 추진 중이고, 이 문구는 시·도 자원봉사센터 공모전 주제로까지 내려가 있다. 추진 체계가 국내 자원봉사 중심이어서 외교부·KOICA 소관인 해외봉사가 이 틀 안에서 어떤 자리를 갖는지는 공개 자료로 확인되지 않는다. 빠져 있다고 단정할 근거도 아직 없다. <span class="src"><a href="https://futurechosun.com/?p=137042">더나은미래</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">확장해서 읽기</span><span class="note">공동연구를 찾는 자리</span></div>
+
+    <div class="item">
+      <h3><a href="https://doi.org/10.3389/fspor.2025.1543502">The perspectives of volunteers with disabilities and sport event organizers on educating and employing volunteers with disabilities</a></h3>
+      <div class="cite">Jobst, M. &amp; Kreinbucher-Bekerle, C.(2025), <i>Frontiers in Sports and Active Living</i> 7:1543502. DOI 10.3389/fspor.2025.1543502 · CC BY 오픈액세스</div>
+      <div class="body">오스트리아 그라츠에서 184단위(이론 58·실습 126) 교육과정을 마친 장애인 봉사자 6명과 이들을 받은 스포츠 행사 조직자 5명을 면담했다. 양쪽 평가는 대체로 긍정적이었고, 봉사자들은 접근성 부족을, 조직자들은 자신들이 봉사자의 역량을 과소평가했음을 말했다. 과업을 고르고 양쪽을 잇는 <b>매개자</b>의 역할이 협력의 조건으로 꼽힌다. 11명 규모의 단일 지역 예비 연구다.</div>
+      <div class="check"><b>이어볼 지점</b> &nbsp;장애인의 해외봉사 참여에서도 같은 물음이 선다—누가 매개하고, 과업은 어떻게 배정되며, 수용기관의 접근성은 누가 책임지는가. 분과가 광주세미나에서 다룬 장애인봉사단 사례와 나란히 놓고 비교 설계를 해볼 만하다.</div>
+    </div>
+
+    <div class="item">
+      <h3><a href="https://research-repository.st-andrews.ac.uk/handle/10023/12082">South–South volunteering and development</a></h3>
+      <div class="cite">Baillie Smith, M., Laurie, N. &amp; Griffiths, M.(2018), <i>Geographical Journal</i> 184(2), 158–168. DOI 10.1111/geoj.12243 · 링크는 세인트앤드루스 저장소 공개본</div>
+      <div class="body">남반구 국가 사이를 오가는 봉사자와 관계자를 면담해, 남남 봉사가 '공통성'의 언어를 되풀이하면서도 남반구 내부의 위계와 인종화된 개발 상상에 부딪힌다는 점을 보인다. 저자들은 남남 봉사를 새로운 것으로 치켜세우거나 무조건 옹호하는 데 신중해야 한다고 말한다.</div>
+      <div class="check"><b>이어볼 지점</b> &nbsp;IVCO가 말하는 교차 이동의 한 축이 남남 봉사다. 한국에서는 연수생 동문이나 수원국 출신 활동가가 제3국에서 활동하는 삼각협력형 봉사가 연구 공백으로 남아 있다.</div>
+    </div>
+  </section>
+
+  <section class="debate">
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">상호성을 어떻게 볼 것인가</span></div>
+    <div class="setup">국제봉사는 오랫동안 북에서 남으로만 흘렀다. 상호성은 이 구도를 고치겠다는 말이다. 그런데 같은 말이 수십 명 규모의 상징 사업에도, 파견 구조 전체의 재설계에도 붙는다. 두 독해를 <b>제도·관계·효과</b>의 세 축에서 나란히 놓는다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">대안이다</div>
+        <p class="pt"><b>제도</b>프랑스는 법을 고쳐 파견 제도를 양방향으로 열었다. 말뿐이었다면 치르지 않았을 비용이다.</p>
+        <p class="pt"><b>관계</b>수용기관은 이미 봉사자를 돌보는 보이지 않는 노동을 하고 있다(Jablonska-Bayro &amp; Haas). 관계는 벌써 상호적이고, 제도가 뒤늦게 따라가는 셈이다.</p>
+        <p class="pt"><b>효과</b>귀국한 봉사자가 본국 단체에서 활동을 이어간다는 보고는 '받는 쪽'에도 남는 것이 있음을 시사한다.</p></div>
+      <div class="col b"><div class="ch">수사다</div>
+        <p class="pt"><b>제도</b>외국인 봉사자를 받기 시작한 지 8년째인 2019년에 251명이다. 비자·재원·언어 장벽은 그대로다.</p>
+        <p class="pt"><b>관계</b>한쪽은 경력과 경험을, 다른 쪽은 무형의 '교류'를 얻는다. 이것이 공정한 분배인지 가릴 잣대가 없다(Lough &amp; Oppenheim).</p>
+        <p class="pt"><b>효과</b>효과를 보고한 자료는 대부분 사업 주체의 자체 조사다. 독립 평가는 드물다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 왜 지금 상호성인가</div>
+      <p><b>H1 규범 대응</b>탈식민 비판에 맞선 정당성 확보<span class="pred">맞다면 → 담론은 바뀌어도 예산은 그대로다.</span></p>
+      <p><b>H2 재원 압박</b>값비싼 북→남 장기 파견을 줄일 명분<span class="pred">맞다면 → 상호 파견 확대와 기존 파견 축소가 함께 온다.</span></p>
+      <p><b>H3 국내정치</b>공여국의 청년·인재 정책이 덧씌워진 결과<span class="pred">맞다면 → 성과지표가 자국 참여자 중심으로 짜인다.</span></p></div>
+    <div class="close">세 가설은 함께 참일 수 있다. 가르려면 세 가지 자료가 필요하다. ① 상호 파견 사업의 도입 시점과 예산 추이 ② 성과지표의 구성 ③ 수용기관 독립 평가. 한국에는 아직 상호 파견 제도가 없어, 어느 가설이 들어맞을지는 제도 논의가 시작될 때 확인할 수 있다.</div>
+  </section>
+
+  <div class="also"><span class="h">분과 소식</span>
+    <b>광주세미나</b> — 8월 28일 광주국제개발협력센터와 함께 「지방정부의 해외봉사에서 찾는 청년정책과 국제협력」을 주제로 분과 첫 세미나를 열었습니다. 발표와 토론 내용은 <a href="https://kaidec.kr/%ed%95%99%ed%9a%8c%ed%99%9c%eb%8f%99/?mod=document&amp;uid=4047">학회 홈페이지</a>에 실려 있습니다.<br>
+    <b>동계학술대회</b> — 12월 학회 동계학술대회에서 분과 세션을 엽니다. 발표를 희망하시는 분은 편집인에게 회신해 주세요.<br>
+    <b>IVCO 2026</b>(10.19–23, 파리) — 분과에 참여하고 있는 지구촌나눔운동이 10월 22일 Human Library 세션 「Accessibility and inclusion – reaching under-represented groups」에서 발표합니다.
+  </div>
+
+  <footer>
+    <b>발행</b> 국제개발협력학회 국제개발봉사분과 &nbsp;·&nbsp; <b>편집인</b> 오지은 &nbsp;·&nbsp; 격주 월요일 오전 9시<br>
+    다음 호 예고 · '무엇을 봉사로 셀 것인가'—UNV 비공식 자원봉사 보고서와 수용기관 관점의 고전 다시 읽기<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+</body></html>
