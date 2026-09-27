@@ -1,0 +1,243 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>글로벌 청년정책 브리프 제2호</title><style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    section,.item,.two,.hyp,.lead,.lens{break-inside:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style>
+</head><body><div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 격주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제2호 &nbsp;·&nbsp; 2026. 09. 28. &nbsp;·&nbsp; 연구 3편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점—제도, 거버넌스, 성과관리, 참여—에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>떠난 청년은 무엇을 가지고 돌아오는가</h2>
+    <p>올해 한국은 워킹홀리데이 상대국을 29개로 늘리고 호주행 연령 상한을 35세로 올렸으며, EU는 2030년까지 대학 졸업자 23%가 해외 학습 이동을 경험하게 하겠다는 목표를 두고 차기 Erasmus+ 예산 408억 유로를 논의하고 있습니다. 그런데 "해외 경험이 이행을 돕는다"는 근거는 대부분 떠날 만한 청년이 떠났다는 선택의 흔적과 섞여 있습니다. 이번 호는 그 둘을 가르려 한 연구들에서 출발합니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">30→35세</div><div class="c">2026. 7. 1.부터 호주 워킹홀리데이<br>한국인 참여 연령 상한(외교부). 협정·MOU 상대 29개 국가·지역</div></div>
+    <div class="cell"><div class="n">23% · 12%</div><div class="c">EU 2030년 목표: 해외 학습 이동을 경험한<br>고등교육 졸업자 · 직업교육 학습자 비율(연령 정의 없음)</div></div>
+    <div class="cell"><div class="n">389개 · 29.9조</div><div class="c">2026년 중앙부처 청년정책 시행계획<br>과제 수·예산(청년기본법 19–34세)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 2편 + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1016/j.econedurev.2024.102510">Study abroad programmes and student outcomes: Evidence from Erasmus</a></h3>
+      <div class="cite">Granato, S., Havari, E., Mazzarella, G., Schnepf, S. V.(2024), <i>Economics of Education Review</i> 99, 102510. DOI 10.1016/j.econedurev.2024.102510 · 오픈액세스(CC BY) · 인용 22회(Semantic Scholar) · 논문번호는 DOI 기준</div>
+      <div class="body">Erasmus 선발 점수의 합격선을 경계로 삼는 <b>회귀불연속 설계</b>로, 이탈리아 한 대학(볼로냐)의 지원자 자료를 써서 교환학생 참여의 효과를 추정했다. 참여는 졸업을 늦추지 않았고, 학부생의 최종 졸업 성적을 유의하게 올렸다. 효과는 이공계와 1학년 때 지원한 학생에게, 그리고 본교보다 수준이 낮은 대학을 방문한 경우에 더 컸다. 반면 대학원 진학과 <b>졸업 1년 뒤 노동시장 성과에서는 통계적으로 유의한 효과가 없었다.</b> 워킹페이퍼 단계(IZA DP 14651)에서는 2013/14–2018/19학년도 지원 약 3만 6천 건이 표본이었다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;합격선 근처의 한계 지원자에 대한 국지적 효과이고, 애초에 지원한 학생만 들어 있어 '지원하지 않은 청년'과의 선택 문제는 남는다. 성적 상승이 실력인지 방문교의 너그러운 평가인지도 이 설계로는 나뉘지 않는다. 같은 방법을 칼라브리아대 자료에 쓴 De Benedetto 외(2025, <i>Labour Economics</i> 93, 102675; RePEc로 서지 확인)는 졸업 3년 뒤 취업 확률 상승을 보고해, 노동시장 효과는 <b>관측 시점과 지역 노동시장</b>에 따라 다르게 나올 가능성이 있다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.35125/jsq.2024.13.4.043">해외취업 정부지원사업 참여자의 해외 노동시장성과 영향요인 분석</a></h3>
+      <div class="cite">김민규·송지윤(2024), 『직업과 자격 연구』 13(4), 43–63. 한국직업자격학회. DOI 10.35125/jsq.2024.13.4.043 · RISS·earticle에서 서지 확인 · 초록은 earticle 기준, 추정 방법 세부는 본문 확인 대상</div>
+      <div class="body">고용노동부·한국산업인력공단의 <b>해외취업정착지원금 수급자</b> 자료로, 해외 현지의 임금과 고용형태(정규직 여부)에 무엇이 영향을 주는지 살폈다. 연령·소득·학력·전공·해외유학 경험 같은 개인 배경의 영향은 국내외 선행연구와 대체로 비슷했고, 취업 국가·직종·취업비자 등 현지 노동시장 변수의 차이가 유의했다. 정부 프로그램 참여 유형에서는 민간 경로 취업보다 공공 정책수단을 거친 경우 성과가 더 컸다고 읽고, 이를 바탕으로 공공 해외취업 사업의 <b>성과관리</b> 개선점을 제안한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;표본이 이미 해외취업에 성공해 지원금을 받은 청년으로 한정되어 비참여자 비교군이 없다. "공공 수단의 성과가 더 크다"는 결과는 공공 경로를 택한 사람이 달랐을 가능성과 분리되지 않으므로 인과가 아니라 상관으로 읽어야 한다. 성과가 현지 임금·고용형태에 그쳐, 이 브리프가 묻는 <b>귀국 후 국내 이행</b>은 다루지 않는다. 같은 저자가 참여한 학술대회 발표(손규태·김민규 2025, 한국이민정책학회)가 귀국 후 재취업을 다루나 RISS에 서지만 있어 이번 호에는 싣지 않는다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1111/j.1468-0297.2010.02369.x">Studying abroad and the effect on international labour market mobility: Evidence from the introduction of ERASMUS</a></h3>
+      <div class="cite">Parey, M. &amp; Waldinger, F.(2011), <i>The Economic Journal</i> 121(551), 194–222. DOI 10.1111/j.1468-0297.2010.02369.x · 저널 초록 미확보 · 아래 요약은 IZA DP 3430(2008) 초록 기준, 발행 전 원문 재확인 대상</div>
+      <div class="body">해외 경험의 효과 연구에서 <b>선택편향</b>을 정면으로 다룬 초기 사례다. 독일 대학·학과별로 ERASMUS가 도입·확대된 시점의 차이를 도구변수로 써서, 관측되지 않는 개인 특성을 통제한 뒤 유학 경험이 훗날 외국에서 일할 확률을 15–20%p 높인다고 추정했다. 효과는 신용제약이 있는 학생에게 더 컸다. 유학이 나중의 이주로 이어지는 통로라는 해석이다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;여기서 잰 성과는 '외국에서 일함'이지 취업률이나 임금이 아니다. 인적자본이 늘어난 것인지, 이동에 대한 심리적 비용이 낮아진 것인지는 이 설계로 가려지지 않는다. 한국의 워킹홀리데이·해외취업 지원이 본국 노동시장 이행을 목표로 내건다면, 이 논문은 오히려 <b>정책 목표와 실제 효과의 방향이 어긋날 수 있음</b>을 시사하는 반례로 읽힌다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 2건</span></div>
+    <ul class="news">
+      <li><b>[국제] EU 학습 이동 목표와 차기 Erasmus+(2028–2034).</b> 2024년 5월 13일 채택된 이사회 권고 「Europe on the Move」는 2030년까지 해외 학습 이동을 경험한 고등교육 졸업자 23%, 직업교육 학습자 12%, 2027년까지 이동 참여자 중 '기회가 적은 청년' 20%를 목표로 정했다(연령 정의 없음). 집행위원회는 2025년 7월 차기 Erasmus+ 예산 408억 유로(현 262억)를 제안하며 유럽연대봉사단(ESC)을 통합했고, 이사회는 2026년 5월 11일 협상 입장을 채택했다. 영국은 2027년부터 Erasmus+에 재참여한다(첫해 분담금 약 5.7억 파운드). <span class="src"><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:C_202403364">이사회 권고</a> · <a href="https://www.consilium.europa.eu/en/press/press-releases/2026/05/11/erasmusplus-council-agrees-position-on-the-eu-s-flagship-programme-for-education-and-training-youth-and-sport/">이사회</a> · <a href="https://www.gov.uk/government/news/young-people-from-all-backgrounds-to-get-opportunity-to-study-abroad-as-uk-eu-deal-unlocks-erasmus">영국 정부</a></span></li>
+      <li><b>[국제] UN DESA 「World Population Highlights 2026: Youth」.</b> 세계 청년(15–24세)은 13억 명이고, 그중 59%(2025년)가 저소득·중저소득국에 산다. 2050년에는 69%로 오른다. 같은 기간 저소득·중저소득국 청년은 16% 늘고 고소득·중고소득국 청년은 약 24% 준다. 고소득·중고소득국에서는 2050년 65세 이상 인구가 청년의 약 세 배가 된다. 청년의 국제 이동을 인구 구조의 문제로 읽게 하는 수치다. <span class="src"><a href="https://desapublications.un.org/publications/world-population-highlights-2026-youth">보고서</a> · <a href="https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/undesa_pd_2026_world_population_highlights-youth_2026_key_messages.pdf">핵심 메시지</a></span></li>
+      <li><b>[국제] 일본 내각부 청년 국제교류 2026년도.</b> 국제사회청년육성사업, 일한청년친선교류, 동남아시아청년의 배는 실시하되 「세계청년의 배」는 2026년도 실시하지 않고 일중청년친선교류는 미정으로 남겼다. 사업 단위의 조정이지 제도 개편은 아니며, 배경 설명은 공식 페이지에 없다. <span class="src"><a href="https://www8.cao.go.jp/youth/kouryu/bosyu-2026.html">内閣府</a></span></li>
+      <li><b>[국내] 워킹홀리데이 제도 변화.</b> 외교부에 따르면 호주 정부는 2026년 7월 1일부터 한국인 참여 연령 상한을 30세에서 35세로 올렸다. 호주는 1995년 첫 워킹홀리데이 상대국이자 연간 참여자가 가장 많은 나라다. 5월 13일에는 한–핀란드 협정이 서명되어 양국 18–35세 청년이 최장 12개월 체류할 수 있게 됐고(발효는 통보 후 60일, 연간 인원은 외교 경로로 통보), 상대국은 29개 국가·지역이 됐다. 참여자 수와 귀국 후 경로 통계는 두 보도자료에 없다. <span class="src"><a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156769134">외교부 7. 1.</a> · <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156761374">외교부 5. 13.</a></span></li>
+      <li><b>[국내] 2026년 청년정책 시행계획 확정(제18차 청년정책조정위원회, 4. 28.).</b> 청년기본법 제9조에 따라 48개 중앙행정기관 389개 과제·약 29.9조 원(일자리 128, 교육·직업훈련 116, 주거 34, 금융·복지·문화 65, 참여·기반 46), 17개 시·도 1,563개 사업·6조 3,532억 원(청년기본법 19–34세). 국제 관련 신규 과제는 한·미·중·일 청년 교류의 '아태청년교류단' 하나다. 2025년 추진실적 평가는 47개 중앙기관·17개 시·도를 대상으로 했다고 적었으나, 평가 지표 자체는 보도자료에 없다. <span class="src"><a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156758853">정책브리핑</a> · <a href="https://www.opm.go.kr/opm/news/press-release.do?mode=download&amp;articleNo=162108&amp;attachNo=153785">보도자료 원문</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 성과관리·측정</span></div>
+    <div class="lens">
+      <div class="h">출국자 수를 세는 정책, 귀국 후를 묻지 않는 통계</div>
+      <h3>해외진출 지원의 성과는 어디서 끝나는가</h3>
+      <p>이번 호에 실린 자료들은 성과의 '측정 지점'이 서로 다르다. EU의 목표(23%·12%)는 <b>참여율</b>이다. 한국의 해외취업 지원 연구(김민규·송지윤)는 <b>현지 임금·고용형태</b>에서 멈추고, 워킹홀리데이 보도자료는 상대국 수와 연령 상한만 적는다. 반면 학술 연구는 <b>귀국 뒤 또는 졸업 뒤 노동시장</b>을 본다—그리고 그 결과는 1년 뒤 무효과(Granato 외), 3년 뒤 취업률 상승(De Benedetto 외), 외국 취업 확률 상승(Parey &amp; Waldinger)으로 갈린다. 성과관리론에서 익숙한 구도다. 산출(출국자·참여율)은 행정이 통제할 수 있고 해마다 셀 수 있지만, 결과(이행의 질)는 시차가 길고 귀속이 어렵다. 그래서 산출이 목표가 되고, 목표가 된 산출은 늘어난다. 2026년 시행계획의 389개 과제 중 국제 이동 관련 과제가 성과를 무엇으로 보고하는지는 공개 자료로 확인되지 않는다. 최소한 정착지원금 수급자의 귀국 후 고용보험 이력을 연결해 보는 것은 새 조사 없이도 가능한 일이다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;참여율 목표가 곧 잘못된 설계는 아니다. EU 권고의 제목이 '모두를 위한 이동 기회'인 데서 보이듯, 이동을 <b>권리이자 경험재</b>로 보면 결과 지표는 애초에 정책 목표가 아니다. 결과 지표를 내걸면 성과가 잘 나올 청년만 고르는 유인(크림 스키밍)이 생기고, 신용제약 청년에게 효과가 더 컸다는 Parey &amp; Waldinger의 발견과 정반대 방향으로 사업이 흐를 수 있다. 측정 지점을 뒤로 옮기는 일은 무엇을 위한 정책인지에 대한 답을 먼저 요구한다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">해외 경험은 이행을 돕는가, 도울 사람을 고르는가</span></div>
+    <div class="setup">해외 경험자의 취업률·임금이 높다는 관찰은 흔하다. 문제는 그것이 경험의 <b>효과</b>인지, 경험을 택한 사람의 <b>특성</b>인지다. 정책 논리는 앞의 해석에 기대고, 연구 설계는 뒤의 가능성을 걷어내려 애쓴다. 두 독해를 <b>근거·대상·정책 함의</b>의 세 축에서 나란히 놓는다. 유럽 사례는 교환학생, 한국 사례는 정부지원 해외취업·워킹홀리데이다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">효과가 있다</div>
+        <p class="pt"><b>근거</b>선택을 통제한 설계에서도 효과가 남는다. 도구변수로 15–20%p의 외국 취업 확률 상승(Parey &amp; Waldinger), 회귀불연속으로 졸업 3년 뒤 취업 확률 상승(De Benedetto 외).</p>
+        <p class="pt"><b>대상</b>효과는 신용제약 학생에게 더 컸다. 지원이 없으면 떠나지 못했을 청년에게 효과가 집중된다면, 공적 지원의 근거가 된다.</p>
+        <p class="pt"><b>함의</b>참여 문턱(연령 상한·상대국 수)을 넓히는 한국의 방향은 이 독해와 맞닿아 있다.</p></div>
+      <div class="col b"><div class="ch">선택이다</div>
+        <p class="pt"><b>근거</b>같은 회귀불연속 설계로 졸업 1년 뒤 노동시장 효과는 없었다(Granato 외). 한국 자료는 비교군 자체가 없어 효과와 선택을 나눌 수 없다(김민규·송지윤).</p>
+        <p class="pt"><b>대상</b>인과 추정치는 모두 합격선 근처 지원자에 대한 국지적 효과다. 지원조차 하지 않는 청년에게 같은 효과를 기대할 근거는 아니다. 교환학생과 워킹홀리데이(단기·저숙련 노동)는 처치 자체가 다르다.</p>
+        <p class="pt"><b>함의</b>효과가 '외국에서 일할 확률'로 나타난다면, 국내 이행을 목표로 한 정책의 성과로 세기 어렵다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 효과가 있다면 어떤 경로인가</div>
+      <p><b>H1 인적자본</b>언어·직무 능력이 실제로 는다<span class="pred">맞다면 → 효과는 체류 기간·과업 난이도에 비례하고 시간이 지나도 유지된다.</span></p>
+      <p><b>H2 신호</b>고용주가 '해외 경험'을 능력의 표지로 읽는다<span class="pred">맞다면 → 효과는 경험이 희소한 시기·집단에 크고, 참여율이 오를수록 줄어든다.</span></p>
+      <p><b>H3 이동 통로</b>이주의 심리적·정보 비용이 낮아진다<span class="pred">맞다면 → 효과는 국내 취업보다 재출국·외국 취업으로 나타난다.</span></p></div>
+    <div class="close">세 가설은 서로 배타적이지 않고, 자료로 가를 수 있다. ① 체류 기간별 효과의 기울기(H1) ② 참여율 상승기 전후의 효과 변화(H2) ③ 귀국 후 국내 취업과 재출국의 분리 집계(H3). 한국에서는 세 번째가 가장 먼저 확인 가능하다—워킹홀리데이·해외취업 지원 참여자의 귀국 후 경로를 행정자료로 연결하면 된다. 이 브리프는 그런 자료가 공개되는지를 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 격주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · 청년 참여의 대표성—청년정책조정위원회 전문위원회와 지자체 청년참여기구는 누구를 대표하는가, 참여·대표성의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+</body></html>
