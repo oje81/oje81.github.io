@@ -91,7 +91,7 @@ footer.site{grid-column:1/-1;border-top:1px solid var(--rule);padding-top:16px;f
 }
 
 /* portrait */
-.portrait{display:block;width:136px;height:182px;object-fit:cover;object-position:50% 12%;border:1px solid var(--rule);background:var(--paper);margin-bottom:16px}
+.portrait{display:block;width:170px;height:227px;object-fit:cover;object-position:50% 12%;border:1px solid var(--rule);background:var(--paper);margin-bottom:16px}
 .posts{margin-top:14px;font-size:.88rem;line-height:1.6;color:var(--ink2)}
 .posts b{color:var(--ink);font-weight:600}
 .posts p{margin:0 0 7px}
