@@ -156,3 +156,6 @@ details.fold summary::before{content:"+";display:inline-block;width:1.1em;font-f
 details.fold[open] summary::before{content:"–"}
 details.fold summary:hover{text-decoration:underline;text-underline-offset:3px}
 @media (max-width:520px){section{margin-bottom:52px}p.body{font-size:1rem}}
+/* 기록 탭의 하위 항목 (현장 노트 / Reading) */
+nav.toc a.sub{padding-left:14px;font-size:.88rem;color:var(--ink2)}
+nav.toc a.sub.here{color:var(--ink);font-weight:600}
