@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>글 제목 · Reading</title>
+<meta name="description" content="문서명 — 이 글이 던지는 물음 한 줄">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@700;800&family=Noto+Serif+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="reading">
+<nav style="margin:0 auto;padding:10px 16px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap" class="archive-bar">
+  <a href="./">← Reading</a><a href="../../" style="color:var(--ink3)">오지은 홈</a>
+</nav>
+<div class="wrap">
+
+<!-- 왼쪽: 문서 카드 (고정). 유형에 따라 항목을 바꿉니다.
+     정책 문서: 문서 / 발행 / 유형 / 분량 / 원문 / 함께 읽은 것
+     논문:     문서 / 저자·게재지 / 유형(실증·이론·리뷰) / 자료·방법 / 원문(DOI) / 함께 읽은 것 -->
+<aside class="doc">
+  <div class="eyebrow">Document</div>
+  <dl>
+    <dt>문서</dt><dd>정식 제목 (원어 제목)</dd>
+    <dt>발행</dt><dd>발행 주체 · 연월 (논문이면 저자 · 학술지 · 권호)</dd>
+    <dt>유형</dt><dd>전략 문서 / 평가 보고서 / 실증 논문 / 이론 논문 / 지침</dd>
+    <dt>분량</dt><dd>쪽수 · 언어 · 구성</dd>
+    <dt>원문</dt><dd><a href="https://example.org/document.pdf">example.org/document.pdf</a></dd>
+    <dt>함께 읽은 것</dt><dd>후속 보고서, 평가서, 비판 논문 (참고문헌에 전체 서지)</dd>
+  </dl>
+  <ul class="toc">
+    <li><a href="#s1"><b>01</b>문서 개요</a></li>
+    <li><a href="#s2"><b>02</b>핵심 주장</a></li>
+    <li><a href="#s3"><b>03</b>제도 설계 분석</a></li>
+    <li><a href="#s4"><b>04</b>근거의 타당성</a></li>
+    <li><a href="#s5"><b>05</b>반론과 경쟁 가설</a></li>
+    <li><a href="#s6"><b>06</b>한국에 주는 시사점</a></li>
+    <li><a href="#score"><b>—</b>평가표 · 주 · 참고문헌</a></li>
+  </ul>
+</aside>
+
+<main>
+  <article>
+    <div class="meta">Reading NN · YYYY.MM.DD · 읽는 데 약 N분</div>
+    <h1>글 제목 (문서 제목이 아니라, 이 글이 던지는 물음)</h1>
+    <p class="sub">읽은 문서의 정식 명칭 (발행 기관, 연도)</p>
+
+    <div class="tldr">
+      <b>세 줄 요약</b>
+      <ol>
+        <li>이 문서가 무엇이고 왜 중요한지 한 줄.</li>
+        <li>가장 단단한 부분과 가장 약한 부분 한 줄.</li>
+        <li>한국 독자가 가져갈 물음 한 줄.</li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><b>01</b>문서 개요</h2>
+    <p>누가, 언제, 왜 만들었는지를 적습니다. 처음 보는 독자를 위해 배경을 넣습니다. 어떤 결의나 계획의 후속인지, 어떤 기구가 집행하는지, 문서의 구성과 핵심 용어는 무엇인지를 두세 문단으로 씁니다.<sup class="fn"><a href="#n1" id="r1">1</a></sup></p>
+    <p>논문이라면: 어떤 연구 흐름 위에 있는지, 무엇을 묻는 연구인지, 어떤 자료와 방법을 썼는지를 여기서 소개합니다.</p>
+
+    <h2 id="s2"><b>02</b>핵심 주장</h2>
+    <p>문서의 핵심 주장과 논리 구조를 적습니다. 무엇을 전제로 삼고 무엇을 결론으로 내놓는지를 순서대로 씁니다. 원문의 중요한 표현은 그대로 인용하고 쪽수를 답니다.</p>
+    <blockquote>
+      <p>"원문에서 가장 중요한 문장을 그대로 옮깁니다. 번역이면 번역임을 밝힙니다."</p>
+      <cite>문서명, p. 00<sup class="fn"><a href="#n2" id="r2">2</a></sup></cite>
+    </blockquote>
+    <ul>
+      <li><strong>주장 1.</strong> 한 문장으로 정리하고, 문서가 그것을 어떻게 뒷받침하는지 덧붙입니다.</li>
+      <li><strong>주장 2.</strong> 같은 방식으로 씁니다.</li>
+      <li><strong>주장 3.</strong> 같은 방식으로 씁니다.</li>
+    </ul>
+    <div class="verdict"><b>판단</b><span>이 절의 판단을 한 문장으로 적습니다.</span></div>
+
+    <h2 id="s3"><b>03</b>제도 설계 분석</h2>
+    <p>행정학의 눈으로 읽습니다. 거버넌스(누가 결정하고 누가 책임지는가), 성과관리(무엇을 지표로 삼고 어떻게 재는가), 참여(누가 어떤 자격으로 들어오는가), 자원(돈과 사람이 어디서 오는가)을 차례로 봅니다. 문서가 말하는 것과 실제 설계가 어긋나는 지점을 찾습니다.</p>
+    <p>논문이라면: 연구가 다루는 제도가 실제로 어떻게 작동하는지, 연구 설계가 그 제도의 어떤 부분을 보고 어떤 부분을 놓치는지를 씁니다.</p>
+    <div class="verdict"><b>판단</b><span>이 절의 판단을 한 문장으로 적습니다.</span></div>
+
+    <h2 id="s4"><b>04</b>근거의 타당성</h2>
+    <p>주장을 받치는 데이터와 연구가 무엇인지, 어디서 왔는지, 빠진 것은 무엇인지를 적습니다. 자기 보고 자료인지 제3자 평가인지, 산출(output)인지 결과(outcome)인지, 인과를 말할 수 있는 설계인지를 구분합니다.<sup class="fn"><a href="#n3" id="r3">3</a></sup></p>
+    <div class="verdict"><b>판단</b><span>이 절의 판단을 한 문장으로 적습니다.</span></div>
+
+    <h2 id="s5"><b>05</b>반론과 경쟁 가설</h2>
+    <p>이 문서를 비판하는 쪽은 뭐라고 하는지, 같은 현상을 다르게 설명하는 가설은 무엇인지를 적습니다. 최근 연구를 찾아 붙이고 각주를 답니다.<sup class="fn"><a href="#n4" id="r4">4</a></sup> 제 판단과 다른 입장도 충실하게 씁니다.</p>
+    <div class="verdict"><b>판단</b><span>이 절의 판단을 한 문장으로 적습니다.</span></div>
+
+    <h2 id="s6"><b>06</b>한국에 주는 시사점</h2>
+    <p>이 문서가 한국의 제도나 실무에 던지는 물음을 적습니다. 답이 아니라 물음을 남깁니다. 더 확인해 보고 싶은 것도 여기 씁니다.</p>
+
+    <section class="notes" id="score" aria-label="평가표, 주, 참고문헌">
+      <h2>평가표</h2>
+      <table class="score">
+        <thead><tr><th>기준</th><th>평가</th><th>이유</th></tr></thead>
+        <tbody>
+          <tr><td>주장의 명료성</td><td class="dots">●●●●○</td><td>한 문장.</td></tr>
+          <tr><td>제도 설계의 구체성</td><td class="dots">●●○○○</td><td>한 문장.</td></tr>
+          <tr><td>근거의 타당성</td><td class="dots">●●●○○</td><td>한 문장.</td></tr>
+          <tr><td>한국 맥락 적용 가능성</td><td class="dots">●●●○○</td><td>한 문장.</td></tr>
+        </tbody>
+      </table>
+      <h2>주</h2>
+      <ol>
+        <li id="n1">출처 표기, 쪽수. <a class="back" href="#r1" aria-label="본문으로">↩</a></li>
+        <li id="n2">원문 인용 출처, 쪽수. <a class="back" href="#r2" aria-label="본문으로">↩</a></li>
+        <li id="n3">데이터 출처. <a class="back" href="#r3" aria-label="본문으로">↩</a></li>
+        <li id="n4">비판 연구 출처. <a class="back" href="#r4" aria-label="본문으로">↩</a></li>
+      </ol>
+      <h2>참고문헌</h2>
+      <ul>
+        <li>저자 (연도). 제목. 발행처. <a href="https://example.org">https://example.org</a></li>
+        <li>저자 (연도). 논문 제목. <i>학술지명</i>, 권(호), 쪽. <a href="https://doi.org/">https://doi.org/</a></li>
+      </ul>
+    </section>
+  </article>
+</main>
+<footer class="site" style="margin-top:36px">© 2026 Jieun Oh · <a href="../../">오지은 홈</a></footer>
+</div>
+</body>
+</html>
