@@ -33,7 +33,12 @@ GitHub Pages 정적 사이트. 빌드 과정 없이 파일을 그대로 올리�
 2. `notes/index.html` 목록 맨 위에 한 줄 추가
 3. 홈 `index.html`의 현장 노트 카드는 최근 3개만 유지
 
-## Reading 첫 글
-1. `notes/reading/001.html` 업로드
-2. `notes/reading/index.html`에서 주석 처리된 `<ul>`을 풀고 번호·날짜·제목 수정
-3. 홈 `index.html`의 Reading 카드도 같은 방식으로
+## Reading 새 글 (템플릿 고정)
+Reading 글의 모양은 `notes/reading/_template.html`로 고정합니다(2026-10-08 확정). 다른 형식으로 만들지 않습니다.
+- 판형: 왼쪽 문서 카드(DOCUMENT 상자 + 목차 상자) / 오른쪽 본문. `<body class="reading">`과 `assets/site.css`의 `.reading` 규칙을 그대로 씁니다. 파일 안에 `<style>`을 넣지 않습니다.
+- 구조: 세 줄 요약 → 01 문서 개요 → 02 핵심 주장 → 03 제도 설계 분석 → 04 근거의 타당성 → 05 반론과 경쟁 가설 → 06 한국에 주는 시사점 → 평가표 → 주 → 참고문헌. 02~05절 끝에 「판단」 상자.
+- 강조: 꼭 기억할 문장은 `<mark>`, 핵심 숫자는 `<b class="num">`. 절마다 한두 번만.
+- 상세 노트: 원문 절별 요약·번역은 `notes/reading/00N-notes.html`에 따로 두고 본문 카드에서 링크(001-notes.html이 예시).
+1. `_template.html`을 복사해 `notes/reading/00N.html`(와 `00N-notes.html`)로 저장하고 내용을 채움
+2. `notes/reading/index.html` 목록 맨 위에 한 줄 추가
+3. 홈 `index.html`의 Reading 카드는 최근 3개만 유지
