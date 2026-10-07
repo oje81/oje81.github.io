@@ -7,7 +7,7 @@ GitHub Pages 정적 사이트. 빌드 과정 없이 파일을 그대로 올리�
 - `index.html` — 홈 (소개·브리프·기록·약력·연구·용역·발표), 한/영 전환
 - `newsletter/` — 국제개발봉사 브리프 아카이브 (`index.html` 목차, `issues/00N.html` 각 호)
 - `youth/` — 글로벌 청년정책 브리프 아카이브 (`index.html` 목차, `issues/00N.html` 각 호)
-- `notes/` — 기록 탭: 현장 노트(`posts/00N.html`, `_template.html` 새 글 틀)와 Reading(`reading/00N.html`, 준비 중)을 `index.html` 한 페이지에 모음
+- `notes/` — 기록 탭: 현장 노트(`posts/00N.html`, `_template.html` 새 글 틀)와 Reading(`reading/00N.html`)을 `index.html` 한 페이지에 모음
 - `assets/` — `site.css`(디자인), `site.js`(언어 전환), `portrait-2026.jpg`(사진), `notes/`(현장 노트 사진)
 
 폴더마다 `index.html`이 하나씩 있고, 이름이 같아도 자리가 다르면 다른 페이지입니다.
