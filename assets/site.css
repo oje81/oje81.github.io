@@ -147,6 +147,7 @@ ul.talks .v{display:block;font-size:.88rem;color:var(--ink2)}
 .tl .what a:hover,.pubs .t a:hover{color:var(--teal);text-decoration-color:currentColor}
 
 /* 목록 항목: 제목 한 줄, 서지·역할·발주처는 다음 줄 (시안 2) */
+p.body,.brief p,.lede{word-break:keep-all;overflow-wrap:anywhere}
 p.body{font-size:1.0625rem;line-height:1.8;max-width:36em;text-wrap:pretty}
 /* 접힌 목록 */
 details.fold summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--teal);padding:12px 0 4px;list-style:none}
