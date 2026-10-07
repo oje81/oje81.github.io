@@ -42,3 +42,8 @@ Reading 글의 모양은 `notes/reading/_template.html`로 고정합니다(2026-
 1. `_template.html`을 복사해 `notes/reading/00N.html`로, `_template-notes.html`을 복사해 `00N-notes.html`로 저장하고 내용을 채움
 2. `notes/reading/index.html` 목록 맨 위에 한 줄 추가
 3. 홈 `index.html`의 Reading 카드는 최근 3개만 유지
+
+## 검색엔진
+- `robots.txt`, `sitemap.xml`, `feed.xml`(RSS) 이 맨 위에 있음
+- 글이나 호를 추가한 뒤 `python3 _tools/sitemap.py` 를 실행하면 `sitemap.xml`·`feed.xml` 이 다시 만들어짐 (`_tools/` 는 사이트에 공개되지 않음)
+- 소유확인 메타 태그는 `index.html` 의 `<head>` 안 표시된 자리에 넣음
