@@ -4,10 +4,10 @@ GitHub Pages 정적 사이트. 빌드 과정 없이 파일을 그대로 올리�
 공개 주소: https://oje81.github.io · 저장소: https://github.com/oje81/oje81.github.io
 
 ## 구성
-- `index.html` — 홈 (소개·약력·연구·용역·발표·기록과 브리프), 한/영 전환
+- `index.html` — 홈 (소개·브리프·기록·약력·연구·용역·발표), 한/영 전환
 - `newsletter/` — 국제개발봉사 브리프 아카이브 (`index.html` 목차, `issues/00N.html` 각 호)
 - `youth/` — 글로벌 청년정책 브리프 아카이브 (`index.html` 목차, `issues/00N.html` 각 호)
-- `notes/` — 현장 노트 (`index.html` 목차, `posts/00N.html` 각 글, `_template.html` 새 글 틀)
+- `notes/` — 기록 탭: 현장 노트(`posts/00N.html`, `_template.html` 새 글 틀)와 Reading(`reading/00N.html`, 준비 중)을 `index.html` 한 페이지에 모음
 - `assets/` — `site.css`(디자인), `site.js`(언어 전환), `portrait-2026.jpg`(사진), `notes/`(현장 노트 사진)
 
 폴더마다 `index.html`이 하나씩 있고, 이름이 같아도 자리가 다르면 다른 페이지입니다.
@@ -31,4 +31,9 @@ GitHub Pages 정적 사이트. 빌드 과정 없이 파일을 그대로 올리�
 ## 현장 노트 새 글
 1. `notes/_template.html`을 복사해 `notes/posts/0NN.html`로 저장하고 내용을 채움 (사진은 `assets/notes/0NN-이름.jpg`)
 2. `notes/index.html` 목록 맨 위에 한 줄 추가
-3. 홈 `index.html`의 현장 노트 목록은 최근 3개만 유지
+3. 홈 `index.html`의 현장 노트 카드는 최근 3개만 유지
+
+## Reading 첫 글
+1. `notes/reading/001.html` 업로드
+2. `notes/index.html`의 Reading 구역에서 주석 처리된 `<ul>`을 풀고 번호·날짜·제목 수정
+3. 홈 `index.html`의 Reading 카드도 같은 방식으로
