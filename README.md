@@ -27,3 +27,8 @@ GitHub Pages 정적 사이트. 빌드 과정 없이 파일을 그대로 올리�
 1. `newsletter/issues/00N.html` 또는 `youth/issues/00N.html` 업로드
 2. 그 폴더의 `index.html`에서 `<ul class="issues">` 맨 위 `<li>`를 복사해 번호·날짜·제목 수정
 3. 홈 `index.html`의 최근 호 목록도 수정 (최근 2개 유지)
+
+## 현장 노트 새 글
+1. `notes/_template.html`을 복사해 `notes/posts/0NN.html`로 저장하고 내용을 채움 (사진은 `assets/notes/0NN-이름.jpg`)
+2. `notes/index.html` 목록 맨 위에 한 줄 추가
+3. 홈 `index.html`의 현장 노트 목록은 최근 3개만 유지
