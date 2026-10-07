@@ -38,7 +38,7 @@ Reading 글의 모양은 `notes/reading/_template.html`로 고정합니다(2026-
 - 판형: 왼쪽 문서 카드(DOCUMENT 상자 + 목차 상자) / 오른쪽 본문. `<body class="reading">`과 `assets/site.css`의 `.reading` 규칙을 그대로 씁니다. 파일 안에 `<style>`을 넣지 않습니다.
 - 구조: 세 줄 요약 → 01 문서 개요 → 02 핵심 주장 → 03 제도 설계 분석 → 04 근거의 타당성 → 05 반론과 경쟁 가설 → 06 한국에 주는 시사점 → 평가표 → 주 → 참고문헌. 02~05절 끝에 「판단」 상자.
 - 강조: 꼭 기억할 문장은 `<mark>`, 핵심 숫자는 `<b class="num">`. 절마다 한두 번만.
-- 상세 노트: 원문 절별 요약·번역은 `notes/reading/00N-notes.html`에 따로 두고 본문 카드에서 링크(001-notes.html이 예시).
-1. `_template.html`을 복사해 `notes/reading/00N.html`(와 `00N-notes.html`)로 저장하고 내용을 채움
+- 상세 노트: 원문 절별 요약·번역은 `notes/reading/00N-notes.html`에 따로 두고 본문 카드에서 링크. 템플릿은 `notes/reading/_template-notes.html`로 고정(본문과 같은 판형, `body class="reading notes-page"`로 색만 청회색). 001-notes.html이 예시.
+1. `_template.html`을 복사해 `notes/reading/00N.html`로, `_template-notes.html`을 복사해 `00N-notes.html`로 저장하고 내용을 채움
 2. `notes/reading/index.html` 목록 맨 위에 한 줄 추가
 3. 홈 `index.html`의 Reading 카드는 최근 3개만 유지

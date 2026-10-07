@@ -164,6 +164,10 @@ nav.toc a.sub.here{color:var(--ink);font-weight:600}
 .reading{--acc:#8A6516;--acc2:#B98A2E;--accbg:#FBF5E6;--accline:#E4D3A8;--mark:#FFF1A8;--red:#B4482A;--redbg:#FBEDE8;--card:#FFFFFF;--shadow:0 1px 2px rgba(19,28,26,.06),0 6px 20px rgba(19,28,26,.05)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .reading{--acc:#D9B45B;--acc2:#B98A2E;--accbg:#2A2416;--accline:#4A3E1F;--mark:#5A4A12;--red:#E58A6E;--redbg:#3A221A;--card:#151D1B;--shadow:none}}
 :root[data-theme="dark"] .reading{--acc:#D9B45B;--acc2:#B98A2E;--accbg:#2A2416;--accline:#4A3E1F;--mark:#5A4A12;--red:#E58A6E;--redbg:#3A221A;--card:#151D1B;--shadow:none}
+/* reading 상세 노트 — 본문과 같은 판형, 색만 청회색 계열 */
+.reading.notes-page{--acc:#2F5D7C;--acc2:#5C86A3;--accbg:#EEF4F8;--accline:#C9DAE6;--mark:#DCEBF5;--red:#8A6516}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .reading.notes-page{--acc:#7FB3D5;--acc2:#5C86A3;--accbg:#17242D;--accline:#2C4555;--mark:#1F3A4D;--red:#D9B45B}}
+:root[data-theme="dark"] .reading.notes-page{--acc:#7FB3D5;--acc2:#5C86A3;--accbg:#17242D;--accline:#2C4555;--mark:#1F3A4D;--red:#D9B45B}
 .reading .wrap{max-width:1120px;grid-template-columns:272px minmax(0,1fr);gap:40px;padding-block:24px 64px}
 .reading nav.archive-bar{max-width:1120px}
 .reading nav.archive-bar a{color:var(--acc)}
