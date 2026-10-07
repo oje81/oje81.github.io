@@ -141,3 +141,7 @@ ul.talks .v{display:block;font-size:.88rem;color:var(--ink2)}
 .post figure.lead img{aspect-ratio:3/2;object-fit:cover}
 .post figure+.facts{margin-top:0}
 .post h2+figure{margin-top:16px}
+
+/* 약력 목록 안의 기관 홈페이지 링크 */
+.tl .what a,.pubs .t a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-decoration-thickness:1px;text-underline-offset:3px}
+.tl .what a:hover,.pubs .t a:hover{color:var(--teal);text-decoration-color:currentColor}
