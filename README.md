@@ -31,7 +31,7 @@ GitHub Pages 정적 사이트. 빌드 과정 없이 파일을 그대로 올리�
 ## 현장 노트 새 글
 1. `notes/_template.html`을 복사해 `notes/posts/0NN.html`로 저장하고 내용을 채움 (사진은 `assets/notes/0NN-이름.jpg`)
 2. `notes/index.html` 목록 맨 위에 한 줄 추가
-3. 홈 `index.html`의 현장 노트 카드는 최근 3개만 유지
+3. 홈 `index.html`의 현장 노트 카드는 최근 2개만 유지
 
 ## Reading 새 글 (템플릿 고정)
 Reading 글의 모양은 `notes/reading/_template.html`로 고정합니다(2026-10-08 확정). 다른 형식으로 만들지 않습니다.
