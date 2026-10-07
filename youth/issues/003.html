@@ -1,0 +1,253 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>글로벌 청년정책 브리프 제3호</title><style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    .item,.two,.hyp,.lead,.lens{break-inside:avoid;} section{break-inside:auto;} .shead{break-after:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 매주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제3호 &nbsp;·&nbsp; 2026. 10. 07. &nbsp;·&nbsp; 연구 4편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점—제도, 거버넌스, 성과관리, 참여—에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>청년의 자리는 늘었다, 그 자리에 앉는 청년은 누구인가</h2>
+    <p>한국 정부는 정부위원회 청년위원 의무 비율을 10%에서 20%로 올리고, 청년정책조정위원회에 청년이 직접 사업을 제안하는 전문위원회 6개 분과 60명을 두기로 했습니다. EU 이사회는 약 4만 명이 참여한 청년대화 11차 결과를 결의로 채택했고, UN의 Youth2030 보고서는 "자리가 곧 권한은 아니다"라고 썼습니다. 자리가 늘수록 묻게 되는 질문이 있습니다. 그 자리에 앉는 청년은 누구이고, 무엇을 대표하는가. 이번 호는 한국의 청년참여기구를 들여다본 최근 연구 두 편에서 출발합니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">10%→20%</div><div class="c">정부위원회 위촉직 중 청년위원 의무 비율<br>(청년기본법 19–34세). 제2차 기본계획 과제, 2026년 시행령 개정으로 추진</div></div>
+    <div class="cell"><div class="n">약 4만 명 · 24개</div><div class="c">EU 청년대화 11차 사이클 참여 청년 수와<br>도출된 권고 수(결의문에 연령 정의 없음)</div></div>
+    <div class="cell"><div class="n">14%→42%</div><div class="c">'의미 있는 청년참여' 기관 정책을 갖춘 UN 기구 비율,<br>2021→2025(UN청년사무소 문서 기준 15–35세)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 3편(국내 2 + 국제 1) + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.18333/KPAR.59.3.61">청년정책참여기구의 협력적 거버넌스 운영에 관한 연구: 시흥시 청년정책네트워크를 중심으로</a></h3>
+      <div class="cite">정보영·이상엽·정문기(2025), 『한국행정학보』 59(3), 61–90. 한국행정학회(KCI 우수등재). DOI 10.18333/KPAR.59.3.61 · RISS(m.riss.kr) 상세 페이지에서 서지·초록·키워드 확인 · 본문은 미열람</div>
+      <div class="body">기초지자체 청년참여기구가 실제로 어떻게 굴러가는지를 <b>Ansell &amp; Gash(2008)의 협력적 거버넌스 분석틀</b>로 들여다본 단일 사례연구다. 시흥시 청년정책네트워크는 정책위원회와 협의체의 이중 구조로, 행정·위원회·협의체 등 여러 이해관계자가 네트워크 활동에 참여한다. 저자들은 참여자 간 협력을 이끌어내는 과정에서 <b>제도적 결핍</b>이 드러난다고 보고, 교육 프로그램 강화와 메타거버넌스 관점의 체계적 정책 개발을 제언한다. 국내 청년참여기구 연구가 대개 조례·현황 기술에 머물던 데 비해, 거버넌스 이론틀로 운영 과정을 분석한 점이 드물다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;시흥은 청년정책 선도 지자체로 꼽히는 곳이라 사례 선택 자체에 편향이 있을 수 있고, 한 곳의 결과를 다른 기초지자체로 옮기기 어렵다. Ansell &amp; Gash 틀은 '협력의 질'을 보는 틀이지 <b>'누가 참여하는가'</b>를 재는 틀이 아니어서, 이번 호의 물음인 대표성은 직접 다뤄지지 않는다. 면접 대상이 현직 위원·담당자 중심이라면, 성과 한계의 원인이 운영 미숙이 아니라 참여자 구성의 쏠림일 가능성(경쟁 가설)은 설계상 걸러지지 않는다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.18333/kpar.59.4.269">서울시 자치구 청년참여기구 간 정책 확산 구조 탐색: 지수형 랜덤 그래프 모형(ERGM)을 활용한 정책 제안 유사성 네트워크 분석</a></h3>
+      <div class="cite">이단·기남훈(2025), 『한국행정학보』 59(4), 269–304. DOI 10.18333/kpar.59.4.269 · Crossref 레코드(제목·저자·권호·쪽)와 RISS 상세 페이지로 이중 확인 · 초록 확보, 본문 미열람</div>
+      <div class="body">서울시 25개 자치구 청년참여기구가 낸 <b>정책 제안문</b>을 코사인 유사도로 연결해 '제안 유사성 네트워크'를 만들고, 지수형 랜덤 그래프 모형(ERGM)으로 어떤 요인이 연결을 만드는지 추정했다. 삼자구조를 통한 간접 연결과 <b>기구별 제안량</b>이 네트워크 형성에 유의했고, 자치구의 청년인구 집중도와 지리적 인접성은 유의하지 않았다. 저자들은 제안의 확산이 공간적 근접성보다 구조적 연결성과 생산 역량에 이끌린다고 읽고, 청년참여기구를 학습과 경쟁이 교차하는 정책 생산의 장으로 해석한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;제안이 서로 닮았다는 것이 곧 학습·확산은 아니다. 서울시의 공통 운영 지침, 같은 수탁기관, 주거·일자리라는 공통 의제가 유사성을 만들었을 수 있다(경쟁 가설). 횡단면 ERGM이라 인과의 방향도 가릴 수 없다. 다만 '청년인구가 많은 구'가 아니라 '제안을 많이 내는 기구'가 중심이 된다는 결과는, 참여기구의 산출이 <b>활동적인 소수</b>에 의해 좌우될 수 있음을 간접적으로 보여 준다—대표성 논의에 긴장을 주는 발견이다. 최근 질적 연구로는 대구 청년정책네트워크를 분석해 "제도적으로 보장된 참여가 권력의 실질적 분산으로 이어지지 못하는 형식적·절차적 참여"라고 결론 낸 강지원 외(2026, 『사회과학 담론과 정책』 19(1), 327–354; RISS 서지·초록 확인, DOI 미표기)가 있다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1016/j.childyouth.2025.108738">Between promise and practice: a scoping review of the democratic outcomes of youth participation in local governance</a></h3>
+      <div class="cite">Ramos, F., Tavares, A. F. &amp; da Cruz, N. F.(2026), <i>Children and Youth Services Review</i> 181, 108738. DOI 10.1016/j.childyouth.2025.108738 · 오픈액세스(CC BY) · LSE Research Online의 출판본 PDF와 Crossref로 확인 · 연령 정의: 아동과 청년을 포괄, 30세 이하</div>
+      <div class="body">24개국 48편의 실증연구(1969–2023, Scopus·Web of Science)를 대상으로, 지방정부 청년참여의 결과를 개인·공동체·정부 수준으로 나눠 집계한 <b>스코핑 리뷰</b>다. 참여의 근거를 규범적(권리)·도구적(정책 개선)·실질적(역량·시민성·임파워먼트)으로 구분하고, 대부분의 연구가 긍정과 부정의 결과를 함께 보고한다는 점에서 <b>참여 과정의 설계</b>가 경험과 영향을 좌우한다고 본다. 정부 수준에서는 '숙의'가 부정적으로 보고된 비율(52.1%)이 가장 높았고, '대표성'도 41.7%가 부정적이었다. 취약한 처지의 청년은 참여 과정에서 자주 배제된 채로 남는다. 결론은 참여를 당연한 민주적 선으로 전제하지 말고 제도 설계의 논리, 게이트키핑, 긍정적 결과의 조건부성을 따져 보라는 것이다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;효과크기가 아니라 '보고된 결과의 빈도'를 센 것이므로, 긍정·부정 비율은 코딩 기준과 출판 편향에 좌우된다. 1차 연구 대부분이 소규모 질적 사례라 이미 활동적인 청년이 응답하는 선택편향이 리뷰에 그대로 옮겨진다. 부정적 결과가 참여 설계 탓인지, 지방정부 자체의 권한·재원 부족 탓인지도 분리되지 않는다. EU 청년대화를 민족지로 관찰해 '순응하는 청년의 목소리'를 만들어 내는 통치 기술로 읽은 Pušnik(2023, <i>YOUNG</i> 31(2), 124–141; DOI 10.1177/11033088221150323)는 같은 현상의 다른 독해다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1080/01944366908977225">A Ladder of Citizen Participation</a></h3>
+      <div class="cite">Arnstein, S. R.(1969), <i>Journal of the American Institute of Planners</i> 35(4), 216–224. DOI 10.1080/01944366908977225 · Crossref·미국계획협회(APA) 자료로 서지 확인 · 원문 초록 미확보, 요약은 리포지터리 요약과 통설 기준, 발행 전 원문 재확인 대상</div>
+      <div class="body">참여를 '하느냐 마느냐'가 아니라 <b>시민이 결정에 행사하는 권력의 크기</b>로 나눈 글이다. 조작(manipulation)과 치료에서 시작해 정보 제공·자문·회유(placation)를 거쳐 동반자 관계·권한 위임·시민 통제로 올라가는 여덟 단의 사다리를 제시했고, 중간의 세 단을 <b>형식적 참여(tokenism)</b>라 불렀다. 도시재생과 Model Cities 같은 미국 연방사업의 사례가 바탕이다. Hart(1992)의 아동참여 사다리(UNICEF Innocenti Essays No. 4)가 이를 아동·청년에 옮겼다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;사다리는 '얼마나 많은 권력'을 묻지 '누가 그 권력을 쥐는가'는 묻지 않는다. 위촉 비율을 올리는 정책은 사다리의 어느 단에 있는가—자문인가, 회유인가, 동반자 관계인가. 그리고 같은 단에서도 앉는 사람이 달라지면 대표성은 달라진다. 이 글이 50년 넘게 읽히는 이유와 한계가 같은 자리에 있다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 4건 + 국내 1건</span></div>
+    <ul class="news">
+      <li><b>[국내] 정부위원회 청년위원 의무 비율 20%, 청년정책조정위원회 전문위원회 설치.</b> 국무조정실 「제2차 청년정책 기본계획('26~'30)」(2025. 12. 26.)은 10대 과제로 "청년위원 위촉비율 10% → 20% 상향 추진('26년초 청년기본법 시행령 개정)"과 "청년들이 직접 사업을 제안·수립할 수 있도록 6개 분과 60명"의 전문위원회 설치·운영을 적었다(2025년 기준 청년위촉 정부위원회 227개, 청년기본법 19–34세). 온통청년의 위원회 구성 페이지는 위촉직의 30%를 청년으로 위촉하는 청년정책조정위원회 아래 일자리·교육·주거·생활·참여·권리·기타 6개 분야 전문위원회(각 위원장 포함 10명 이내)를 적는다. 시행령 개정안이 4월 국무회의를 거쳐 4월 14일 시행됐고 대상이 중앙 227개·광역 2,496개 위원회라는 보도(국무조정실 발표 전재)가 있으나, 법령 원문과 전문위원 선발 방식·경쟁률은 이번 호에서 확인하지 못했다. 온통청년 법령 페이지는 2023년 9월 개정본(일반 위원회 1/10, 청년정책 주관 위원회 3/10)을 보여 준다. <span class="src"><a href="https://www.opm.go.kr/_res/opm/etc/opm_youth_plan2.pdf">기본계획 원문</a> · <a href="https://www.youthcenter.go.kr/youthCommittee/ythCmtOrganization/ythCmtOrgan">온통청년 위원회 구성</a> · <a href="https://www.youthcenter.go.kr/youthPolicy/ythPlcyRaw/ythPlcyRawMain">온통청년 법령</a></span></li>
+      <li><b>[국제] EU 이사회, 청년대화 11차 사이클 결과 결의 채택(5. 11.).</b> 교육·청년·문화·체육 이사회는 2025년 1월–2026년 6월 폴란드·덴마크·키프로스 의장국 트리오가 진행한 EU 청년대화 11차 사이클(주제: 유럽청년목표 1 'EU와 청년을 잇다') 결과 결의와, EU 청년전략 작업계획 2025–2027 개정 결의를 채택했다. 결의 초안에 따르면 회원국·후보국에서 약 4만 명이 협의에 참여했고 그중 90% 이상이 첫 참여자였으며, 루블린·코펜하겐·니코시아 세 차례 EU 청년회의에서 24개 권고가 나왔다(결의문에 연령 정의 없음). 권고의 뼈대는 학교 시민교육, 정책 결정 시 '청년 체크', 청년과 결정권자 사이의 공식 대화 기제, 구속력 있는 참여 기준이다. 같은 날 각료들은 2027년 이후 청년전략의 참여·이행·영향을 토론했다. <span class="src"><a href="https://www.consilium.europa.eu/en/meetings/eycs/2026/05/11/">이사회 회의</a> · <a href="https://data.consilium.europa.eu/doc/document/ST-8310-2026-INIT/en/pdf">결의 초안(ST 8310/26)</a></span></li>
+      <li><b>[국제] UN 「Youth2030 진행보고서 2026」—"자리는 권한이 아니다".</b> 132개 UN 국가팀과 50개 UN 기구의 자료로 8개 핵심성과영역을 평가한 제6판이자 2단계(2025–2030)의 첫 보고서다. '의미 있는 청년참여'를 위한 기관 정책을 강화한 UN 기구 비율은 2021년 14%에서 2025년 42%로 올랐고, 국가팀의 참여 절차도 20%p 개선됐다. 그러나 UN청년사무소는 "presence is not power, consultation is not co-ownership"라며 결정권 없는 참여를 짚고, 우선순위 설정·자원 배분·책무성에서의 실질 영향을 재는 쪽으로 옮기겠다고 썼다. 「미래를 위한 협약」 행동 37(d)에 따라 올해 출범한 '의미 있는 청년참여 핵심원칙'(11개, 비구속)이 제도적 배경이다(UN청년사무소 문서의 청년은 15–35세). <span class="src"><a href="https://www.un.org/youthaffairs/en/news/participation-power-reflections-2026-youth2030-progress-report">UN청년사무소</a> · <a href="https://www.un.org/youthaffairs/en/news/opening-new-doors-meaningful-youth-participation-ministerial-breakfast-2026-ecosoc-youth-forum">ECOSOC 청년포럼</a></span></li>
+      <li><b>[국제] 영국, 투표연령 16세 법안 하원 통과·상원 심사 중.</b> 영국 의회선거와 잉글랜드·북아일랜드 지방선거의 투표연령을 18세에서 16세로 낮추는 「국민대표법안(Representation of the People Bill)」이 9월 2일 하원 3독을 411 대 102로 통과해 9월 14일 상원 2독을 마쳤고, 위원회 단계에 있다(10월 5일 기준, 국왕 재가 전). 정부 정책요약은 16·17세의 모든 영국 선거 투표권, 14세부터 사전 등록, 16세 미만의 공개 선거인명부 비게재를 적는다. 정부가 의뢰한 조사(14–17세 3,500여 명)에서 잉글랜드 16·17세의 92%가 인정 신분증이나 실물 은행카드를 가진 것으로 나타났고, 학교에서 투표 준비 교육을 받았다는 응답은 절반에 못 미쳤다. 신규 유권자 규모와 적용 시점은 정부 문서에서 확인되지 않는다. <span class="src"><a href="https://bills.parliament.uk/bills/4080">법안 진행</a> · <a href="https://www.gov.uk/government/publications/representation-of-the-people-bill-policy-summaries/votes-at-16">정책요약</a> · <a href="https://www.gov.uk/government/publications/votes-at-16-research/votes-at-16-research-executive-summary">조사 요약</a></span></li>
+      <li><b>[국제] 일본 こども家庭庁 「こども若者★いけんぷらす」 2025년도 활동보고.</b> 정부가 제시한 20개 주제에 대해 연인원 895명의 아동·청년이 의견을 냈다(등록 자격: 초등학교 1학년부터 20대). 상시 등록형 의견수렴 플랫폼이라는 점에서 한국의 위촉형 참여기구와 설계가 다르다. 등록자 총수와 의견이 정책에 반영된 결과는 공개 페이지에 없다. <span class="src"><a href="https://www.cfa.go.jp/policies/iken-plus/katsudo-hokokusho">こども家庭庁</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 참여·대표성</span></div>
+    <div class="lens">
+      <div class="h">비율은 법이 정하고, 명단은 공모가 정한다</div>
+      <h3>청년위원 20%는 무엇을 대표하는가</h3>
+      <p>대표성 논의의 오래된 구분을 빌리면, 위촉 비율 규정은 <b>기술적 대표성</b>(구성원이 누구를 닮았는가)을 연령 한 축에서 보장하는 장치다. 19–34세라는 연령 칸만 채우면 규정은 충족되고, 그 칸 안에서 누가 앉는지는 공모와 청년인재DB, 추천이 정한다. 그런데 이번 호의 연구들은 그 '안'을 가리킨다. 서울 자치구 참여기구의 산출은 청년인구가 아니라 제안을 많이 내는 기구에 쏠렸고(이단·기남훈), 대구 네트워크의 참여는 권한 분산으로 이어지지 못했으며(강지원 외), 24개국 리뷰에서 대표성은 10건 중 4건이 부정적으로 보고됐다(Ramos 외). 제1차 기본계획 시기의 청년정책위원회를 두고 "실국장급 공무원 비중이 높아 사실상 청년이 아닌 사람이 다수"라고 지적한 오수연 외(2021, 『현대사회와 행정』 31(4))의 문제는 비율 규정으로 풀린다. 그다음 문제—<b>참여하는 청년이 청년 일반과 얼마나 다른가</b>—는 아직 아무 자료도 답하지 않는다. 국무조정실이 위촉 현황을 점검하겠다고 했으니, 점검표에 성별·학력·고용상태·지역 같은 칸이 있는지가 다음 확인 지점이다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;비율 규정은 목표가 아니라 문턱이고, 문턱을 두는 정책에 대표성의 완결을 요구하는 것은 과한 주문이다. 위원회가 필요로 하는 것은 '평균적 청년'이 아니라 안건을 읽고 말할 수 있는 청년이며, 그렇다면 활동적인 소수가 모이는 것은 결함이 아니라 설계의 결과다. 기술적 대표성을 밀어붙이면 추첨제처럼 선발을 무작위화해야 하는데, 그 경우 전문성과 지속성이 줄어 Arnstein의 사다리에서 오히려 아래 단으로 내려갈 수 있다. 어느 쪽이 맞는지는 참여기구의 목적—<b>의견 수렴인가, 결정 공유인가</b>—을 먼저 정해야 가려진다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">청년참여기구는 청년을 대표하는가, 참여한 청년을 대표하는가</span></div>
+    <div class="setup">청년위원의 자리를 늘리는 정책은 "청년의 목소리를 정책에 반영한다"는 논리에 선다. 반론은 그 목소리가 <b>청년 일반</b>의 것인지, 공모에 응하고 회의에 나올 수 있는 <b>특정 청년</b>의 것인지 묻는다. 두 독해를 근거·대상·정책 함의의 세 축에서 나란히 놓는다. 국제 사례는 EU 청년대화, 한국 사례는 정부위원회 청년위원과 지자체 청년참여기구다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">대표한다</div>
+        <p class="pt"><b>근거</b>연령 칸이 비어 있던 위원회에 청년이 들어가는 것 자체가 의제를 바꾼다. 국회 청년의원이 청년 관련 법안 발의에 더 활발했다는 분석(정회옥 2022, 『동서연구』 34(4))은 기술적 대표성이 실질적 대표성으로 이어질 수 있음을 시사한다.</p>
+        <p class="pt"><b>대상</b>EU 청년대화 11차 참여자의 90% 이상이 첫 참여자였다. 문턱을 넓히면 새 얼굴이 들어온다.</p>
+        <p class="pt"><b>함의</b>비율 상향과 전문위원회 신설은 이 독해 위에 있다. 다음 단계는 결정권—자문에서 의결로.</p></div>
+      <div class="col b"><div class="ch">선택된 소수다</div>
+        <p class="pt"><b>근거</b>서울 자치구 참여기구의 산출은 제안량이 많은 기구에 쏠렸고(이단·기남훈), 대구의 참여는 형식적·절차적이었다(강지원 외). 리뷰에서 취약 청년은 자주 배제된 채 남는다(Ramos 외).</p>
+        <p class="pt"><b>대상</b>공모·추천으로 들어오는 청년은 시간·정보·네트워크를 가진 청년이다. 첫 참여자가 많다는 것은 돌아오지 않는다는 뜻일 수도 있다.</p>
+        <p class="pt"><b>함의</b>비율을 올릴수록 '청년이 동의했다'는 정당화는 강해지고, 동의한 청년이 누구였는지는 묻기 어려워진다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 자리가 늘면 무엇이 달라지는가</div>
+      <p><b>H1 기술적 대표성</b>연령 구성이 바뀌면 의제와 의결이 바뀐다<span class="pred">맞다면 → 20% 시행 전후로 위원회 안건·의결 내용에 청년 의제의 비중이 는다.</span></p>
+      <p><b>H2 자기선택</b>참여자는 청년 일반과 체계적으로 다르다<span class="pred">맞다면 → 위원 구성(학력·고용·지역)이 청년 인구와 다르고, 기구 간 제안이 서로 닮는다.</span></p>
+      <p><b>H3 제도 설계</b>결과는 구성이 아니라 권한·환류 구조가 정한다<span class="pred">맞다면 → 같은 구성이라도 의결권·피드백 의무가 있는 기구에서만 제안 반영률이 오른다.</span></p></div>
+    <div class="close">세 가설은 서로 배타적이지 않고, 자료로 가를 수 있다. ① 20% 시행 전후 위원회 의결 내용의 변화(H1) ② 위촉 청년위원·참여기구 위원의 인구학적 구성 공개(H2) ③ 제안 건수 대비 반영 건수와 환류 기록(H3). 한국에서는 두 번째가 가장 먼저 가능하다—국무조정실의 위촉 현황 점검표에 몇 개의 칸을 더하면 된다. 이 브리프는 그 점검 결과가 공개되는지를 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 매주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · 청년정책 전담부처는 필요한가—조정기구와 집행부처 사이, 집행·전달체계의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+</body></html>
