@@ -7,3 +7,4 @@
   set(lang);
   document.addEventListener('click',function(e){var b=e.target.closest('.langbtn button'); if(b) set(b.dataset.l);});
 })();
+window.addEventListener('beforeprint',function(){document.querySelectorAll('details.fold').forEach(function(d){d.open=true;});});

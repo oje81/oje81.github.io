@@ -1,5 +1,5 @@
 :root{
-  --ground:#F3F6F5; --paper:#FFFFFF; --ink:#131C1A; --ink2:#465754; --ink3:#788A87;
+  --ground:#F3F6F5; --paper:#FFFFFF; --ink:#131C1A; --ink2:#394745; --ink3:#788A87;
   --teal:#0E6B5D; --ochre:#8A6516; --rule:#CFD9D6; --tint:#E7EEEC;
   --serif:'Nanum Myeongjo','Noto Serif KR',Georgia,serif;
   --sans:'IBM Plex Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
@@ -33,29 +33,29 @@ nav.toc a.here{color:var(--teal);font-weight:600}
 .contact{margin-top:22px;font-size:.85rem;color:var(--ink2);line-height:1.7}
 .contact a{color:var(--ink2)}
 
-main section{padding-top:8px;margin-bottom:52px}
+main section{padding-top:8px;margin-bottom:68px}
 main section:first-child{margin-bottom:44px}
-h2.sh{font-family:var(--sans);font-size:.78rem;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--teal);margin:0 0 18px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
-.lede{font-family:var(--serif);font-size:1.38rem;line-height:1.55;font-weight:700;margin:0 0 20px;max-width:40em;text-wrap:pretty}
+h2.sh{font-family:var(--sans);font-size:.84rem;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--teal);margin:0 0 22px;padding-bottom:8px;border-bottom:1px solid var(--ink)}
+.lede{font-family:var(--serif);font-size:1.42rem;line-height:1.5;font-weight:700;margin:0 0 20px;max-width:40em;text-wrap:pretty}
 p.body{margin:0 0 14px;max-width:40em;color:var(--ink2)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;padding:0;list-style:none}
 .chips li{font-size:.82rem;padding:3px 10px;border:1px solid var(--rule);background:var(--paper);color:var(--ink2)}
 
 /* timeline — signature: country codes of postings */
 ol.tl{list-style:none;margin:0;padding:0}
-ol.tl li{display:grid;grid-template-columns:118px 44px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.yr{font-family:var(--mono);font-size:.8rem;color:var(--ink3);font-variant-numeric:tabular-nums}
+ol.tl li{display:grid;grid-template-columns:140px 44px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.yr{font-family:var(--mono);font-size:.82rem;color:var(--ink3);font-variant-numeric:tabular-nums;white-space:nowrap}
 .cc{font-family:var(--mono);font-size:.72rem;font-weight:600;color:var(--ochre);border:1px solid var(--ochre);text-align:center;padding:0 2px;line-height:1.6}
 .what b{font-weight:600}
 .what span{display:block;font-size:.88rem;color:var(--ink2)}
 
 ul.pubs{list-style:none;margin:0;padding:0}
-ul.pubs li{padding:10px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:62px minmax(0,1fr);gap:12px;align-items:baseline}
-ul.pubs .t{font-weight:600}
-#projects ul.pubs .t{font-weight:600;font-size:.95rem}
-#projects ul.pubs .v{font-size:.85rem}
-ul.pubs .v{font-size:.88rem;color:var(--ink2)}
-h3.sub{font-size:.95rem;margin:30px 0 4px;color:var(--ink)}
+ul.pubs li{padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:88px minmax(0,1fr);gap:12px;align-items:baseline}
+ul.pubs .t{display:block;font-weight:600;font-size:1rem;line-height:1.5}
+ul.pubs .v{display:block;font-size:.86rem;color:var(--ink3);margin-top:4px;line-height:1.55}
+ul.pubs .role{display:block;font-size:.88rem;color:var(--ink2);margin-top:3px;line-height:1.55}
+ul.pubs .role .kind{font-size:.66rem;vertical-align:1px;margin-right:8px}
+h3.sub{font-size:1rem;margin:34px 0 6px;color:var(--ink)}
 .kind{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:1px;color:var(--teal);border:1px solid var(--teal);padding:0 5px;margin-right:6px;vertical-align:2px}
 
 /* newsletter feature */
@@ -142,6 +142,16 @@ ul.talks .v{display:block;font-size:.88rem;color:var(--ink2)}
 .post figure+.facts{margin-top:0}
 .post h2+figure{margin-top:16px}
 
-/* 약력 목록 안의 기관 홈페이지 링크 */
+/* 약력·논문 목록 안의 링크: 글자색 유지, 옅은 밑줄 */
 .tl .what a,.pubs .t a{color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-decoration-thickness:1px;text-underline-offset:3px}
 .tl .what a:hover,.pubs .t a:hover{color:var(--teal);text-decoration-color:currentColor}
+
+/* 목록 항목: 제목 한 줄, 서지·역할·발주처는 다음 줄 (시안 2) */
+p.body{font-size:1.0625rem;line-height:1.8;max-width:36em;text-wrap:pretty}
+/* 접힌 목록 */
+details.fold summary{cursor:pointer;font-weight:600;font-size:.95rem;color:var(--teal);padding:12px 0 4px;list-style:none}
+details.fold summary::-webkit-details-marker{display:none}
+details.fold summary::before{content:"+";display:inline-block;width:1.1em;font-family:var(--mono)}
+details.fold[open] summary::before{content:"–"}
+details.fold summary:hover{text-decoration:underline;text-underline-offset:3px}
+@media (max-width:520px){section{margin-bottom:52px}p.body{font-size:1rem}}
