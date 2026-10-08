@@ -228,6 +228,7 @@ nav.toc a.sub.here{color:var(--ink);font-weight:600}
 .reading table.score tr:last-child td{border-bottom:0}
 .reading table.score th{font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--acc);background:var(--accbg);font-weight:700}
 .reading table.score td:first-child{font-weight:700;white-space:nowrap}
+@media (max-width:640px){.reading table.score td:first-child{white-space:normal}.reading table.score th,.reading table.score td{padding:8px 8px;overflow-wrap:anywhere}}
 .reading table.score .dots{font-family:var(--mono);color:var(--acc);letter-spacing:2px;white-space:nowrap;font-size:1rem}
 @media (max-width:900px){
   .reading .wrap{grid-template-columns:minmax(0,1fr);gap:24px}
