@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>글로벌 청년정책 브리프 제5호</title>
+<style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    .two,.hyp,.lead,.lens{break-inside:avoid;} .item,section{break-inside:auto;} .shead{break-after:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 매주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제5호 &nbsp;·&nbsp; 2026. 10. 19. &nbsp;·&nbsp; 연구 4편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건 · 읽기 가이드 1편</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점(제도, 거버넌스, 성과관리, 참여)에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>청년영향평가와 청년체감도지수: 측정이 정책을 어떻게 바꾸는가</h2>
+    <p>국무조정실은 8월 업무보고에서 청년영향평가와 청년체감도지수를 도입하겠다고 밝혔고, 국회에는 7월에 청년영향평가를 의무화하는 청년기본법 개정안이 제출되어 정무위원회에 계류 중입니다. 독일은 2017년부터 연방정부 법안을 12–27세에 미치는 영향으로 사전 점검하는 청년체크(Jugend-Check)를 운영해 왔고, 유럽연합 집행위원회는 2025년 업무계획의 12개 과제에 유스체크를 적용했으며, 일본은 5월에 15–39세 10만 명 조사를 시작했습니다. 측정 도구가 정책을 바꾸는지, 아니면 정책에 맞추어 측정이 먼저 바뀌는지를, 17개 시·도 시행계획의 성과지표를 분석한 국내 연구와 대구 청년기본조례의 변천, 그리고 스웨덴 청년보장의 성과 보고가 바뀐 과정을 추적한 연구로 읽습니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">77.2%</div><div class="c">17개 시·도 2023년 청년정책 시행계획 1,528개 사업 가운데 성과측정 역설이 한 가지 이상 나타난 비율<br>(청년기본법 19–34세 · 시·도 조례는 다수가 39세까지 · 한이정·이정욱 2025)</div></div>
+    <div class="cell"><div class="n">490건 → 약 100건</div><div class="c">독일 연방 청년체크, 제20대 입법기에 사전 점검한 법안 수와 발간한 체크 수<br>(독일 청년체크 대상 12–27세 · 3차 보고서 2025. 9.)</div></div>
+    <div class="cell"><div class="n">약 10만 명</div><div class="c">일본 こども家庭庁가 5월 29일 시작한 '젊은 세대 종합조사' 표본<br>(일본 若者世代 15–39세 · 2025년도 추경 0.5억 엔)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 3편(국내 2 + 국제 1) + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.26847/mspa.2025.35.2.1">성과측정 역설(PMX)의 통제, 무엇이 필요한가: 청년정책을 중심으로</a></h3>
+      <div class="cite">한이정·이정욱(2025), 『현대사회와 행정』 35(2), 1–32. 한국국정관리학회(KCI 등재). DOI 10.26847/mspa.2025.35.2.1 · RISS(m.riss.kr) 상세 페이지, Semantic Scholar DOI 레코드, doi.org 해석(교보 스콜라)으로 삼중 확인 · 초록 확보, 본문 미열람</div>
+      <div class="body">성과측정 역설(performance measurement paradox)이란 성과를 측정하는 단계에서 의도적이든 비의도적이든 왜곡이 생기는 현상이다. 정책을 대표하지 못하는 지표를 고르거나, 도전적이지 않은 목표를 세우거나, 결과 대신 투입과 과정을 재는 경우가 여기에 든다. 저자들은 17개 광역자치단체의 <b>2023년 청년정책 시행계획에 실린 1,528개 사업</b>을 대상으로 이 역설의 실태를 진단하고, 위계선형모형으로 사업 수준과 광역 수준의 관리 요인이 역설에 미치는 영향을 분석했다. 그 결과 <b>전체 사업의 77.2%에서 한 가지 이상의 역설 유형</b>이 나타났다. 사업 수준에서는 대상 모호성과 사업 자율성이, 광역 수준에서는 정책관리조직과 전달체계가 역설에 유의한 영향을 미치는 것으로 확인됐다. 저자들은 정책 대상을 분명히 하고, 청년전담부서의 권한을 강화하며, 광역별로 청년센터를 두는 조직 기반이 필요하다고 제안한다. 청년정책을 다룬 국내 연구가 대체로 전달체계나 참여기구를 분석해 온 데 비해, 이 연구는 시행계획의 성과지표 자체를 자료로 삼아 측정의 품질을 수량화했다는 점에서 다르다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;초록만으로는 효과의 방향, 곧 자율성이 높을수록 역설이 늘어나는지 줄어드는지를 알 수 없다. 역설의 판정 기준이 연구자의 코딩에 기대므로, '도전적이지 않은 목표'의 경계가 어디인지에 따라 77.2%는 달라질 수 있다. 시행계획은 광역이 중앙에 제출하는 문서이므로, 지표의 왜곡은 지방정부의 관리 역량보다 중앙의 보고 양식과 공모사업 규격에서 비롯됐을 가능성도 남는다. 그래도 이 수치는 청년체감도지수와 청년영향평가가 얹힐 바탕, 곧 지금의 성과지표 체계가 어떤 상태인지를 보여 준다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://m.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&amp;control_no=47913a2db7fa6dd2c85d2949c297615a">청년기본조례 제·개정 과정으로 본 대구 청년정책의 성격: 서울, 광주와의 비교</a></h3>
+      <div class="cite">천용길·공다연·신주연·정윤태·이상직(2026), 『사회과학 담론과 정책』 19(1), 255–297. 경북대 사회과학연구원(KCI 등재). DOI 없음 · RISS 상세 페이지와 매일신문(7. 24.) 보도로 교차 확인(DBpia·KCI는 자동 접근 불가) · 초록 확보, 본문 미열람</div>
+      <div class="body">저자들은 청년기본조례를 지방정부 청년정책의 제도적 텍스트로 보고, 2015년에 나란히 조례를 제정한 대구, 서울, 광주의 제·개정 과정을 구성주의 정책분석으로 비교했다. 문제를 어떻게 규정하는지, 어떤 정책수단을 얼마나 구체적으로 두는지, 집행과 전달을 어떻게 짜는지가 분석 축이다. 서울은 권리 보장과 참여 거버넌스의 제도화를 중심으로 정책수단과 집행 장치를 빠르게 넓혔고, 광주는 정착과 생활 의제를 강화하며 조항을 선별적으로 더했다. 대구는 제정은 빨랐으나 개정 과정에서 <b>권리·참여 장치의 강제력과 정책수단의 구체성이 제한적</b>이었다. 청년을 권리의 주체보다 지역 정착과 유출 방지의 대상으로 규정하고, 핵심 수단을 재량 규정으로 두며, 사업과 예산을 계획·집행 단계로 미루는 특징이 나타났다. 보도에 따르면 10년 동안의 개정 횟수는 서울 24회, 광주 11회, 대구 9회였다. 대구 전문가 심층면담은 보조 자료로 쓰였다. 국내 청년조례 연구가 조문의 유무를 세는 데 머물렀던 것과 달리, 조례가 '청년 문제'를 무엇으로 정의하는지를 변천 과정에서 추적했다는 점이 다르다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;세 도시의 차이를 정치 지형과 인구 위기 의제로 설명하지만, 조례 개정 횟수는 의회의 입법 관행이나 집행부의 조례 정비 주기로도 설명될 수 있다. 재량 규정이 많다는 사실이 곧 정책 의지의 부족을 뜻하지는 않는다. 조례보다 시행계획과 예산에 내용을 두는 방식이 대구에서는 오히려 유연성으로 작동했을 가능성을 저자들은 따로 검증하지 않는다. 면담이 대구에만 있어 서울·광주의 해석은 문서에 기대고 있다. 이번 호의 쟁점과 관련해서는, 청년영향평가 같은 측정 장치가 조례에 '할 수 있다'로 들어가는지 '하여야 한다'로 들어가는지가 그 뒤의 변천을 좌우한다는 함의가 남는다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1111/padm.12720">Collaborative gaming: When principals and agents agree to game the system</a></h3>
+      <div class="cite">Pierre, J. &amp; de Fine Licht, J.(2021), <i>Public Administration</i> 99(4), 711–722. DOI 10.1111/padm.12720 · 오픈액세스 · Semantic Scholar DOI 레코드와 전문 색인(Scholar Gateway)으로 이중 확인 · 전문 확보 · 연령 정의: 스웨덴 청년보장 18–24세 · <a href="https://claude.ai/artifact/MVNaTXVPcawB6pbH3CbQmP">읽기 가이드 →</a></div>
+      <div class="body">성과 자료의 조작, 곧 게이밍(gaming)은 보통 집행기관이 상급 부처를 속이는 행동으로 연구돼 왔다. 저자들은 부처와 집행기관이 <b>함께 성과 목표나 측정 방식을 손보는 '협력적 게이밍'</b>을 제안하고, 스웨덴 고용부와 공공고용서비스(PES)의 두 사례로 이를 보여 준다. 첫 사례가 청년보장이다. 2014년 총선에서 사회민주당은 18–24세 실업자에게 등록 후 90일 안에 일자리, 인턴십 또는 훈련을 제공하는 '90일 보장'을 가장 중요한 공약으로 내걸었다. 이행은 등록 1일과 91일의 고용 상태를 비교해 측정하는 것이 통례였다. 그런데 2016년 6월 PES 내부 메모는 <b>90일 안에 어떤 일자리나 훈련 제안이든 있었으면 기간에 관계없이 보장 이행으로 기록</b>하도록 했다. 이력서 작성 이틀 과정도 이행으로 집계됐고 성공률은 크게 올라갔다. PES 고위 간부는 저자들에게 "우리 통계로는 청년 실업자에게 무엇을 제공했는지 계속 추적할 수 없었다. 정부에 우리가 무엇을 했는지 어떻게 보여 주겠는가"라고 말했고, 부처가 이를 알고 관심을 보여 공식 임무가 됐다고 밝힌다. 둘째 사례는 2008–2013년 중도우파 정부가 급여 삭감 정책의 효과를 입증하려고 지표를 늘린 끝에 실패한 과정이다. 저자들은 정책의 현저성이 높을수록 부처가 유리한 성과 보고를 원하는 유인이 커지고, 성과 보고의 정치적 가치가 정책을 재평가하는 데 쓰이는 가치보다 앞서게 된다고 본다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;사례는 두 건이고 인터뷰는 여섯 건이어서, 저자들도 밝히듯 이 유형이 얼마나 흔한지는 알 수 없다. 90일 안의 '어떤 제안이든' 집계하는 방식은 조작이 아니라 측정 대상을 결과에서 서비스 제공으로 바꾼 정당한 재정의였다는 반론이 가능하다. 유럽연합 청년보장의 공식 지표도 '4개월 안의 제안'을 세므로 스웨덴만의 일탈은 아니다. 다만 그 재정의가 공개 토론 없이 내부 메모로 이뤄졌다는 점은 남는다. 한국에 대입하면, 청년체감도지수의 산식을 누가 정하고 누가 바꿀 수 있는지가 지수의 값보다 먼저 물어야 할 질문이 된다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1016/0149-7189(79)90048-X">Assessing the impact of planned social change</a></h3>
+      <div class="cite">Campbell, D. T.(1979), <i>Evaluation and Program Planning</i> 2(1), 67–90. DOI 10.1016/0149-7189(79)90048-X · doi.org 해석과 Semantic Scholar 레코드(2010년 <i>JMDE</i> 재수록본, 인용 820회)로 이중 확인 · 초록 확보(재수록본), 본문 미열람 · 요약은 원문 재확인 대상</div>
+      <div class="body">계획된 사회 변화의 효과를 평가하는 방법론을 다룬 글로, 이른바 '캠벨의 법칙'이 여기서 나왔다. 어떤 계량적 사회 지표든 사회적 의사결정에 많이 쓰일수록 왜곡 압력에 더 노출되고, 그 지표가 감시하려던 사회 과정을 더 왜곡하기 쉽다는 명제다. 캠벨은 평가 방법론이 체제와 정부를 넘어 공유될 수 있다고 보면서도, 지표가 행정의 목표가 되는 순간 지표와 현실이 멀어진다고 경고한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;이 법칙은 측정을 하지 말라는 뜻이 아니라, 지표를 한 가지에 걸지 말고 여러 지표를 쓰며 조작 유인을 설계 단계에서 줄이라는 뜻으로 보통 읽는다. 청년체감도지수가 부처 평가나 예산과 연동되는 순간 이 법칙의 조건이 갖춰진다. 반대로 어떤 연동도 없는 지수는 왜곡되지 않는 대신 아무것도 바꾸지 못할 수 있다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 2건</span></div>
+    <ul class="news">
+      <li><b>[국내] 청년영향평가: 정부는 '도입', 국회에는 의무화 법안(의안번호 2219871, 7. 9., 정무위 계류).</b> 국무조정실 8월 5일 업무보고 보도자료는 "청년체감도지수와 청년영향평가를 도입"하겠다고 적었으나 설계와 일정은 담지 않았다(제4호). 이에 앞서 문대림 의원 등 11인은 7월 9일 청년기본법 일부개정법률안을 발의했다. 보도에 따르면 개정안은 중앙행정기관과 지방자치단체가 고용, 교육, 주거, 복지, 금융 등 청년의 권익에 큰 영향을 미치는 주요 정책과 중장기 계획을 수립·변경할 때 청년영향평가를 실시하도록 하고, 평가에 청년과 전문가의 의견을 듣도록 하며, 평가 결과와 반영 여부, 그 사유를 공개하고, 국무총리가 지침을 마련해 청년정책조정위원회가 심의하며, 매년 국회 소관 상임위원회에 실적을 보고하도록 한다. <b>의안 조문은 의안정보시스템 자동 접근이 막혀 열람하지 못했고 보도 2건을 교차했다.</b> 정부의 '도입'이 법률 개정으로 가는지, 지침과 시행계획으로 가는지는 아직 정해지지 않았다. <span class="src"><a href="https://watch.peoplepower21.org/BillDetail/2219871">열려라국회 의안 2219871</a> · <a href="http://www.ihalla.com/article.php?aid=1783645717788060073">한라일보</a> · <a href="https://www.jejunews.com/news/articleView.html?idxno=2226623">제주일보</a> · <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156773494">국조실 보도자료(8. 5.)</a></span></li>
+      <li><b>[국내] 청년기본법 개정안 3건이 같은 상임위에 계류: 지역 격차(3. 6.), 영향평가(7. 9.), 전담기관·예산(7. 22.–23.).</b> 주진우 의원 등 13인의 개정안(2217273)은 거주 지역에 따른 기회 격차 완화를 국가와 지방자치단체의 책무로 두고 가족돌봄청년과 고립·은둔 청년을 취약계층 청년에 명시한다. 김동아 의원의 두 개정안(2220108·2220118)은 보도에 따르면 민간 재단인 청년재단을 국가가 세우는 청년정책진흥원으로 바꾸고, 기획예산처 장관이 예산을 편성할 때 청년정책 기본계획을 존중하도록 한다. 세 법안은 모두 정무위원회 소관위 심사 단계이며, 청년기본법이 2020년 제정 뒤 처음으로 평가, 전달기관, 예산 연동이라는 세 방향의 개정 요구를 동시에 받고 있다. 조문은 모두 미열람이다. <span class="src"><a href="https://watch.peoplepower21.org/BillDetail/2217273">의안 2217273</a> · <a href="https://watch.peoplepower21.org/BillDetail/2220108">2220108</a> · <a href="https://watch.peoplepower21.org/BillDetail/2220118">2220118</a> · <a href="https://www.etoday.co.kr/news/view/2562773">이투데이</a> · <a href="https://biz.heraldcorp.com/article/10815671">헤럴드경제</a></span></li>
+      <li><b>[국제] 독일 청년체크 3차 보고서(9. 23.): 제20대 입법기 법안 490건 사전 점검, 약 100건 발간. 효과 평가는 없다.</b> 연방 청년체크 역량센터(KomJC)는 2017년부터 연방정부 법안이 12–27세에 미치는 영향을 교육·노동, 디지털, 가족, 여가, 정치·사회, 환경·건강의 여섯 생활 영역에서 점검한다. 독립 연구기관(슈파이어 독일행정연구소)이 수행하는 유일한 입법 동반 영향평가라는 점이 특징이다. 2차 보고서(2017–2021)는 543건을 점검해 126건에 청년 관련성이 있다고 보고 체크를 발간했으며, 그 126건이 14개 연방부처 가운데 11개의 법안이었다. 연방 청년장관은 이번 보고서를 받으며 체크의 역할을 "감수성 환기 임무"라고 표현했다. <b>두 보고서의 발표문에는 체크가 법안을 실제로 바꿨는지에 대한 평가가 없다</b>(보고서 본문 미열람). 베를린주는 2024년 4월 주정부 결의에 따라 같은 연구소에 주 차원의 체크 도구 개발을 맡겼고 2025년 10월 결과가 나왔다. 튀링겐주는 2022년부터 무작위로 뽑은 12–27세 50명이 법안을 직접 점검하는 모델사업을 운영해 2024년 3월 결과를 발표했다. <span class="src"><a href="https://www.bmbfsfj.bund.de/bmbfsfj/aktuelles/alle-meldungen/karin-prien-nimmt-bericht-zum-jugend-check-entgegen-270514">연방 가족부(3차 보고서)</a> · <a href="https://familienportal.de/bmbfsfj/aktuelles/alle-meldungen/zweiter-bericht-des-kompetenzzentrums-jugend-check-uebergeben-193480">2차 보고서</a> · <a href="https://www.foev-speyer.de/en/news-details/entwicklung-jugend-check-berlin-projektabschluss/">베를린 도구 개발</a> · <a href="https://www.thueringer-landtag.de/presse/pressemitteilungen/2024/junge-erwachsene-pruefen-gesetzentwuerfe">튀링겐 주의회</a></span></li>
+      <li><b>[국제] 유럽연합: 집행위원회 유스체크를 2025년 업무계획 12개 과제에 적용, 2026년 계획에도 적용 중. 비교 보고서는 "유스체크는 참여 도구가 아니다".</b> 집행위원회는 2022년 '유럽 청년의 해'의 후속 조치로 새 정책 제안이 청년에게 미치는 영향을 점검하는 유스체크를 도입했고, 2025년 업무계획에서는 소비자 의제, 기술 연합, 2027년 이후 다년도 재정계획 등 12개 과제를 청년 협의 대상으로 골랐다. 수단은 집행위원과의 청년정책대화, 시민패널, 공개 협의에서 16–30세 응답에 특별히 주목하는 방식 등이며, 영향평가 문서 자체를 바꾸는 규정은 확인되지 않는다. 한편 교육문화집행기관(EACEA)의 비교 보고서(2024. 7.)는 33개국의 청년 주류화 관행을 살펴, 공식 절차에 방법론을 갖춘 유스체크가 플랑드르, 독일, 프랑스, 오스트리아 네 곳에 있고, 모두 조사·연구에 근거를 두며, 정부 발의 법안을 주로 다루고, <b>청년과 이해관계자 협의는 공식 절차의 일부가 아니라고</b> 정리했다. 저자 인터뷰는 이탈리아, 몰타, 네덜란드가 도입을 준비 중이라고 전한다. 문대림 의원안이 평가에 청년 의견 수렴을 넣은 것과 대비되는 설계다. <span class="src"><a href="https://youth.europa.eu/news/progress-european-commission-youth-check-amplifying-young-voices-eu-policymaking_mt">집행위 유스체크 경과</a> · <a href="https://youth.europa.eu/sites/default/files/inline-files/Overview-of-Commission-Youth-Check-in-2025.pdf">2025년 적용 개요</a> · <a href="https://national-policies.eacea.ec.europa.eu/youthwiki/publications/youth-mainstreaming-youth-impact-assessment-and-youth-checks">EACEA 보고서</a> · <a href="https://eurydice.eacea.ec.europa.eu/news/youth-mainstreaming-youth-impact-assessment-and-youth-checks-interview-one-our-authors">저자 인터뷰</a></span></li>
+      <li><b>[국제] 일본 こども家庭庁, 15–39세 약 10만 명 '젊은 세대 종합조사' 5월 29일 개시. 정책 설계에 앞서 측정부터.</b> 2025년도 추경 0.5억 엔으로 위탁 시행하며, 가족·대인관계·일·돈·주거의 어려움, 지원 인지와 필요, 자존감과 웰빙, 사회 참여 의향을 묻고 'こども若者★いけんぷらす'로도 응답을 받는다. 보고서는 연도 내에 낸다. 2025년 12월 국가·지방 협의 자료는 이 조사를 2026년도부터 본격 시작하는 若者世代 정책의 기초 자료로 자리매김하면서도 수치 목표는 두지 않았다(제4호에서 다룬 実行計画2026의 후속). <span class="src"><a href="https://www.cao.go.jp/kodoku_koritsu/torikumi/yushikisha_arikata/dai6/pdf/siryou2.pdf">조사 개요(EBPM추진실)</a> · <a href="https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/6ad38a7a-4227-45d4-ba59-3babfb0e4f2b/7ecf0eea/20251218_councils_kodomo_seisaku_kyougi_6ad38a7a_03.pdf">국가·지방 협의 자료(2025. 12. 18.)</a> · <a href="https://ryukyushimpo.jp/kyodo/entry-5278912.html">교도통신</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 정책 형성·변천</span></div>
+    <div class="lens">
+      <div class="h">측정 도구는 정책의 결과가 아니라 정책의 입력이다</div>
+      <h3>청년영향평가는 무엇을 바꾸고, 무엇에 맞춰 바뀌는가</h3>
+      <p>정책 형성의 관점에서 보면 청년영향평가와 청년체감도지수는 정책을 평가하는 장치이기 전에 <b>의제를 만드는 장치</b>다. 법안마다 청년 영향을 적어야 하면 부처는 청년을 대상으로 상정하지 않았던 사업에서도 청년을 찾아 적게 된다. 독일에서 체크가 14개 부처 가운데 11개의 법안에 붙었다는 사실이 그 효과를 보여 준다. 그런데 두 차례 보고서의 발표문 어디에도 체크가 법안을 바꿨는지에 대한 평가가 없다는 사실은 두 번째 효과를 가리킨다. 측정 도구는 그 자체가 정책 산출물이 되어 보고서의 수로 성과를 증명하기 시작한다. 한국의 출발점은 더 불리하다. 17개 시·도 시행계획 사업의 77.2%에서 성과측정 역설이 나타났다는 분석(한이정·이정욱)은 새 지표가 얹힐 바탕이 이미 투입 위주의 측정이라는 뜻이고, 스웨덴 사례(Pierre·de Fine Licht)는 지표가 정책 목표에 맞춰 조용히 재정의될 수 있음을 보여 준다. 영향평가를 '하여야 한다'로 쓸지 '할 수 있다'로 쓸지, 결과와 반영 여부를 공개할지, 지수의 산식을 누가 바꾸는지가 평가의 존재 여부보다 뒤의 변천을 더 크게 좌우한다고 본다(천용길 외). 그래서 지금 물어야 할 것은 영향평가의 도입 여부가 아니라 세 가지 설계다. 평가 결과가 법안 심사와 예산 편성의 어느 단계에서 반영되는지, 체감도지수가 부처 평가와 연동되는지, 그리고 지표의 변경 절차가 공개되는지다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;측정이 정책을 왜곡한다는 서술은 측정이 없을 때의 상태를 과소평가한다. 2,500여 개 법률을 추적한 유럽 4개국 연구(Brenner &amp; Fazekas 2021, <i>Governance</i> 36(1), 2023년 인쇄)는 사전 영향평가를 거친 법률이 정권 교체 뒤에도 덜 바뀌었다고 보고한다. 영향평가는 정책을 바꾸는 도구라기보다 정책의 변천을 늦추는 도구일 수 있고, 청년정책처럼 정부마다 명칭과 사업이 바뀌어 온 분야에서는 그 안정화 효과가 왜곡 비용보다 클 수 있다. 77.2%라는 수치도 측정의 실패가 아니라 측정이 처음으로 문제를 드러낸 결과로 읽을 수 있다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">청년영향평가와 청년체감도지수: 측정이 정책을 어떻게 바꾸는가</span></div>
+    <div class="setup">도입론은 청년정책이 48개 부처·청에 흩어져 있으므로 공통의 측정 장치가 있어야 조정과 책임이 가능하다고 본다. 신중론은 측정 장치가 정책을 바꾸기보다 정책에 맞춰 스스로 바뀌며, 보고서와 지수가 늘어난 만큼 체감이 늘지는 않는다고 본다. 두 입장 모두 측정이 필요하다는 데는 다르지 않다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">측정이 정책을 바꾼다</div>
+        <p class="pt"><b>근거</b>법안마다 청년 영향을 적게 하면 청년을 대상으로 삼지 않던 부처도 청년을 고려하게 된다. 독일에서는 체크가 11개 부처의 법안에 붙었고, 사전 영향평가를 거친 법률은 덜 바뀌었다(Brenner &amp; Fazekas).</p>
+        <p class="pt"><b>사례</b>독일은 2017년부터 490건을 점검했고 베를린·튀링겐으로 번졌다. 유럽연합 집행위원회는 2025년 12개 과제에 유스체크를 적용했고 이탈리아·몰타·네덜란드가 뒤따른다. 한국은 국회 발의안이 결과와 반영 여부의 공개까지 담았다.</p>
+        <p class="pt"><b>함의</b>평가를 '하여야 한다'로 쓰고 결과를 공개하면, 평가가 형식에 그치는지 아닌지를 국회와 청년이 확인할 수 있다.</p></div>
+      <div class="col b"><div class="ch">측정이 먼저 바뀐다</div>
+        <p class="pt"><b>근거</b>시행계획 사업의 77.2%에서 성과측정 역설이 나타났고(한이정·이정욱), 스웨덴 청년보장은 지표의 정의를 바꿔 성공률을 올렸다(Pierre·de Fine Licht). 지표가 의사결정에 쓰일수록 왜곡 압력이 커진다(Campbell).</p>
+        <p class="pt"><b>사례</b>독일은 보고서 발표문에서 체크가 법안을 바꿨는지 밝히지 않았고, 비교 보고서는 유스체크가 참여 도구가 아니라고 적었다. 대구는 조례에 참여 장치를 재량으로 두어 집행이 행정 판단에 따라 달라졌다.</p>
+        <p class="pt"><b>함의</b>지수를 부처 평가나 예산과 연동하면 왜곡 유인이 생기고, 연동하지 않으면 아무것도 바꾸지 못한다. 연동 방식의 설계가 지수의 설계보다 먼저다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 청년영향평가를 도입하면 무엇이 달라지는가</div>
+      <p><b>H1 설계 변경</b>영향평가가 법안과 계획의 내용을 바꾼다<span class="pred">맞다면 → 평가 뒤 수정된 법안·계획의 비율과 수정 사유가 공개 자료에서 확인된다.</span></p>
+      <p><b>H2 형식적 준수</b>평가는 보고서를 늘리지만 내용은 바꾸지 못한다<span class="pred">맞다면 → 평가 건수는 늘고 '반영'으로 분류된 결과는 늘지만, 수정 전후의 조문과 예산에 차이가 없다.</span></p>
+      <p><b>H3 측정 재정의</b>지표와 평가 기준이 정책 목표에 맞춰 바뀐다<span class="pred">맞다면 → 체감도지수의 산식이나 평가 대상 범위가 조용히 바뀌고, 지수는 오르지만 청년의 이용·만족 지표는 그대로다.</span></p></div>
+    <div class="close">세 가설은 서로 배타적이지 않고 자료로 가려볼 수 있다. 평가 결과와 반영 여부의 공개(H1·H2), 지수 산식의 변경 이력(H3), 그리고 시행계획 성과지표에서 투입·과정 지표가 차지하는 비율의 추이(H2·H3)다. 이 브리프는 청년기본법 개정안 3건의 심사 경과와 청년체감도지수의 설계 공개 여부를 계속 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 매주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · 청년센터는 누구의 조직인가: 위탁과 노동, 거버넌스·조정의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+
+</body>
+</html>
