@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>글로벌 청년정책 브리프 제6호</title>
+<style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    .two,.hyp,.lead,.lens{break-inside:avoid;} .item,section{break-inside:auto;} .shead{break-after:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style>
+</head><body>
+<div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 매주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제6호 &nbsp;·&nbsp; 2026. 10. 26. &nbsp;·&nbsp; 연구 4편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건 · 읽기 가이드 1편</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점(제도, 거버넌스, 성과관리, 참여)에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>가족돌봄청년과 고립·은둔 청년: 발굴과 지원의 책임은 누구에게 있는가</h2>
+    <p>「가족돌봄 등 위기아동·청년 지원에 관한 법률」이 3월 26일 시행되었고, 보도에 따르면 청년미래센터는 9월에 4곳에서 17개 시·도로 늘었습니다. 영국은 4월에 재가된 법률로 지방정부의 학교 밖 아동 등록부에 '영케어러 여부'를 넣었고, 학교 센서스에서는 아직 절반이 넘는 학교가 영케어러를 한 명도 기록하지 않습니다. 일본은 7월에 세 부처 합동으로 영케어러 지원플랜을 내면서 18세 이상 상담이 한 해 0건인 지자체가 시·정·촌의 약 9할이라고 적었습니다. 법이 책무를 국가와 지자체 모두에게 두었을 때 발굴은 실제로 누구의 일이 되는지를, 한국 가족돌봄청년의 규모를 세 자료로 추정한 연구, 청년미래센터 설계를 비판한 연구, 그리고 일본 898개 히키코모리 지원기관의 협력망을 분석한 연구로 읽습니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">89,800명 · 56%</div><div class="c">잉글랜드 2025/26 학교 센서스에서 영케어러로 기록된 학생 수(전체의 약 1%)와 영케어러를 0명으로 보고한 학교 비율<br>(영케어러 법정 정의 18세 미만 · 교육부 2026. 6. 4.)</div></div>
+    <div class="cell"><div class="n">50% · 88.5%</div><div class="c">일본 도도부현·일반 시정촌 가운데 2024년도 18세 이상 영케어러 상담 접수가 0건이었던 비율<br>(지원 대상은 대체로 30세 미만 중심, 40세 미만까지 가능 · こども家庭庁 2026. 7.)</div></div>
+    <div class="cell"><div class="n">0.37%~10.40%</div><div class="c">자료와 정의에 따라 달라지는 한국 가족돌봄청년 추정 비율<br>(연구의 조작적 정의 19~39세 · 자료마다 모집단이 달라 직접 비교 불가 · 김지선·주영선 2025)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 3편(국내 2 + 국제 1) + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://m.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&amp;control_no=e193183c2f6b5359b7998d826d417196">우리나라 가족돌봄청년은 누구인가? 행정데이터, 한국의료패널, 청년 삶 실태조사를 활용하여</a></h3>
+      <div class="cite">김지선·주영선(2025), 『한국가족복지학』 72(2), 251–276. 한국가족사회복지학회(KCI 등재). DOI 10.16975/kjfsw.2025.72.2.251 · RISS(m.riss.kr) 상세 페이지와 편집인이 보내 준 원문 PDF로 확인(doi.org·KCI는 자동 접근 차단) · 본문 확보 · 연령 정의: 연구는 19~39세로 조작적 정의, 청년 삶 실태조사는 19~34세</div>
+      <div class="body">가족돌봄청년이 몇 명인지는 어떤 자료로 어떻게 정의하느냐에 따라 달라진다. 저자들은 가족돌봄청년을 "장애, 신체 또는 정신적 질환, 고령 등의 문제를 가진 가족을 돌보거나 생계를 책임질 위기에 놓인 19세 이상 39세 이하인 사람"으로 정의하고, 복지사각지대 발굴시스템의 위기가구 데이터(2023년 5월, 1,274만 명), 한국의료패널(2019년), 청년 삶 실태조사(2022년)의 세 자료로 규모를 각각 추정했다. 그 결과 가족돌봄청년으로 분류될 수 있는 비율은 <b>0.37%(중증질환 산정특례 가구의 청년)에서 10.40%(만성질환 가구원과 동거하는 청년)</b>까지 벌어졌고, 청년이 스스로 돌봄 책임을 답한 청년 삶 실태조사에서는 0.6%였다. 저자들은 이를 주민등록 인구에 적용해 약 18만 9천 명에서 530만 명으로 환산한다. 평균 연령은 25.7~27.4세, 우울 경험은 7.3~18.3%였고, 실태조사 기준 우울 13.7%는 전체 청년 6.1%의 두 배가 넘었다. 복지사각지대 데이터에서 본 위기 요인은 주거(7.5~22.0%), 고용(5.7~15.3%), 경제(4.5~12.4%) 순이었다. 저자들은 돌봄필요자의 행정 정보에서 출발해 동거 청년을 찾는 '역방향 발굴'을 제안한다. 건강보험 자료로 13~34세의 5.6~7.3%를 추정한 함선유 외(2022), 복지패널로 2.9~4.4%를 추정한 최영준 외(2022), 3만 3천~71만 5천 명으로 추정한 서혜지·김교성(2024)에 이어, 이 연구는 행정데이터를 처음 쓰고 추정 폭이 가장 넓다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;세 추정치의 분모가 서로 다르다. 0.37%와 1.45%는 복지사각지대 발굴 대상 1,274만 명 가운데 비율이고, 10.40%는 의료패널 가구원 가운데 비율인데, 저자들은 이를 전체 주민등록 인구 5,100만 명에 곱한다. 530만 명이라는 상한은 '만성질환자와 같은 집에 사는 19~39세'의 수에 가깝고 돌봄 수행 여부는 담지 않으며, 저자들도 과대 추정 가능성을 적는다. 반대로 0.6%는 자기보고의 과소 추정일 수 있다. 복지사각지대 데이터는 이미 위기 신호가 잡힌 가구의 표본이어서 전체 청년을 대표하지 않는다. 그래도 이 폭은 이번 호의 쟁점에 직접 닿는다. 법이 공공데이터 발굴을 허용해도 돌봄의 판정 기준을 정하지 않으면, 발굴 실적은 기준을 넓게 잡은 기관에서 더 많이 나오게 된다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://m.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&amp;control_no=5d9a8b4774e11ad7e9810257f7042666">고립·은둔 청년을 위한 정책의 의의와 한계: 청년정책 기본계획과 청년미래센터를 중심으로</a></h3>
+      <div class="cite">박정민·송현구·라수현(2025), 『한국사회』 26(2), 147–183. 고려대 한국사회연구소(KCI 등재). DOI 10.22862/kjsr.2025.26.2.005 · RISS 상세 페이지와 편집인이 보내 준 원문 PDF로 확인(doi.org 자동 접근 차단) · 본문 확보 · 연령 정의: 2.4%·24만 4천 명은 19~34세(한국보건사회연구원 2023)</div>
+      <div class="body">저자들은 고립·은둔 청년을 개인의 심리 문제가 아니라 과도한 경쟁, 제도와의 단절, 사회적 시민권의 약화에서 비롯한 구조적 문제로 보고, 머튼(Merton)의 아노미 이론과 사회적 배제 논의를 분석 틀로 삼았다. 자료는 제1차 청년정책 기본계획과 2023년 수정안, 2021~2025년 시행계획, 그리고 인천·울산·충북·전북 청년미래센터의 홈페이지·블로그·SNS 등 공개 자료다. 저자들은 기본계획 수정안(2023. 3.)에 '고립·은둔 청년'이 처음 명시된 뒤 2024년 시행계획에서 별도 과제가 되고 2024년 8월 14일 4개 센터가 문을 연 과정을 추적한다. <b>2024년 과제의 성과지표는 '발굴·지원 인원 320명'이었고 실적은 575명(216%)이었으나, 저자들은 320명의 산출 근거가 제시되지 않았고 실적 대부분이 초기상담이라고 지적한다.</b> 예산은 2024년 13억 900만 원에서 2025년 15억 6천만 원으로 늘었다. 지역별 특화사업은 인천 비대면 발굴과 가족 지원, 울산 지역산업 연계 직업훈련, 충북 또래지원단과 가상회사, 전북 커뮤니티와 시민교육이다. 저자들은 센터 사업이 개인 역량 강화와 <b>기존 제도로의 복귀</b>에 집중되어 있고, 당사자가 정책 설계에 참여하는 장치가 없으며, 재고립(복귀 시도 뒤 재고립 경험 45.6%)에 대한 사후 구조가 약하다고 본다. 국내 고립·은둔 연구가 실태 조사와 유형화에 치중한 가운데, 이 글은 시행계획의 과제 번호와 성과지표까지 읽어 전달기관의 설계를 평가한 드문 사례다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;저자들이 밝히듯 분석은 공식 문서와 이차 자료에 기대고, 센터별 차이의 비교도 정량적이지 않다. 시범사업 2년차의 평가여서 법률 시행과 17개 시·도 확대 뒤에도 그대로 유효한지는 별도 검증이 필요하다. '복귀 중심'이라는 비판은 시민권 회복이라는 저자들의 규범적 기준에서 나온 것이어서, 센터가 복귀율과 초기상담 건수를 지표로 삼은 것은 성과관리 체계가 요구하는 측정 가능성의 산물이라는 반론이 가능하다. 다만 목표치 320명의 근거가 없고 54만 명 추정치와 어긋난다는 지적은 지표 설계의 문제로 남는다. 같은 시기 신하영·한상윤(2026, 『한국사회복지행정학』 28(3))은 전문가 중요도·실행도 분석으로 지원체계의 우선과제를 가려냈는데, 이번 호에서는 초록을 확보하지 못해 서지만 적어 둔다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1002/pcn5.70311">Identifying hub functions and collaboration patterns in hikikomori support networks: A nationwide cross-sectional study</a></h3>
+      <div class="cite">Usami, M. 외 8인(2026), <i>PCN Reports</i> 5(1), e70311. DOI 10.1002/pcn5.70311 · 오픈액세스 · PubMed 레코드(PMID 41773244)와 PMC 전문(PMC12949849)으로 이중 확인 · 전문 확보 · 연령 정의: 히키코모리 추정 146만 명은 내각부 2022년도 조사 15–64세, 기관 조사는 연령 제한 없음 · <a href="https://claude.ai/artifact/KeLEpTdkYzzvjxMxNRDFpt">읽기 가이드 →</a></div>
+      <div class="body">후생노동성이 2021년 2~3월에 전국 약 9,000개 히키코모리 관련 기관에 보낸 설문의 유효 응답 1,024건 가운데 898개 기관을 분석했다. 결과 변수는 16개 유형의 협력 상대 가운데 몇 유형과 협력하는지다. 다중회귀에서 <b>다룬 사례 수(β=0.149)와 대상 집단의 다양성(β=0.116)은 협력 수를 유의하게 높였고, 직원 수는 유의하지 않았다</b>(β=−0.023). 대상 집단이 한 범주 늘면 협력 상대 유형은 평균 1.93개 늘었다. 기관 유형별로는 정신보건복지센터, 보건소, 히키코모리 지역지원센터가 평균 10개 유형 이상과 협력했고, 교육지원센터와 학교 관련 기관의 부문 간 협력은 가장 적었다. 군집분석은 자원제한형, 협력핵심형, 종합형의 세 유형을 가려냈다. 직원과 사례가 중간 수준인데 협력이 가장 많은 협력핵심형이 비영리단체와 청년 고용지원기관 같은 비전통적 상대와도 연결된 지역 허브로 나타났다. 저자들은 기관의 크기가 아니라 연결의 밀도와 위치가 조정 역량을 예측한다고 보고, 이런 허브 기관에 투자해 분절을 줄이라고 제안한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;모형의 설명력은 3.9%다. 응답률 11.4%의 익명 조사여서 협력에 적극적인 기관이 응답에도 적극적이었을 가능성을 저자들도 배제하지 못한다. 협력 수는 상대의 가짓수여서 의뢰가 실제로 이루어졌는지, 당사자의 결과가 나아졌는지는 담지 않는다. 허브 기관의 협력이 기능의 산물이 아니라 법정 지위의 산물일 수 있다는 경쟁 가설도 남는다. 정신보건복지센터와 보건소는 법령상 조정 역할이 있고 비영리단체는 없다. 그래도 교육 부문의 협력이 가장 적었다는 결과는 한국에도 적용할 수 있는 질문을 남긴다. 학령기 가족돌봄·고립 아동의 첫 접점인 학교와 청년미래센터를 잇는 통로가 법률 어디에 있는지다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1177/1468018107073892">Global perspectives on children's unpaid caregiving in the family: Research and policy on 'young carers' in the UK, Australia, the USA and Sub-Saharan Africa</a></h3>
+      <div class="cite">Becker, S.(2007), <i>Global Social Policy</i> 7(1), 23–50. DOI 10.1177/1468018107073892 · Semantic Scholar DOI 레코드(인용 347회)와 SAGE 원문 페이지로 이중 확인 · 초록 확보, 본문 미열람 · 요약은 원문 재확인 대상</div>
+      <div class="body">영케어러 연구의 기초 문헌이다. 베커는 영국, 호주, 미국, 사하라 이남 아프리카의 통계와 연구를 처음으로 비교하면서, 각국의 인식과 정책 대응을 <b>'선진(advanced), 중간(intermediate), 초기(preliminary), 발생 중(emerging)'의 네 단계</b>로 나누었다. 영국만이 법률과 전담 서비스를 갖춘 선진 단계였고, 호주는 중간, 미국은 초기였다. 그는 아동의 돌봄을 하나의 연속선 위에 두고, 영케어러가 나라를 넘어 공통점을 가지며 '취약 아동'의 한 집단으로 인식되어야 한다고 보았다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;네 단계 분류는 인식의 수준을 재는 것이어서, 법이 있다는 것과 발굴이 이루어진다는 것을 같은 척도에 둔다. 영국이 선진 단계였던 2007년에서 20년이 지난 지금도 학교의 56%가 영케어러를 한 명도 기록하지 않는다는 사실은 이 분류가 놓치는 것을 보여 준다. 한국은 2026년 법률 시행으로 이 분류의 '선진' 단계에 들어섰다고 말할 수 있지만, 같은 이유로 그 말이 무엇을 보장하는지는 따로 물어야 한다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 2건</span></div>
+    <ul class="news">
+      <li><b>[국내] 「가족돌봄 등 위기아동·청년 지원에 관한 법률」 3월 26일 시행. 연령으로 나뉘어 있던 근거를 34세 이하로 묶었고, 발굴은 '본인 신청'에서 '관계자 요청'으로 넓혔다.</b> 보도에 따르면 13세 미만 가족돌봄아동은 시·군·구 드림스타트팀이, 13~34세 가족돌봄 아동·청년은 청년미래센터가 사례관리를 맡고, 기준 중위소득 100% 이하에게 연 200만 원의 자기돌봄비를 준다. 고립·은둔은 19~34세를 청년미래센터가, 9~18세를 성평등가족부의 학교밖청소년지원센터 원스톱 패키지가 맡는다. 교사와 복지시설 종사자가 지원을 요청할 수 있게 되었고, 2027년에는 공공데이터로 위기군을 조기 발굴하는 체계를 도입할 계획이다. 센터는 2024년 8월 인천·울산·충북·전북 4곳에서 3월에 8곳으로, 보도에 따르면 9월에 17개 시·도로 늘었다. <b>법률 번호(제20846호, 2025. 3. 25. 제정)와 시행일은 두 논문의 참고문헌으로 확인했으나 조문과 복지부 보도자료 원문은 자동 접근이 막혀 열람하지 못했고 보도 4건을 교차했다.</b> 한 법률 아래에서도 발굴과 사례관리의 책임이 연령에 따라 세 부처·기관으로 나뉜 구조는 그대로다. <span class="src"><a href="https://www.newspim.com/news/view/20260325000372">뉴스핌(3. 25.)</a> · <a href="https://www.mt.co.kr/policy/2026/03/25/2026032510204035993">머니투데이(3. 25.)</a> · <a href="https://www.mt.co.kr/policy/2026/06/30/2026063007541649921">머니투데이(6. 30.)</a> · <a href="https://www.imaeil.com/page/view/2026092510412492057">매일신문(9. 25.)</a></span></li>
+      <li><b>[국내] 서울시 '고립은둔청년 온(ON) 프로젝트'(4. 7.): 2030년까지 1,090억 원, 자치구별 센터 25곳, 아동·청소년기 조기 진단.</b> 서울시의 두 번째 종합계획이다. 5,041가구 조사(2025. 9.~2026. 1.)에서 서울 청년(19~39세)의 7.1%(약 19만 4천 명)가 고립, 2.0%(약 5만 4천 명)가 은둔 상태로 추정되었고, 그 가운데 12.6%는 청소년기에 시작되었다. 계획은 서울청년기지개센터를 2곳으로, 지역 센터를 2027년까지 15곳에서 25곳으로 늘리고, 부모교육을 2,300명에서 2만 5천 명으로 확대하며, 전력·통신 등 53종의 생활 데이터로 고위험군을 찾는다. 중앙정부가 19~34세를, 서울이 19~39세를 대상으로 삼아 같은 도시 안에서 두 연령 정의가 함께 쓰이게 되었다. <b>서울시 발표문 원문은 미열람, 보도 2건 교차.</b> <span class="src"><a href="https://www.khan.co.kr/article/202604072057005/">경향신문</a> · <a href="https://www.dailian.co.kr/news/view/1630457/">데일리안</a></span></li>
+      <li><b>[국제] 영국: 「아동 복리와 학교법 2026」(4. 29. 재가)이 지방정부의 학교 밖 아동 등록부에 '영케어러 여부' 항목을 넣었다. 학교 센서스의 영케어러는 89,800명, 0명 보고 학교는 56%.</b> 법은 잉글랜드 지방정부가 학교에 다니지 않는 아동의 등록부를 두도록 하면서, 지방정부가 정보를 갖고 있거나 합리적으로 얻을 수 있는 범위에서 아동이 「아동법 1989」 제17ZA조(3)의 영케어러(18세 미만)인지를 기록하도록 했다(제436C조 제2항 (m)). 당초 정부안에는 없던 항목이 상원 심의를 거쳐 정부 수정안으로 들어왔다. 한편 교육부가 6월 4일 낸 2025/26 학교 센서스에서 영케어러로 기록된 학생은 89,800명으로 전년보다 25,300명 늘었고, 영케어러를 0명으로 보고한 학교는 69%에서 56%로 줄었다. 교육부는 수집 초기의 증가가 실제 증가보다 기록 정착을 반영할 수 있다고 적었다. 셰필드·버밍엄대 연구진은 6월에 범정부 돌봄자 행동계획에 대한 권고에서 학교의 약 70%에 영케어러 기록이 없다고 지적했다. 등록부는 지방정부, 센서스는 교육부, 돌봄 평가는 아동법으로 책임이 나뉜 채 데이터 항목으로 연결되는 설계다. <span class="src"><a href="https://www.legislation.gov.uk/ukpga/2026/21/section/38/enacted">legislation.gov.uk 제38조</a> · <a href="https://explore-education-statistics.service.gov.uk/find-statistics/school-pupils-and-their-characteristics/2025-26">교육부 통계</a> · <a href="https://carers.org/news-and-media/news/post/586-uk-government-agrees-to-add-young-carers-to-register-of-children-not-in-school">Carers Trust(1. 20.)</a> · <a href="https://centreforcare.ac.uk/wp-content/uploads/2026/07/Recommendations-for-Cross-Government-Action-Plan-on-Carers-FINAL-V2_tagged.pdf">Centre for Care 권고</a></span></li>
+      <li><b>[국제] 일본 「영케어러 지원플랜」(7. 23.): こども家庭庁·후생노동성·문부과학성 합동, 2026~2028년도. 수치 목표는 없고 현황 수치는 있다.</b> 2024년 6월 개정 「子ども・若者育成支援推進法」이 영케어러를 처음 정의하고(연령은 두지 않음) 국가와 지자체의 노력 의무를 둔 뒤 나온 첫 3년 계획이다. 플랜은 2024년도에 400개 이상의 지자체가 실태조사를 했으나 기명식은 약 4할에 그치고, 도도부현과 시구정촌의 약 3할이 18세 이상 영케어러의 고유 상담창구를 두지 않았으며, 2024년도 상담 접수 0건이 도도부현 50%, 일반 시정촌 88.5%였다고 적었다. 과제는 학교·의료·복지에서의 조기 파악과 정보 연계, 가정 전체 지원, 18세 이상 지원, 사회적 인지도 제고이며, 지자체 담당부서 설치 상황을 조사해 공표하기로 했다. 지원 대상은 법에 따라 대체로 30세 미만 중심이고 40세 미만까지 가능하다. 세 부처가 하나의 문서를 냈지만 주체별 역할은 '고려할 수 있는 시책'으로 적혀 있고 의무 배분은 없다. <span class="src"><a href="https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/7e905491-e68b-4ff9-a0ea-de037f9e2e28/22d106f4/20260717_policies_young-carer_support-project_02_02.pdf">지원플랜 원문(cfa.go.jp)</a> · <a href="https://fukushishimbun.com/seiji/35592">福祉新聞(2024. 6.)</a></span></li>
+      <li><b>[국제] 일본 히키코모리 지원: 시정촌의 85.4%가 상담창구를 명확히 했고 75.8%가 플랫폼을 두었다. 전담 센터는 38곳, 지원 스테이션은 110곳.</b> 후생노동성이 3월 전국 어린이정책 주관과장회의에 낸 자료에 따르면 2023년도 말 기준 1,741개 지자체 가운데 1,487곳이 히키코모리 상담창구를 명확히 했고 1,319곳이 지역 플랫폼을 설치했다. 2024년도에 히키코모리 지역지원센터를 둔 곳은 38개 시구정, 지원 스테이션은 110개 시구정촌이었다. 2025년도 예산은 16억 엔으로 전년과 같다. 2025년 1월에는 2010년 지침을 보완하는 「히키코모리 지원 핸드북」이 나와 지원 목표를 '자립'에서 '자율'로 옮기고 사회 모델을 명시했다. 추정 인구는 약 146만 명(15~64세, 내각부 2022년도 조사)으로 50명에 1명이다. 창구가 있는 지자체의 비율은 높지만, 영케어러 플랜이 보여 준 것처럼 창구의 존재와 상담의 발생은 다른 수치다. <span class="src"><a href="https://www.cfa.go.jp/assets/contents/node/basic_page/field_ref_resources/b1ba8054-23a8-4ad2-94bb-d0f6e0a03c51/887758db/20250314-councils-kodomoseisaku-syukankacho-b1ba8054-3800.pdf">후생노동성 자료(2025. 3.)</a> · <a href="https://www.mhlw.go.jp/web_magazine/feature/20260501.html">후생노동성 웹매거진(2026. 5.)</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 거버넌스·조정</span></div>
+    <div class="lens">
+      <div class="h">책무가 모두에게 있을 때 발굴은 누구의 업무가 되는가</div>
+      <h3>법은 책임을 묶었고 집행은 연령으로 나누었다</h3>
+      <p>한국은 법률로 34세 이하를 한 체계에 묶었지만, 보도에 따르면 사례관리는 13세 미만, 13~34세, 9~18세, 19~34세로 나뉘어 드림스타트, 청년미래센터, 학교밖청소년지원센터가 각각 맡는다. 영국은 새 기관 없이 등록부와 학교 센서스의 데이터 항목으로 기존 기관을 연결했고, 일본은 세 부처가 한 문서를 냈지만 역할은 권고로 남겼다. 거버넌스·조정의 관점에서 보면 세 설계는 모두 '발굴'을 특정 기관의 산출물이 아니라 여러 접점의 부산물로 둔다. 그 결과가 영국의 0명 보고 학교 56%와 일본의 상담 0건 시정촌 88.5%다. 창구와 법적 책무가 있어도 자기 업무 지표에 들어가지 않은 발굴은 일어나지 않는다. Usami 외의 분석에서 협력이 많은 기관은 큰 기관이 아니라 다양한 대상을 맡은 기관이었고, 학교 쪽 기관의 협력은 가장 적었다. 한국에는 학교와 청년미래센터를 잇는 통로, 그리고 17개 센터의 협력 상대를 같은 기준으로 비교할 지표가 아직 없다. 김지선·주영선의 추정 폭(0.37~10.40%)과 2024년 시범사업의 목표치 320명(박정민 외)이 보여 주듯, 누구를 몇 명이나 찾아야 하는지가 정해지지 않은 상태에서는 발굴 실적이 기관의 노력보다 정의의 넓이와 목표치의 높낮이를 반영하게 된다고 본다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;연령별 분담은 분절이 아니라 전문화일 수 있다. 13세 미만을 아동보호 체계에 남긴 것은 학대·방임과 겹치는 사례를 아동복지법의 권한으로 다루기 위한 선택이고, 9~18세를 청소년 체계에 둔 것은 학교 밖 청소년 지원망이 이미 있기 때문이다. 영국의 56%도 69%에서 내려온 수치다. 일본의 0건은 수요가 없다는 뜻일 수도 있다. 데이터 항목 하나를 공유하는 영국 방식이 조정기구를 더 두는 것보다 효율적일 수 있으나, 이를 판단할 자료는 아직 없다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">가족돌봄청년과 고립·은둔 청년: 발굴과 지원의 책임은 누구에게 있는가</span></div>
+    <div class="setup">집중론은 발굴과 사례관리의 책임을 전담기관(청년미래센터)에 모아야 성과를 묻고 자원을 배분할 수 있다고 본다. 분산론은 발굴은 학교, 병원, 주민센터 같은 접점에서 일어나므로 접점마다 기록 의무를 두고 전담기관은 연계에 집중해야 한다고 본다. 두 입장은 발굴의 책임을 어디에 두는지에서 다르다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">전담기관에 책임을 모아야 한다</div>
+        <p class="pt"><b>근거</b>접점마다 책무를 두면 누구의 업무도 아니게 된다. 일본은 창구를 둔 지자체가 85%인데 18세 이상 상담 0건 시정촌이 88.5%다. 협력을 많이 하는 기관은 다양한 대상을 한곳에서 맡는 기관이었다(Usami 외).</p>
+        <p class="pt"><b>사례</b>한국은 가족돌봄과 고립·은둔을 청년미래센터에 함께 맡기고 17개 시·도로 늘렸다. 서울은 자치구별 센터 25곳과 생활 데이터 53종으로 발굴을 센터 중심으로 짰다.</p>
+        <p class="pt"><b>함의</b>센터의 발굴 건수와 연계 성사율을 공개 지표로 두면 책임을 물을 수 있다. 다만 지표가 정의의 넓이를 따라 움직인다는 점(김지선·주영선)을 함께 보아야 한다.</p></div>
+      <div class="col b"><div class="ch">접점에 책임을 두어야 한다</div>
+        <p class="pt"><b>근거</b>당사자는 스스로를 돌봄자나 고립 상태로 인식하지 않는 경우가 많아 센터를 찾아오지 않는다. 학교 센서스에 항목을 넣은 영국에서 기록 학생이 두 해 사이 크게 늘었다(교육부 2026).</p>
+        <p class="pt"><b>사례</b>영국은 새 기관 없이 등록부와 센서스의 데이터 항목으로 연결했다. 한국의 새 법도 교사와 복지시설 종사자의 지원 요청을 열었고 2027년 공공데이터 발굴을 예고했다.</p>
+        <p class="pt"><b>함의</b>접점 기록은 비용이 낮지만, 영국의 56%가 보여 주듯 기록 의무만으로 기록이 생기지는 않는다. 접점의 기록을 누가 점검하는지가 설계의 핵심이 된다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 청년미래센터가 17개 시·도로 늘면 무엇이 달라지는가</div>
+      <p><b>H1 기관 효과</b>센터가 있는 곳에서 발굴과 연계가 늘어난다<span class="pred">맞다면 → 센터 설치 전후, 그리고 설치 시기가 다른 시·도 사이에서 등록 청년 수와 연계 건수의 차이가 나타난다.</span></p>
+      <p><b>H2 접점 효과</b>발굴은 센터가 아니라 학교·의료·주민센터의 의뢰에서 나온다<span class="pred">맞다면 → 등록 경로를 나눠 보면 본인 신청보다 관계자 요청의 비중이 커지고, 의뢰 기관의 수가 등록 수를 예측한다.</span></p>
+      <p><b>H3 정의 효과</b>등록 수의 차이는 시·도마다 다른 판정 기준에서 나온다<span class="pred">맞다면 → 센터의 노력 지표와 무관하게 판정 기준이 넓은 시·도의 등록 수가 많고, 기준을 통일하면 격차가 줄어든다.</span></p></div>
+    <div class="close">세 가설은 등록 경로별 통계와 시·도별 판정 기준의 공개로 가려볼 수 있다. 이 브리프는 청년미래센터의 시·도별 등록·연계 통계와 2027년 공공데이터 발굴 체계의 설계를 계속 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 매주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · '쉬었음' 청년과 NEET: 통계가 바뀌면 정책 대상도 바뀌는가, 성과관리·측정의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+</body></html>
