@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>국제개발봉사 브리프 제5호</title><style>
+  :root{
+    --bg:#F2F5F4; --card:#FFFFFF; --ink:#131C1A; --ink2:#4E5F5C; --ink3:#7C8D8A;
+    --accent:#0E6B5D; --label:#8A6516; --rule:#C9D4D1; --tint:#EAEFEE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .rules{margin-top:13px;border-top:2px solid var(--ink);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .also{margin-top:12px;padding:12px 14px;background:var(--tint);border:1px solid var(--rule);font-size:11.5px;line-height:1.75;color:var(--ink2);}
+  .also .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;display:block;margin-bottom:5px;}
+  .also a{color:var(--ink2);}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:10.5px;font-weight:700;letter-spacing:1.2px;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 7px;font-size:11.5px;line-height:1.72;color:var(--ink2);}
+  .two p:last-child{margin-bottom:0}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:10.5px;letter-spacing:1.2px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 6px;font-size:11.5px;line-height:1.72;color:var(--ink2);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;font-size:11px;}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:11mm;}
+    body{background:#fff;font-size:8.2pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    section,.item,.two,.hyp,.lead{break-inside:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:18pt;margin-top:3px;}
+    .eyebrow{font-size:6.6pt;}
+    .issueline{font-size:7.1pt;margin-top:5px;}
+    .blurb{font-size:7.5pt;line-height:1.5;margin-top:5px;}
+    .rules{margin-top:7px;}
+    .lead{margin-top:9px;padding:8px 10px;}
+    .lead .kicker{font-size:6.6pt;}
+    .lead h2{font-size:12.5pt;}
+    .lead p{font-size:7.9pt;line-height:1.52;margin-top:4px;}
+    .stats{margin-top:8px;}
+    .stats .cell{padding:6px 8px;}
+    .stats .n{font-size:11pt;}
+    .stats .c{font-size:6.5pt;line-height:1.35;}
+    section{margin-top:10px;}
+    .shead{padding-top:6px;}
+    .shead .num{font-size:6.6pt;}
+    .shead .name{font-size:10pt;}
+    .shead .note{font-size:6.6pt;}
+    .item{margin-top:6px;}
+    .item + .item{margin-top:6px;}
+    .tag{font-size:6pt;padding:0 3px;}
+    .item h3{font-size:8.7pt;line-height:1.35;margin-top:3px;}
+    .cite{font-size:6.7pt;line-height:1.4;margin-top:2px;}
+    .body{font-size:7.65pt;line-height:1.44;margin-top:3px;}
+    .check{font-size:7.1pt;line-height:1.4;margin-top:3px;padding-left:7px;}
+    .check b{font-size:6.6pt;}
+    ul.news{margin-top:6px;}
+    ul.news li{font-size:7.65pt;line-height:1.44;margin-top:5px;padding-left:11px;}
+    ul.news li:before{top:7px;width:4px;height:4px;}
+    ul.news li .src{font-size:6.6pt;}
+    .also{font-size:7.1pt;line-height:1.44;padding:7px 9px;margin-top:6px;}
+    .also .h{font-size:6.6pt;margin-bottom:3px;}
+    .setup{font-size:7.65pt;line-height:1.44;margin-top:6px;}
+    .two{margin-top:6px;}
+    .two .col{padding:7px 9px;}
+    .two .ch{font-size:6.6pt;margin-bottom:4px;}
+    .two p{font-size:7.2pt;line-height:1.42;margin-bottom:3px;}
+    .hyp{margin-top:6px;padding:7px 9px;}
+    .hyp .h{font-size:6.6pt;margin-bottom:4px;}
+    .hyp p{font-size:7.2pt;line-height:1.42;margin-bottom:3px;}
+    .hyp b{font-size:7pt;}
+    .close{font-size:7.65pt;line-height:1.44;margin-top:6px;}
+    footer{margin-top:9px;padding-top:6px;font-size:6.7pt;line-height:1.5;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+  }
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style><style>
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101615;--card:#161E1C;--ink:#E8EEEC;--ink2:#B4C2BF;--ink3:#8A9A97;--accent:#5CC1B0;--label:#D9B45B;--rule:#2C3936;--tint:#1C2624}}
+:root[data-theme="dark"]{--bg:#101615;--card:#161E1C;--ink:#E8EEEC;--ink2:#B4C2BF;--ink3:#8A9A97;--accent:#5CC1B0;--label:#D9B45B;--rule:#2C3936;--tint:#1C2624}
+</style><style>
+.debate .two .ch,.debate .hyp .h{letter-spacing:0;font-size:12px}
+.debate .two p,.debate .hyp p{font-size:12.5px;line-height:1.75;color:var(--ink);margin-bottom:9px}
+.debate .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+.debate .a .pt b{color:var(--accent)}.debate .b .pt b{color:var(--label)}
+.debate .hyp b{font-family:inherit;font-size:12.5px;margin-right:7px}
+.debate .pred{display:block;margin-top:2px;color:var(--accent)}
+@media (max-width:640px){
+ .debate .two p,.debate .hyp p{margin-bottom:10px}
+ .debate .two .col{padding:14px 15px}
+ .debate .two .col.b{margin-top:12px;border-top:1px solid var(--rule)}
+ .debate .two .col:first-child{border-bottom:1px solid var(--rule)}
+}
+@media print{
+ .debate .two .ch,.debate .hyp .h{font-size:7pt}
+ .debate .two p,.debate .hyp p{font-size:7.2pt;line-height:1.42;margin-bottom:3px;color:var(--ink2)}
+ .debate .pt b{font-size:6.2pt;padding:0 3px;margin-right:4px}
+ .debate .hyp b{font-size:7pt;margin-right:4px}
+ .debate .pred{display:inline;margin-left:4px}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow">국제개발협력학회 국제개발봉사분과 · 격주 발행</div>
+  <div class="title">국제개발봉사 브리프</div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제5호 &nbsp;·&nbsp; 2026. 11. 02. &nbsp;·&nbsp; 연구 3편 · 확장 2편 · 정책 4건</div>
+  <div class="blurb">국제개발봉사의 연구·정책·제도 동향과 인접 분야의 읽을거리를 격주로 정리합니다. 함께 읽고 논의할 분, 공동연구를 찾는 분을 기다립니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>같은 날 나온 두 숫자</h2>
+    <p>2025년 12월 5일 UN 본부에서 자원봉사에 관한 두 문서가 같은 날 공개되었습니다. 한쪽은 월 21억 명, 다른 쪽은 월 8.62억 명을 제시하였습니다. 2.4배 차이입니다. 어느 한쪽이 틀렸다기보다는 측정의 정의와 방법이 다른 것으로 보입니다. 문제는 이 수치들이 그대로 정책의 근거로 쓰인다는 점입니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">21억 : 8.62억</div><div class="c">월간 자원봉사자 수<br>UNV 보고서와 IAVE 발표문의 수치</div></div>
+    <div class="cell"><div class="n">20%</div><div class="c">ICLS 4주 기준기간을 따르는 국가 설문의 비율<br>나머지는 조화·보정·모형 추정을 거친다(2026 SWVR)</div></div>
+    <div class="cell"><div class="n">43%</div><div class="c">IAVE 세계 설문 응답 10,053명 가운데<br>한국 응답이 차지한 비중</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 2편 + 다시 읽기 1편 · 이번 호는 국내 최신 논문을 싣지 못하였다</span></div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://www.sciencedirect.com/science/article/pii/S0261517726000221">'Peeling back the layers': Power dynamics and saviour complex in South-South volunteer tourism</a></h3>
+      <div class="cite">Polus, R. &amp; Carr, N.(오타고대 관광학과), <i>Tourism Management</i> 115, 105412. DOI 10.1016/j.tourman.2026.105412 · 오픈액세스(CC BY 4.0) · 2026.02.04 온라인 공개, 2026년 8월호</div>
+      <div class="body">이 연구는 남반구 출신 봉사자가 남반구의 다른 지역에서 활동하는 이른바 남남 봉사관광에서도 구원자 서사와 권력 비대칭이 나타나는지를 검토하였다. 저자들은 AIESEC을 통해 2주 이상 현지 주민과 직접 접촉하는 활동을 마친 16개국 봉사자 20명(여성 13명, 남성 7명, 20~31세)을 준구조화 면담하고, Braun과 Clarke의 주제분석을 적용하였다. 분석 결과 여섯 가지 주제가 도출되었다. 선의와 의도하지 않은 결과, 구원자 콤플렉스, 문화적 우월감, 권력 불균형, 빈곤의 상품화, 윤리적 자각이다. 저자들은 기존의 이동성 특권과 '봉사 엘리트주의' 개념에 더하여 <b>관계적 특권</b>(relational privilege)이라는 개념을 제안하였다. 같은 남반구 출신이라는 문화적 근접성이 봉사자와 수용 공동체 사이의 대등한 관계를 보장하지는 않는다는 것이 이 연구의 결론이며, 저자들은 프로그램 설계를 공동체가 주도할 필요가 있다고 제안한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;지난 호에서 소개한 Mwaruta의 '타자화' 비판이 논증에 그쳤다면, 이 연구는 그 물음에 경험적 자료를 제공한다는 점에서 의의가 있다. 다만 설계상의 한계는 분명하다. 표본 20명은 통계적 대표성을 갖지 않으며, AIESEC을 통한 모집은 특정 성향의 참여자를 선별하였을 가능성이 있고, 면담은 2021년 1월 온라인으로 수행된 회고적 진술이다. 저자들 역시 이 세 가지를 한계로 밝히고 있다. 한국의 사업에 적용하면 다음 질문이 남는다. 남남협력이나 삼각협력을 '수평적'이라고 규정하는 근거가 참여자의 국적에 있는지, 아니면 프로그램 안에서 누가 무엇을 결정하는지에 있는지이다. 후자를 측정하는 연구 설계는 아직 드물다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://www.sciencedirect.com/science/article/pii/S2772655X24000685">Decolonizing or Re-colonizing? Community members' perspectives of global service learning programs</a></h3>
+      <div class="cite">Habashy, N., Webster, N. &amp; Hunt, C. A.(펜실베이니아주립대), <i>World Development Sustainability</i> 5, 100190. DOI 10.1016/j.wds.2024.100190 · 오픈액세스(CC BY-NC-ND) · 2024.11.17 온라인 공개, 2024년 12월호</div>
+      <div class="body">봉사 프로그램 평가에서 가장 드물게 조사되는 대상인 수용 공동체 구성원에게 직접 질문한 비교사례 연구이다. 저자들은 코스타리카의 반도 마을(주민 약 3,000명, 면담 30명)과 케냐의 도시(인구 20만 명 이상, 면담 15명)에서 2017~2019년 현장 방문을 통해 준구조화 면담, 참여관찰, 기록 자료를 수집하였다. 주민들이 가장 많이 언급한 이득은 시설이나 경제적 혜택이 아니라 <b>관계</b>였다. 케냐에서는 귀국한 학생들이 개별 청년을 계속 후원한 사례가 반복적으로 보고되었고, 교육·영어 수업과 수료증이 취업에 도움이 되었다는 진술도 확인되었다. 부정적 평가 또한 구체적이었다. 학생의 잦은 교체로 생활이 흔들렸다는 점, 프로그램 종료 후 사업이 중단되었다는 점, 언어 장벽, 프로그램 거점에서 멀리 사는 주민의 배제감이 지적되었다. 미국 대학의 한 팀은 현지 의견 없이 사업을 선정하였고, 주민들은 이를 효과가 낮았다고 평가하였다. 주민들의 요구는 세 가지로 정리된다. 더 긴 체류, 현지가 선정한 사업, 종료 후의 후속 관리이다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;저자들은 주민이 설계와 평가를 주도할 때에만 탈식민적 결과가 가능하며, 그렇지 않을 경우 재식민적 결과로 이어질 수 있다고 본다. 다만 두 사례의 질적 연구로서 일반화 가능성이 낮다는 점을 저자들이 명시하고 있고, 비교 대상 두 지역의 조건 차이(주민 3,000명의 마을과 인구 20만의 도시)도 크다. 그럼에도 분과에 주는 함의는 실용적이다. 주민이 꼽은 첫 번째 이득이 관계라는 결과는 산출물 중심으로 성과지표를 구성한 사업 설계와 어긋난다. 한국 봉사단 사업의 수용기관 만족도 조사가 어떤 항목을 묻고 있는지, 그 안에 '사업 종료 후 후속 관리'가 포함되어 있는지를 먼저 확인할 필요가 있다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://www.cambridge.org/core/journals/voluntas/article/volunteering-hierarchies-in-the-global-south-remuneration-and-livelihoods/41F5D3AA4A151815C1B5889CFFE6CE43">Volunteering Hierarchies in the Global South: Remuneration and Livelihoods</a></h3>
+      <div class="cite">Baillie Smith, M., Fadel, B., O'Loghlen, A.(노섬브리아대 국제개발센터) &amp; Hazeldine, S.(국제적십자사연맹), <i>Voluntas</i> 33(1), 93–106. DOI 10.1007/s11266-020-00254-1 · 오픈액세스(CC BY 4.0)</div>
+      <div class="body">이 연구는 공여 기관이 남반구 자원봉사자에게 보수를 지급하는 방식이 어떤 결과를 낳는지를 분석하였다. 자료는 국제적십자사연맹의 Global Review on Volunteering(2013~2015, 158개국 600명 이상, 면담 288건과 설문 340건)이며, 이 논문은 그중 아프리카와 중동·북아프리카 자료를 재분석하였다. 주요 결과는 세 가지이다. 첫째, 보수는 자원이 풍부한 국제 봉사자와 그렇지 않은 현지 봉사자 사이에 위계를 형성한다. 둘째, 공여 사업에 연동된 지급은 기존의 공동체 봉사를 교란하며, 사업 종료 후 활동이 감소한 사례가 보고되었다. 셋째, 일부 조직은 <b>유급 직무에 '자원봉사자'라는 명칭을 부여하여 정식 고용계약을 회피한다</b>. 저자들은 보수를 개인 노동의 대가가 아니라 공동체 자산을 확충하는 수단으로 설계하는 생계·역량 접근을 제안하였다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;이 연구는 이번 호 쟁점의 전제를 제공한다. 세계 자원봉사자 수를 어떻게 집계하든, '봉사자'로 분류된 사람들 가운데 일부는 사실상 저임금 노동자라는 지적이기 때문이다. 분류 방식이 집계 결과를 좌우하고, 그 결과가 정책에 반영된다. 다만 자료가 10년 이상 경과하였고 적십자 체계 안에서 수집되었으며, 분석 표본이 상당 부분 유급 실무자의 시각에 의존한다는 점은 저자들도 밝히고 있다. 사례 선정 경로상 국가 간 비교 가능성도 제한된다. 한국의 사업에 적용하면, 수용기관이 고용한 현지 보조 인력과 파견 단원의 신분과 보수 구조를 같은 표에 놓고 비교한 자료가 있는지가 확인할 과제로 남는다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 1건</span></div>
+    <ul class="news">
+      <li><b>[국제] 2026 SWVR 원문 확인: 수치가 아니라 수치의 산출 방법을 본다.</b> 제3호에서 소개한 월 21억 명과 34.5%의 출처인 「2026 세계자원봉사현황보고서: 자원봉사와 그 측정」(UNV, 2025년 12월)을 전문으로 확인하였다. 연구 파트너는 노섬브리아대(1·2·4·5·6장), 프리토리아대(7장 GIVE), ILO(3장 글로벌 추정)이다. 보고서에 따르면 생산가능인구(15세 이상) 61억 명 가운데 34.5%, 약 21억 명이 월 1회 이상 참여한다. 조직을 거치지 않는 <b>직접 봉사가 25%로 조직 기반 봉사(11.7%)의 두 배</b>이며, 지역별 참여율은 아프리카 58.5%(9.22억 명 중 약 5.39억 명), 아시아·태평양 31.8%, 미주 30.3%, 유럽·중앙아시아 24.2%, 아랍국가 24%이다. 성별로는 남성 36.9%, 여성 32.1%로 나타났다. 주목할 점은 보고서가 스스로 제시한 경고이다. 34.5%는 <b>2022년 보고서의 14.9%와 비교할 수 없으며</b>, 증가분은 참여의 증가가 아니라 포착 범위의 확대에 기인한다고 보고서는 밝히고 있다. 19차 ICLS 정의의 4주 기준기간을 따르는 국가 설문은 약 20%에 불과하여 나머지는 조화·검증·모형 추정 과정을 거친다. 핵심 도구인 GIVE는 개인 가치, 사회 가치, 경제 가치, 지원 환경의 네 차원으로 구성되며, 보고서는 "어떤 측정 도구도 중립적이지 않다"고 전제하면서 경제적 가치평가만을 사용할 경우 자원봉사를 유급노동의 대체물로 축소할 위험이 있다고 지적하였다. <span class="src"><a href="https://www.unv.org/sites/default/files/The%202026%20SWVR%20Web%20Version.pdf">보고서 전문(PDF)</a> · <a href="https://www.unv.org/news/2026-swvr-redefining-true-value-volunteerism">UNV 공개 안내</a></span></li>
+      <li><b>[국제] 파리 포럼: 개막 연설은 '정의'와 '역량강화'를 문제 삼았고, 폐회식 발표는 아직 문서로 확인되지 않는다.</b> 10월 20일 Toily Kurbanov UNV 사무총장은 개막 연설에서 세 가지 질문을 제기하였다. 첫째, 이 분야가 자원봉사의 정의에 합의할 수 있는가이다. 현행 기준은 2002년 UN 총회 결의 56/38이며, 보다 현대적인 정의가 새 총회 결의로 이어질 수 있다고 언급하였다. 둘째, <b>'역량강화'라는 용어가 한쪽은 모델을 보유하고 다른 쪽은 이를 수용한다는 전제를 내포하고 있지 않은가</b>이다. 북반구 기관이 남반구의 기준을 채택하는 방향을 요구하였다. 셋째, 2030년까지 3년이 남은 시점에서 SDGs를 자원봉사에 통합하는 작업이 실질적 변화를 만드는지, 아니면 보고 업무만 늘리는지를 검토해야 한다는 것이다. 세계 자원봉사자의 해를 post-2030 의제에 자원봉사를 포함시키는 기회로 활용하자고 제안하였다. 22일에는 2026 SWVR에 기반한 측정 워크숍과 재원 조달 전략 대화가 병행되었고, 16:30 폐회식에는 공동 선언과 함께 <b>2027년 개최지·공동주최 발표</b>가 일정에 포함되어 있었다. 23일 연구의 날은 지난 1년의 연구를 검토하고 2027년 의제를 정하는 자리였다. <b>다만 폐회식에서 실제로 발표된 내용은 확인하지 못하였다.</b> 포럼 홈페이지에 'Bogota 2027' 메뉴와 2027년 사전등록 버튼이 생긴 것은 11월 1일 기준으로 확인되지만, 공식 발표문은 찾지 못하였다. 참석하신 분의 확인을 기다린다. <span class="src"><a href="https://www.unv.org/story/unv-executive-coordinator-speaks-global-volunteering-forum-paris">UNV 보도(10.20)</a> · <a href="https://ivcoforum.org/programme/">포럼 일정</a> · <a href="https://ivcoforum.org/">포럼 홈페이지</a></span></li>
+      <li><b>[국제] IAVE 「자원봉사의 미래를 위한 행동 촉구」: 권고 네 영역과 무급 대체를 막는 행동규범.</b> 2025년 12월 5일 UN 본부에서 발표된 이 문서는 8개월간 164개국 약 14,000명의 의견을 수렴하였다. 세계 설문 10,053명(봉사자 7,376명, 조직 대표 2,677명)과 대화 126회(글로벌 13회, 지역 13회, 74개국 100회, 참여 3,925명)가 그 근거이다. 근거 문서인 Insights Paper(Chris Millora, 2025년 11월, IAVE와 Forum 공동)는 권고를 네 영역으로 정리한다. 상징적 감사가 아니라 정책·재원·국가전략 반영을 통해 가치를 인정할 것, 인프라·관리·협력·포용을 통해 지원 환경을 조성할 것, 정부 핵심 재원과 민간 공동재원으로 지속적으로 투자할 것, 봉사자의 안전과 권리를 보호하고 국제 사업에서 '구원자주의'를 피해 현지 주도를 보장할 것이다. 주목할 대목은 두 번째 영역에 포함된 행동규범 권고이다. <b>상근직을 무급 봉사자로 대체하는 착취를 방지하는 규범</b>을 요구하며, 캐나다 대화에서 필수 서비스가 여성·고령자·신규 이민자 봉사자에게 점차 의존하고 있다는 보고를 근거로 자원봉사는 "보완이지 대체가 아니다"라고 명시하였다. Insight 5와 권고 4·6은 장기적이고 드러나지 않는 성과를 포착하는 연구와 국제적으로 공유되는 측정 틀을 요구한다. 파리 포럼은 22일 오후 이 문서의 실행을 위한 전체 워크숍을 열었다. 설문 응답의 43%가 한국이었다는 점은 보고서가 스스로 밝힌 한계이며, 쟁점 노트에서 다시 검토한다. <span class="src"><a href="https://www.iave.org/call-to-action-future-of-volunteering-launch/">발표 안내(2025.12.5)</a> · <a href="https://www.iave.org/iavewp/wp-content/uploads/2025/12/Insights-Paper-Call-to-Action-for-the-Future-of-Volunteering.pdf">Insights Paper(PDF)</a></span></li>
+      <li><b>[국내] 개발협력주간(11.23~27)을 앞두고: 제4차 종합기본계획의 첫해이다.</b> 국무조정실(실장 임기근)은 10월 31일, 2026년 개발협력주간에 앞서 사전행사를 개최한다고 밝혔다. 개발협력 홍보존은 11월 1일(일)부터 4일(수)까지 광화문광장 놀이마당에서 운영되고, 사진전은 11월 1일부터 한 달간 용산역·부산역 등 전국 15개 장소에서 순회 개최된다. 올해 슬로건은 <b>'K-ODA와 함께 여는 상생의 미래'</b>이며, 제4차 국제개발협력 종합기본계획(2026~2030) 수립 원년이라는 점이 그 배경으로 제시되었다. 이 계획은 2026년 2월 26일 제56차 국제개발협력위원회에서 확정되었다. 국무조정실 부스에서는 제4차 종합기본계획과 보건·문화·AI 분야 개발협력 전략이 소개된다. 공개된 사전행사 안내에는 <b>봉사단이나 해외봉사에 관한 언급이 없다.</b> 지난 호에서 다룬 '해외봉사가 어느 국가계획에도 명확히 자리 잡지 못하고 있다'는 문제가 홍보 단계에서도 같은 양상으로 확인된다. 수치와 프로그램 세부는 언론 보도에 근거한 것이며, <b>국무조정실 보도자료 원문은 확인하지 못하였다.</b> <span class="src">출처 <a href="https://www.ksw-news.com/news/articleView.html?idxno=3054938">한국사회복지저널 2026.10.31</a> · 제4차 계획 <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156746164">국무조정실 보도자료(2026.2.26)</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">확장해서 읽기</span><span class="note">함께 연구할 주제를 찾습니다</span></div>
+
+    <div class="item">
+      <h3><a href="https://pubmed.ncbi.nlm.nih.gov/41555589/">Factors Influencing Community Members' Perception of Primary Health Care Services Delivered by Community Health Workers in Rural Areas: A Systematic Review</a></h3>
+      <div class="cite">Ahmed, N., Dahal, M., Crocket, H. &amp; Strasser, R.(와이카토대 등), <i>Australian Journal of Rural Health</i> 34(1), 2026. DOI 10.1111/ajr.70142 · PubMed 41555589 · 아래 요약은 초록과 CHW Central 공개 소개에 근거하며, 전문은 확인하지 못하였다</div>
+      <div class="body">보건 분야의 지역보건요원(CHW)은 국제개발봉사와 가장 많이 중첩되는 직군이다. 이 체계적 문헌고찰은 15개국의 연구를 종합하여, 농촌 주민이 CHW가 제공하는 1차 보건서비스를 수용하는 데 영향을 미치는 요인을 세 가지로 정리하였다. 서비스 전달(이용 가능성, 접근성, 질), 신뢰(역량에 대한 인식, 비밀 유지에 대한 기대), 그리고 정체성과 문화(CHW가 같은 공동체 출신인지, 배경이 유사한지)이다. 저자들은 훈련 강화, 신뢰 구축, 공동체 요구에 반응하는 서비스가 수용과 이용을 함께 높인다고 결론지었다.</div>
+      <div class="check"><b>이어볼 지점</b> &nbsp;'같은 공동체 출신인가'가 수용의 핵심 변수로 확인되었다는 점은 파견 사업에 직접적인 함의를 지닌다. 외부에서 온 봉사자가 수행하는 활동과 현지 인력이 수행하는 동일한 활동을 주민이 다르게 받아들이는지를 한국 사업 안에서 비교한 자료는 아직 확인되지 않는다. 분과가 보건 분야 수용기관 두세 곳에서 같은 문항으로 조사한다면 그 자체로 비교 설계가 된다. 다만 체계적 고찰인 만큼 포함 연구 수와 질 평가 기준은 전문에서 확인할 필요가 있으며, 봉사자 신분이나 보수 문제는 공개 요약에서 다루어지지 않았다.</div>
+    </div>
+
+    <div class="item">
+      <h3><a href="https://journals.sagepub.com/doi/10.1177/0038026120938291">Unwaged labour intensified: Volunteer management and work targets at a UK charity</a></h3>
+      <div class="cite">Read, R.(본머스대 보건사회과학부), <i>The Sociological Review</i> 69(1), 223–239, 2021. DOI 10.1177/0038026120938291 · 오픈액세스(CC BY-NC 4.0) · 2020.07.06 온라인 공개</div>
+      <div class="body">전화·온라인 상담을 제공하는 영국 자선단체를 대상으로 자원봉사자 관리의 작동 방식을 민족지적으로 분석한 연구이다. 핵심 발견은 인사관리(HRM) 기법이 무급 노동에 그대로 적용되었다는 점이다. 생산성 목표가 도입되면서 봉사자의 업무량이 증가하였고, 관리 측은 <b>높은 강도로 일하는 것 자체를 이타심과 공감의 증거로 간주하였다</b>. 저자는 서비스 노동에 관한 페미니즘 분석을 원용하여, 이러한 관리 전략이 봉사자의 감정과 자기 인식을 목표치에 맞추어 조정하였다고 해석한다. 생산성, 효율, 비용 대비 가치라는 언어가 자원봉사 경험 자체를 재구성한다는 것이 결론이다.</div>
+      <div class="check"><b>이어볼 지점</b> &nbsp;측정과 관리가 봉사자에게 미치는 영향을 조직 내부에서 관찰한 연구로, 이번 호 쟁점의 다른 한쪽을 뒷받침한다. 측정 체계를 갖추면 제도적 인정이 따른다는 주장과, 측정이 도입되면 무급 노동의 강도가 높아진다는 관찰은 같은 현상의 두 측면일 수 있다. 공동연구 과제로 옮기면 다음과 같이 질문할 수 있다. 한국 봉사단 사업의 성과지표가 도입되거나 변경된 시점을 전후로 단원의 활동 시간과 보고 업무량이 어떻게 달라졌는가. 사업 설명자료와 단원 보고 양식만으로도 상당 부분 추적이 가능하다. 다만 영국의 단일 사례에 대한 질적 연구이고, 상담이라는 감정노동 성격이 강한 직무라는 점에서 일반화에는 한계가 있다.</div>
+    </div>
+  </section>
+
+  <section class="debate">
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">같은 날 나온 두 숫자</span></div>
+    <div class="setup">2025년 12월 5일 UN 본부에서 두 문서가 같은 날 공개되었다. UNV의 2026 SWVR은 월 21억 명(생산가능인구의 34.5%)을 제시하였고, IAVE는 「자원봉사의 미래를 위한 행동 촉구」를 발표하면서 보도문에 <b>월 8.62억 명</b>을 명시하였다. 다만 함께 발간된 Insights Paper(Chris Millora 집필) 본문에는 이 수치가 없다. 두 수치의 차이는 2.4배이다. 세계 자원봉사자의 해가 '측정의 해'로 불리는 지금, 측정의 범위를 어디까지 확장할 것인가가 쟁점이 된다. <b>범위, 비교가능성, 표본</b>의 세 축으로 정리한다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">측정을 넓혀야 한다</div>
+        <p class="pt"><b>범위</b>조직을 거치지 않는 직접 봉사가 25%로 조직 기반(11.7%)의 두 배이다. 좁은 정의는 남반구의 상호부조를 집계에서 제외한다. 범위를 넓혀야 실태가 드러난다.</p>
+        <p class="pt"><b>비교가능성</b>SWVR의 논지는 기존의 측정 방식 때문에 자원봉사가 정책과 투자 결정에서 과소평가되어 왔다는 것이다. 과거와의 연속성을 잃더라도 현재를 정확히 측정하는 편이 낫다는 입장이다.</p>
+        <p class="pt"><b>표본</b>GIVE는 시간 집계를 넘어 개인·사회·경제·지원환경의 네 차원을 평가한다. 질을 측정하려는 시도 자체가 진전이며, 적용 과정에서 보완할 수 있다.</p></div>
+      <div class="col b"><div class="ch">넓히면 쓸 수 없게 된다</div>
+        <p class="pt"><b>범위</b>'자원봉사자'로 분류된 사람 가운데 일부는 사실상 저임금 노동자이다(Baillie Smith 외 2022). 분류를 넓힐수록 이들의 노동은 통계에서 더 보이지 않게 된다.</p>
+        <p class="pt"><b>비교가능성</b>SWVR 자체가 34.5%를 2022년의 14.9%와 비교할 수 없다고 명시하였다. 추세를 보여주지 못하는 지표는 정책 평가에 활용하기 어렵다. 4주 기준기간을 따르는 국가 설문은 약 20%에 불과하고 나머지는 모형 추정이다.</p>
+        <p class="pt"><b>표본</b>IAVE 설문 응답 10,053명 가운데 43%가 한국이었다. 보고서가 스스로 밝힌 한계이다. 한국의 사례가 세계 평균으로 해석될 위험이 있다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 두 수치는 왜 벌어졌는가</div>
+      <p><b>H1 정의</b>SWVR은 직접·비공식 봉사를 포함하고, IAVE의 수치는 조직을 거친 참여에 가깝다.<span class="pred">이 가설이 맞다면 SWVR의 조직 기반 추정(11.7%, 약 7억 명)이 IAVE의 8.62억 명에 근접해야 한다. 두 배 이상 차이가 나면 정의만으로는 설명되지 않는다.</span></p>
+      <p><b>H2 기준기간</b>'월 1회'를 측정하는 기준기간이 다르다. SWVR은 19차 ICLS의 4주를 적용한다.<span class="pred">이 가설이 맞다면 IAVE 측 문서에 다른 기준기간이 명시되어 있어야 한다. 기준기간 표기가 없다면 가설을 검증할 수 없으며, 그 자체가 문제이다.</span></p>
+      <p><b>H3 모형 추정</b>SWVR은 설문이 없는 국가를 모형으로 추정하고, IAVE는 응답에 근거한다.<span class="pred">이 가설이 맞다면 설문 미실시국을 제외하고 재계산할 때 격차가 줄어야 한다. 줄지 않으면 추정 방식은 원인이 아니다.</span></p></div>
+    <div class="close">가설을 가리려면 ① IAVE가 8.62억 명의 근거로 제시한 자료, ② SWVR 3장의 국가별 원자료와 모형 추정을 구분한 표, ③ 두 문서가 적용한 기준기간의 정의를 나란히 검토해야 한다. 모두 공개 문서로 확인할 수 있으며, 분과가 직접 수행할 수 있는 작업이다. 다만 어느 가설이 맞든 남는 과제가 하나 있다. <b>세계 수치의 격차를 좁히는 작업과, 한국 사업 하나에서 누가 봉사자로 집계되고 누가 집계되지 않는지를 기록하는 작업은 서로 다른 일이다.</b> 후자에는 대규모 자료가 필요하지 않다. 분과가 파악하고 있는 사업 하나를 골라 파견 단원과 수용기관 보조 인력을 같은 표에 기록해 보면, 어느 통계가 그 표를 담을 수 있는지가 드러난다. 판단은 독자의 몫으로 남긴다.</div>
+  </section>
+
+  <div class="also"><span class="h">분과 소식</span>
+    <b>국제개발봉사 국회포럼</b> 「한국 국제개발봉사의 다음 30년: 규모의 확대에서 포용성과 책무성으로」 · <b>11월 20일(금) 14:00–16:10</b> · 국회의원회관 제2세미나실 · 현장 개최 + Zoom 웨비나 생중계 · 주관 국제개발봉사분과. 사전등록 안내는 공개되는 대로 전하겠습니다(문의 kaidecv4d@gmail.com).<br>
+    <b>동계학술대회</b> · 12월 12일(토) · 분과 세션. 발표를 희망하시는 분은 편집인에게 회신해 주세요.<br>
+    <b>찾습니다</b> · 이번 호는 교차 확인이 되는 2026년 국내 학술논문을 찾지 못해 연구 동향의 국내 칸을 비웠습니다. 최근 발표하신 논문이나 추천하실 글이 있으면 편집인에게 알려 주세요. 파리 포럼 참관기도 기다립니다.
+  </div>
+
+  <footer>
+    <b>발행</b> 국제개발협력학회 국제개발봉사분과 &nbsp;·&nbsp; <b>편집인</b> 오지은 &nbsp;·&nbsp; 격주 월요일 오전 9시<br>
+    다음 호 예고 · 제6호(11월 16일)는 11월 20일 국회포럼의 쟁점을 미리 짚고, 개발협력주간 논의와 파리 포럼 연구의 날의 2027년 의제를 다룹니다.<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+</body>
+</html>
