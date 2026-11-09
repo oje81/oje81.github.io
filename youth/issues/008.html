@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>글로벌 청년정책 브리프 제8호</title>
+<style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    .two,.hyp,.lead,.lens{break-inside:avoid;} .item,section{break-inside:auto;} .shead{break-after:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 매주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제8호 &nbsp;·&nbsp; 2026. 11. 9. &nbsp;·&nbsp; 연구 4편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점(제도, 거버넌스, 성과관리, 참여)에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>청년참여예산과 청년자율예산: 참여는 배분을 바꾸는가</h2>
+    <p>기획예산처는 10월 26일 국민참여예산을 총지출 증가율 이상으로 늘리면서 국민참여단의 19~34세 청년 비중을 20.7%에서 40%로 올리겠다고 밝혔습니다. 서울시는 11월 7일 서울청년정책네트워크 총회에 2027년 청년자율예산안 6개 사업 42억 3,900만 원을 의결 안건으로 올렸고(총회 결과는 작성 시점에 미확인), 관악구는 10월 8일 청년 제안 10개 사업 2억 원을 2027년 본예산에 담는 청년참여예산제를 시작했습니다. 뉴욕시의회는 11세 이상 주민 약 13만 명이 투표한 참여예산 결과를 5월에 발표했고, 유럽평의회 지방·지역정부회의는 지난해 10월 청년참여헌장을 22년 만에 새로 채택했습니다. 청년의 몫을 예산 안에 정원으로 두는 방식과 청년이 직접 편성하는 방식이 각각 무엇을 바꾸는지를, 참여예산에 누가 참여하고 누가 빠지는지를 분석한 국내 연구 2편과 핀란드·폴란드 비교 연구, 그리고 참여 설계의 고전으로 읽습니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">20.7% → 40%</div><div class="c">국민참여예산 국민참여단에서 19~34세 청년이 차지하는 비중, 약 120명에서 약 240명으로<br>(기획예산처 「국민참여예산제도 활성화 방안」 2026. 10. 26. · 보도자료 원문 미열람, 보도 3건 교차)</div></div>
+    <div class="cell"><div class="n">500억 → 42.4억 원</div><div class="c">서울시 청년자율예산, 2018년 계획 규모(연 500억)와 2027년안(6개 사업 42억 3,900만 원)<br>(서울청년정책네트워크 위원 19~39세 · 서울시 보도 2건 교차, 2018년 서울시 보도자료)</div></div>
+    <div class="cell"><div class="n">4.1% · 5.9%</div><div class="c">지난 1년간 주민참여예산 활동 경험이 있는 비율, 19~39세 청년과 40대<br>(한국행정연구원 사회통합실태조사 2021 · 김정인 2023 분석)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 3편(국내 2 + 국제 1) + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.22783/krila.2023.37.4.241">청년의 사회자본이 주민참여예산 활동에 미치는 영향 연구</a></h3>
+      <div class="cite">김정인(2023), 『지방행정연구』 37(4), 241–272. 한국지방행정연구원(KCI 등재). DOI 10.22783/krila.2023.37.4.241 · RISS 상세 레코드와 한국지방행정연구원 원문 PDF로 이중 확인 · 본문 대부분 확보(결론부와 회귀표 수치는 미열람) · 연령 정의: 청년 19~39세(다수 지자체 청년기본조례 기준)</div>
+      <div class="body">저자는 한국행정연구원 「2021년 사회통합실태조사」 응답자 8,077명 가운데 19~39세 2,572명을 분석했다. 종속변수는 지난 1년간 주민참여예산 활동 경험 유무다. 청년의 참여 경험 비율은 <b>4.1%</b>(104명)였고, 20대 4.6%, 30대 3.4%였다. 40대는 5.9%, 50대는 4.5%, 60세 이상은 4.8%였다. 청년은 기성세대보다 이웃신뢰(2.61 대 2.81)와 지방자치단체 신뢰(2.57 대 2.63)가 낮았고, 동호회 활동과 자원봉사·기부 활동은 높았다. 로지스틱 회귀에서 자원봉사·기부단체 활동과 이웃신뢰는 참여 경험과 정(+)의 관계였고, 가족신뢰는 부(−)의 관계로 나타났다. 지방자치단체 신뢰, 공동체의식, 호혜적 규범은 유의하지 않았다. 저자는 사회자본 가운데 네트워크와 대인신뢰의 일부만이 청년의 참여예산 활동과 이어진다고 적는다. 국내 참여예산 연구가 제도 운영 실태와 참여자의 만족도를 다뤄 온 데 비해, 이 연구는 전국 표본에서 청년만을 떼어 참여 여부의 설명 변수를 찾은 점이 다르다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;참여 경험이 사회자본을 만든다는 역방향 해석이 횡단 자료에서는 배제되지 않는다. 가족신뢰의 부(−)의 효과는 40대 이상에서도 같은 방향이어서 청년 고유의 현상은 아닐 수 있고, 저자의 해석은 결론부를 보지 못해 확인하지 못했다. 활동 경험 4.1%라는 수치 자체가 이번 호 쟁점의 출발점이다. 청년 참여를 늘리려는 제도가 참여 경험이 있는 4%의 성격을 묻지 않으면, 정원 확대는 이미 참여하는 청년을 더 뽑는 일이 될 수 있다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://m.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&control_no=a283f9e6148064377ecd42904f0c5d65">잠재계층분석을 통한 주민참여예산제도 상 비참여 집단에 대한 탐색: 서울특별시 은평구 주민참여예산제도를 중심으로</a></h3>
+      <div class="cite">김지영·정문기(2024), 『한국행정학보』 58(3), 217–242. 한국행정학회(KCI 우수등재). DOI 미확인 · RISS 상세 레코드와 성균관대 교원 업적 목록으로 이중 확인(KCI·DBpia는 자동 접근 차단) · 초록 확보, 본문 미열람 · 연령 정의: 은평구 주민 전체(청년을 따로 정의하지 않음)</div>
+      <div class="body">저자들은 참여자가 아니라 참여하지 않는 주민에 초점을 맞췄다. 은평구 주민을 설문·면접하고 잠재계층분석으로 비참여 집단을 나눴다. 사회인구학적 특성에 따라 두 집단이 나타났다. 하나는 안정된 소득과 직업을 가진 경제활동 집단으로, 중장년과 <b>청년 여성</b>이 여기에 속했다. 다른 하나는 소득이 낮고 고용이 불안정한 사회적 주변 집단이다. 두 집단은 참여의 장애를 다르게 인식했다. 저자들은 온·오프라인 홍보의 병행, 참여 유인의 설계, 일과 시민활동의 양립을 돕는 제도적 지원을 제안한다. 국내 참여예산 연구가 참여자의 특성과 만족을 설명해 온 흐름에서, 비참여자를 유형화한 점이 이 연구의 위치다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;한 자치구 사례이고 표본 크기와 응답률은 초록에서 확인하지 못했다. 비참여의 이유가 시간 부족인지, 제도를 모르는 것인지, 알고도 효능감이 없어서인지에 따라 처방이 다른데, 두 유형이 이 셋 가운데 무엇을 가르는지는 본문 확인이 필요하다. 이번 호의 쟁점과 관련해서는 청년이 하나의 집단이 아니라는 점이 남는다. 일하는 청년 여성과 고용이 불안한 청년은 다른 이유로 빠지므로, 청년 정원 하나로 두 집단이 함께 들어오리라고 보기는 어렵다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1080/02673843.2025.2570232">Youth empowered or just involved? Exploring youth participatory budgeting in Finland and Poland</a></h3>
+      <div class="cite">Radzik-Maruszak, K., Kołomycew, A., Szulc-Wałecka, E. &amp; Lehtonen, P.(2025), <i>International Journal of Adolescence and Youth</i> 30(1), 2025. 10. 23. 온라인 게재(CC BY). DOI 10.1080/02673843.2025.2570232 · Semantic Scholar와 OpenAlex DOI 레코드로 이중 확인(출판사 페이지·기관저장소는 자동 접근 차단) · 초록 확보, 본문 미열람 · 연령 정의: 초록에 미기재</div>
+      <div class="body">저자들은 핀란드 에스포와 폴란드 루블린의 청년참여예산을 29건의 개인·집단 면접과 문서 자료로 비교했다. 두 도시 모두 청년의 역량 강화와 시민 참여를 목표로 내세웠다. 에스포는 시가 주도하는 집중형 모델이고, 루블린은 학교 단위에 비정부기구가 참여하는 분권형 모델이다. 저자들은 두 사례 모두에서 청년의 행위 주체성과 시민적 학습이 높아졌다고 본다. 동시에 숙의의 시간이 제한되고, 포용이 상징에 머물며, 제도적 뒷받침이 고르지 않다는 한계를 공통으로 지적한다. 포용성과 공동 소유에 대한 장기적 약속이 없으면 청년참여예산은 <b>상징적 절차로 남을 위험</b>이 있다고 결론 내린다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;면접 대상에 참여하지 않은 청년이 포함됐는지는 초록으로 알 수 없다. 참여한 청년과 담당 공무원의 평가는 제도에 호의적일 가능성이 있다. 두 도시의 예산 규모와 결정 권한의 범위가 초록에 없어, 상징성의 원인이 숙의 설계인지 돈의 크기인지 구분되지 않는다. 그럼에도 복지국가 유형이 다른 두 나라에서 같은 한계가 나타났다는 점은, 문제가 한 나라의 행정 문화보다 참여예산이라는 도구의 구조에 있을 가능성을 시사한다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1111/j.1540-6210.2006.00667.x">Varieties of Participation in Complex Governance</a></h3>
+      <div class="cite">Fung, A.(2006), <i>Public Administration Review</i> 66(s1), 66–75. DOI 10.1111/j.1540-6210.2006.00667.x · Semantic Scholar DOI 레코드(인용 2,267회)와 공개 PDF(FIU 강의자료)로 이중 확인 · 본문 확보</div>
+      <div class="body">펑은 참여 제도를 세 축으로 나눈다. 누가 참여하는가, 어떻게 소통하고 결정하는가, 그 결과가 정책과 어떻게 이어지는가다. 첫 축은 선출직과 공무원에서 전문 이해관계자, 일반 이해관계자, 무작위 선발, 공개 모집, 자발적 참여, 확산된 공중으로 이어진다. 그는 자발적 참여자가 "더 큰 공중을 대표하지 않는 경우가 잦다"고 적고, 무작위 선발이 기술적 대표성을 가장 잘 보장한다고 본다. 세 번째 축은 영향력 없음에서 자문, 공동 통치, 직접 권한까지다. 그는 포르투알레그리의 참여예산을 저소득 주민에게 직접 권한을 준 사례로 들어 정치적 불평등, 곧 정의의 문제에 대한 처방으로 분류한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;이 틀로 보면 국민참여단의 청년 정원은 첫 축(선발)을 바꾸고 세 번째 축(권한)은 그대로 둔 설계다. 서울의 청년자율예산은 세 번째 축을 공동 통치에 가깝게 두었으나 첫 축은 공개 모집과 자발적 참여에 머문다. 펑의 틀은 어느 조합이 옳은지 말하지 않는다. 다만 선발만 바꾸고 권한을 바꾸지 않을 때 대표성은 늘고 영향은 늘지 않을 수 있다는 점을 예측하게 한다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 2건</span></div>
+    <ul class="news">
+      <li><b>[국내] 기획예산처 「국민참여예산제도 활성화 방안」(10. 26., 제3차 재정운용전략협의회): 국민참여단의 19~34세 청년 비중을 20.7%에서 40%로, 국민참여예산 규모는 총지출 증가율 이상으로 확대.</b> 보도에 따르면 기준선은 2019~2027년 최고·최저 연도를 뺀 평균 770억 원이고, 2018년 도입 뒤 298개 사업 5,439억 원이 반영됐다. 연평균 반영 규모는 2019~2023년 52개 사업 1,016억 원에서 2024~2026년 12개 사업 119억 원으로 줄었다가, 2027년 예산안에는 21개 사업 3,010억 원이 담겼다. 청년 몫은 예산액이 아니라 <b>심사·선정 기구의 정원</b>으로 정해졌다. 앞서 1월 29일 제도 개편으로 국민참여단은 300여 명에서 600여 명으로 늘고 비공개 선발에 대국민 공모가 더해졌다(기획예산처 정책뉴스 6. 9.). 10월 26일 방안의 보도자료 원문은 열람하지 못했고 보도 3건을 교차했다. <span class="src"><a href="https://www.asiatoday.co.kr/kn/view.php?key=20261026010008815">아시아투데이</a> · <a href="https://www.korea-news.com/news/articleView.html?idxno=105241">공무원뉴스</a> · <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148966149&call_from=rsslink">제도 개편(정책브리핑 6. 9.)</a> · <a href="https://www.korea.kr/briefing/pressReleaseView.do?newsId=156742071&call_from=rsslink">1. 29. 보도자료</a></span></li>
+      <li><b>[국내] 서울시 2027년 청년자율예산안 42억 3,900만 원(6개 사업), 11. 7. 서울청년정책네트워크 총회에서 의결 예정으로 발표(11. 4.). 관악구는 청년 제안 10개 사업 2억 원을 2027년 본예산에 반영하는 청년참여예산제 시작(10. 8.).</b> 서울시는 청년위원이 제안한 65개 사업 가운데 분과 심사를 거친 6개를 시민투표로 골랐다고 밝혔다. 체육 바우처(19~39세 중위소득 150% 이하 9,999명, 1인 20만 원), 장기 수험생 재교육, 취업준비 온라인 플랫폼 등이다. 2018년 서울시는 청년이 직접 기획·집행하는 "500억 규모의 청년자율예산"을 두고 2022년까지 매년 500억 원을 추가하겠다고 발표했었다. 2019년 투표에는 8,300명이 참여했고 투표 비중은 일반 시민과 청년시민위원이 절반씩이었다. 관악구는 관악청년네트워크가 낸 23개 제안을 구가 심사해 10개(생성형 AI 구독 지원, 고립·은둔 청년 동행, 퇴직 청년 14주 과정 등)로 묶었고, 내년부터 '청년제안 책임답변제'를 두고 청년예산을 11억 원까지 늘릴 계획이라고 밝혔다. 두 사례 모두 보도자료 원문은 열람하지 못했고 보도 2건씩 교차했다. 관악구의 청년 연령 정의는 보도에 없다. <span class="src"><a href="https://go.seoul.co.kr/news/newsView.php?id=20261104500136">서울신문(11. 4.)</a> · <a href="https://www.sportalkorea.com/news/articleView.html?idxno=2025052909553672405">뉴시스</a> · <a href="https://mediahub.seoul.go.kr/archives/1179871">서울시(2018. 9. 11.)</a> · <a href="https://mediahub.seoul.go.kr/archives/1251387">서울시(2019. 9. 4.)</a> · <a href="https://go.seoul.co.kr/news/newsView.php?id=20261008500177">서울신문(10. 8.)</a> · <a href="https://www.sijung.co.kr/news/articleView.html?idxno=438656">시정일보</a></span></li>
+      <li><b>[국제] 유럽평의회 지방·지역정부회의, 「청년의 지방·지역 생활 참여에 관한 유럽헌장」 개정본 채택(2025. 10. 29., 결의 516·권고 537). 2003년 개정본을 22년 만에 대체.</b> 헌장은 청년의회의 구성이 "지역 청년의 다양성을 공정하게 대표"해야 하고 위원은 공정하고 투명한 절차로 뽑혀야 한다고 적었다(제33항). 참여예산은 자문·관여 방식을 보완하는 절차로 열거됐다(제38항). 청년의회에 대해서는 "비판적 목소리를 훼손하지 않는 제한 없는 반복적 재정 지원"을 요구했다(제36항). 청년의 연령은 각국 법제에 맡겼고, 해설서는 유럽평의회와 유럽위원회가 청년정책에서 13~30세를 쓴다고 적었다. 투표연령 인하와 선거 명부의 청년 할당도 검토 과제로 넣었다(제44항). 권고는 각료위원회에 회원국의 국가 차원 지원 틀 마련을 요청했다. 구속력은 없다. <span class="src"><a href="https://rm.coe.int/cg-2025-49-14finprov-en-european-charter-on-the-participation-of-young/488028e792">CG(2025)49-14</a></span></li>
+      <li><b>[국제] 뉴욕시의회 2027회계연도 참여예산 결과 발표(5. 22.): 22개 선거구에서 11세 이상 주민 약 13만 명이 투표, 자본예산 약 2,500만 달러.</b> 투표는 4월 11~19일에 진행됐고, 참여 자격은 해당 선거구에 사는 11세 이상 주민이다. 시의원이 선거구별로 운영하고 당선 사업은 시의원의 자본예산 재량분에서 집행된다. 청년을 겨냥한 사업(청년 환경관리, 청년 극장 등)이 일부 있으나 청년 투표자 수는 공개되지 않았다. 청년을 별도 기구에 두지 않고 <b>투표 연령을 낮춰 일반 참여예산 안에 포함</b>시킨 설계다. <span class="src"><a href="https://council.nyc.gov/press/2026/05/22/3126/">NYC Council(5. 22.)</a></span></li>
+      <li><b>[국제] 롱비치(미국 캘리포니아) 청년참여예산 4년차 결과 발표: 12~26세 1,422명 투표, 10개 사업에 각 5만 달러(총 50만 달러).</b> 시 청년개발국은 4월 13~28일 투표에서 15개 후보 가운데 10개를 선정했다고 밝혔다. 재원은 지방 조세 조치(Measure US)다. 전년 투표자는 1,976명이었다. 청년 운영위원회가 후보를 고르고 청년 투표가 배분을 정하며 집행은 시가 맡는다. 보스턴의 청년참여예산은 연 100만 달러다(보도). 투표자가 줄어든 이유는 발표문에 없다. <span class="src"><a href="https://longbeach.gov/press-releases/office-of-youth-development-announces-2026-youth-power-participatory-budgeting-long-beach-awardees/">Long Beach 발표</a> · <a href="https://youthtoday.org/2026/09/long-beach-can-teach-communities-youth-participatory-budgeting/">Youth Today(9. 3.)</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 참여·대표성</span></div>
+    <div class="lens">
+      <div class="h">정원은 누가 앉는지를 바꾸고, 자율예산은 무엇을 정하는지를 바꾼다</div>
+      <h3>청년의 몫을 정하는 두 방식</h3>
+      <p>참여·대표성의 관점에서 이번 호의 국내 사례는 두 갈래다. 국민참여예산은 청년의 몫을 심사 기구의 정원(40%)으로 정했다. 이는 펑의 첫 축, 곧 참여자 선발을 바꾸는 설계다. 서울의 청년자율예산과 관악의 청년참여예산은 청년이 제안하고 고른 사업에 예산을 붙인다. 이는 세 번째 축, 곧 권한을 나누는 설계다. 두 방식은 대표성의 문제를 다르게 안고 있다. 정원 방식은 19~34세 240명이 어떤 청년인지를 묻는다. 김정인의 분석에서 참여예산 활동 경험이 있는 청년은 4.1%이고, 이들은 자원봉사·기부 활동이 많고 이웃신뢰가 높은 집단이다. 공모로 뽑는 정원은 이 4%에서 채워질 가능성이 높다. 김지영·정문기가 찾은 비참여 집단, 곧 일하는 청년 여성과 고용이 불안한 청년은 정원이 늘어도 들어오기 어렵다. 자율예산 방식은 다른 물음을 안는다. 서울의 2027년안은 42억 원이다. 2018년 계획의 500억 원과 견주면 12분의 1이다. 권한의 크기가 줄면 참여는 남고 배분은 거의 바뀌지 않는다. 핀란드와 폴란드의 비교 연구가 적은 "상징적 절차"의 위험이 여기에 해당한다. 두 방식 가운데 어느 쪽이 나은지는 목적에 달려 있다고 본다. 청년의 관점을 심사에 넣는 것이 목적이면 정원이 맞고, 청년이 배분을 정하게 하는 것이 목적이면 자율예산이 맞다. 다만 두 제도 모두 참여한 청년이 참여하지 않은 청년을 대표하는지는 따로 묻지 않는다. 뉴욕은 투표 연령을 11세로 낮춰 청년 기구 없이 일반 참여예산 안에서 이 물음을 비켜 갔다. 유럽헌장은 청년의회의 구성이 지역 청년의 다양성을 대표해야 한다고 적었을 뿐 방법은 각국에 맡겼다. 한국의 두 제도에는 아직 이 조항에 해당하는 규칙이 없다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;정원 40%는 심사 기구 안에서 청년이 다수가 아니라도 무시되지 않을 규모를 확보하는 장치이고, 참여자가 기존 참여층에서 나온다는 것은 모든 공모형 참여의 공통 조건이지 이 제도의 결함은 아니다. 서울의 자율예산 축소도 배분 권한의 후퇴라기보다 2018년 계획이 과대했고 지금의 42억 원이 숙의로 감당할 수 있는 규모라는 해석이 가능하다. 대표성은 무작위 선발로 올릴 수 있지만, 무작위로 뽑힌 청년이 예산을 숙의할 시간과 정보를 갖는다는 보장은 없다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">청년참여예산과 청년자율예산: 참여는 배분을 바꾸는가</span></div>
+    <div class="setup">배분론은 청년이 심사와 편성에 들어가면 예산의 쓰임이 청년 쪽으로 움직인다고 본다. 과정론은 참여예산이 바꾸는 것은 배분보다 참여한 청년의 역량과 제도에 대한 신뢰이며, 배분의 변화는 작거나 확인되지 않는다고 본다. 두 입장은 참여 자체의 가치를 부정하지 않는다는 점에서 같고, 무엇으로 성과를 재야 하는지에서 다르다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">참여는 배분을 바꾼다</div>
+        <p class="pt"><b>근거</b>포르투알레그리의 참여예산은 저소득 지역으로 투자를 옮겼고, 펑은 이를 정치적 불평등에 대한 처방으로 분류했다. 조창덕(2022)은 2009~2018년 광역정부에서 청년 시민단체 수가 많을수록 청년정책예산이 컸다고 보고했다. 조직된 참여가 예산과 함께 움직인다는 결과다.</p>
+        <p class="pt"><b>사례</b>롱비치는 청년 투표가 50만 달러의 배분을 정하고, 서울의 자율예산은 청년이 고른 6개 사업에 42억 원을 붙인다. 참여가 없었다면 없었을 사업이다.</p>
+        <p class="pt"><b>함의</b>성과는 청년 제안 사업의 채택률과 집행률, 청년 관련 예산의 증감으로 잴 수 있다. 정원과 권한을 함께 늘려야 배분이 움직인다.</p></div>
+      <div class="col b"><div class="ch">참여는 참여자를 바꾼다</div>
+        <p class="pt"><b>근거</b>핀란드·폴란드 비교에서 확인된 효과는 청년의 행위 주체성과 시민적 학습이었고, 배분의 변화는 보고되지 않았다. 조창덕(2022)에서 청년 유권자 비율은 청년정책예산과 관계가 없었다. 김정인(2023)의 참여 경험 청년 4.1%는 이미 활동적인 집단이다.</p>
+        <p class="pt"><b>사례</b>서울의 자율예산은 500억 원 계획에서 42억 원으로 줄었으나 총회와 분과 활동은 이어진다. 국민참여예산은 연평균 반영액이 1,016억 원에서 119억 원으로 준 시기에 참여단을 두 배로 늘렸다.</p>
+        <p class="pt"><b>함의</b>성과는 참여 청년의 효능감과 제도 신뢰, 비참여 청년의 유입으로 잰다. 참여를 배분의 수단으로만 평가하면 축소기의 참여예산은 실패로 기록된다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 국민참여단의 청년 비중을 40%로 올리면 무엇이 달라지는가</div>
+      <p><b>H1 배분</b>청년 비중이 높은 참여단은 청년 관련 제안을 더 많이 통과시킨다<span class="pred">맞다면 → 2028년 예산안부터 청년 관련 참여예산 사업의 수와 금액이 전체 반영분보다 빠르게 는다.</span></p>
+      <p><b>H2 구성</b>달라지는 것은 참여단의 연령 구성뿐이고 통과 사업의 구성은 그대로다<span class="pred">맞다면 → 사업 분야별 반영 비율이 2027년안과 다르지 않고, 청년 위원의 투표 성향이 다른 연령과 구분되지 않는다.</span></p>
+      <p><b>H3 선발</b>늘어난 정원이 기존 참여층에서 채워져 대표성은 바뀌지 않는다<span class="pred">맞다면 → 청년 위원의 학력·고용 형태·시민단체 활동 경험이 19~34세 인구 분포와 크게 다르고, 공모 지원자의 구성이 회차마다 비슷하다.</span></p></div>
+    <div class="close">세 가설은 국민참여단의 구성(연령 외에 고용 형태와 거주지)과 사업별 투표 결과가 공개되면 가려볼 수 있다. 이 브리프는 2027년 국민참여단 공모의 선발 방식, 서울시 2027년 본예산에서 자율예산 6개 사업의 반영 여부, 관악구 청년참여예산의 조례 근거 유무를 계속 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 매주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · 청년센터와 청년미래센터: 전달체계는 어디서 겹치는가, 집행·전달체계의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+
+</body>
+</html>
