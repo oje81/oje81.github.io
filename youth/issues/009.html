@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>글로벌 청년정책 브리프 제9호</title>
+<style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    .two,.hyp,.lead,.lens{break-inside:avoid;} .item,section{break-inside:auto;} .shead{break-after:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 매주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제9호 &nbsp;·&nbsp; 2026. 11. 16. &nbsp;·&nbsp; 연구 4편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건 · 읽기 가이드 1편</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점(제도, 거버넌스, 성과관리, 참여)에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>청년센터와 청년미래센터: 전달체계는 어디서 겹치는가</h2>
+    <p>전국의 청년센터는 2026년 8월 기준 250개소(광역 17, 기초 233)이고, 보건복지부의 청년미래센터는 올해 4개 시·도에서 17개 시·도로 늘어나 대구 센터가 10월 1일 문을 열었습니다. 두 센터는 모두 19~34세 청년을 맡고, 대부분 3년 단위 민간위탁으로 운영되며, 상담 건수와 등록 인원으로 평가받습니다. 영국은 6월에 고용연금부의 Youth Hubs를 2029년까지 360곳으로 늘리겠다고 밝혔고, 같은 해 문화미디어스포츠부는 Young Futures Hubs 50곳을 따로 추진합니다. 핀란드의 원스톱 청년안내센터(Ohjaamo)는 89곳에서 한 해 21만 5천 건의 방문을 받았습니다. 한 청년이 여러 센터를 거칠 때 전달체계는 어디서 겹치고 어디서 끊어지는지를, 서울청년센터 종사자 19명을 면접한 제도적 문화기술지, 청소년센터와 청년센터의 운영 특성을 비교한 연구, 스웨덴 NEET 청년 30명의 서술을 분석한 연구, 그리고 원스톱 창구의 고전으로 읽습니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">250개소 · 17개 시·도</div><div class="c">전국 청년센터 수(2026. 8., 광역 17·기초 233, 위탁 운영 63.6%)와 2026년 청년미래센터 설치 시·도 수<br>(청년센터는 청년기본법 19~34세, 서울 조례는 19~39세 · 청년미래센터는 가족돌봄 13~34세, 고립·은둔 19~34세 · 이슬기 2026 인용 자료, 복지부 발표는 보도 교차)</div></div>
+    <div class="cell"><div class="n">47.4% · 77%</div><div class="c">전국 청년센터 종사자 가운데 근무 1년 미만 비율과 이·퇴직 의사가 있는 비율(2024년 전국 조사)<br>(종사자 연령 제한 없음, 서울청년센터 종사자 90명 중 39세 이하 84.4% · 이슬기 2026 재인용)</div></div>
+    <div class="cell"><div class="n">180 → 360 · 8 → 50</div><div class="c">영국 고용연금부 Youth Hubs(16~24세 NEET 대상)의 2026년 개소 수와 2029년 목표, 문화미디어스포츠부 Young Futures Hubs의 선도 지역 수와 2029년 목표<br>(DWP 2026. 6. 12. · DCMS 중간평가 2026. 9. 16.)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 3편(국내 2 + 국제 1) + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://www.kihasa.re.kr/hswr/assets/pdf/1724/journal-46-3-568.pdf">청년지원매니저의 장기근속을 어렵게 하는 일의 조직화: 제도적 문화기술지</a></h3>
+      <div class="cite">이슬기(2026), 『보건사회연구』 46(3), 568–596. 한국보건사회연구원(KCI 등재). DOI 10.15709/hswr.2026.46.3.568 · RISS 상세 레코드와 학술지 원문 PDF로 이중 확인(doi.org 해석은 자동 접근 차단) · 전문 확보 · 연령 정의: 이용자 청년은 청년기본법 19~34세(서울 조례 19~39세), 종사자는 연령 제한 없음</div>
+      <div class="body">저자는 서울청년센터의 청년지원매니저 15명과 선임매니저 4명을 2025년 6~9월에 1인당 평균 100분씩 면접하고, 센터장 3명과 광역센터·자치구·서울시 담당자 3명을 2차 정보제공자로 두었다. 법령, 설치·운영지침, 성과평가지표, 근로계약서, 위·수탁협약서 같은 텍스트가 일을 어떻게 조직하는지를 추적했다. 전국 조사에서 청년센터 종사자의 <b>47.4%가 근무 1년 미만</b>이고 77%가 이·퇴직 의사를 갖고 있다는 수치가 출발점이다. 저자는 기획·운영·평가 단계에서 11가지 일의 조직화를 찾았다. 사업계획서는 12월에 내는데 성과지표는 이듬해 2월에 확정되어 계획이 목표치에 맞춰 다시 짜이고, 종합상담 목표는 2025년 센터당 300건에서 360건으로 올라 신청할 정책이 적은 겨울에도 실적이 요구되었다. 야간 단독 근무에서 폭언과 신체적 공격이 있었으나 지침에 안전 기준은 없었다. 저자는 성과 중심 민간위탁, 부분적으로 제도화된 사회복지, 청년친화라는 세 체제가 한 일 과정에서 함께 작동한다고 본다. 이용자 청년의 참여 권리는 구체적으로 보장되는 반면, 그 일을 하는 종사자 청년의 안전과 고용 지속의 조건은 제도화되지 않았다는 것이 결론이다. 국내 청년센터 연구가 청년센터의 역할과 운영 모델(정진철 외 2020, 백승훈 외 2023)과 종사자의 고용불안정(윤태영·남재욱 2023)을 다뤄 온 데 비해, 이 연구는 고용불안정이 어떤 문서와 절차에서 만들어지는지를 추적한 점이 다르다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;면접 대상은 서울 17개 자치구 센터의 현직자다. 이미 떠난 사람의 경험은 남은 사람의 전언으로만 들어왔고, 서울 밖 센터의 직영·공공위탁 모델은 다루지 않았다. 세 체제 가운데 어느 것이 근속에 더 큰 영향을 주는지는 이 설계로 가릴 수 없다. 민간위탁 자체가 아니라 위탁 계약의 지표 설계가 문제라는 경쟁 해석도 가능하다. 다만 이번 호의 쟁점과 관련해서는, 전달체계의 끝에 있는 한 사람이 1년 안에 바뀌는 조건에서 다른 센터와의 연계가 누구의 기억에 남는지를 묻게 한다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.55063/KIYFE.2026.24.2.9">청소년센터와 청년센터의 운영 특성 비교 연구: 연계 및 발전 방안을 중심으로</a></h3>
+      <div class="cite">송원일(2026), 『청소년시설환경』 24(2), 109–117. 한국청소년시설환경학회(KCI 등재). DOI 10.55063/KIYFE.2026.24.2.9 · RISS 상세 레코드와 Semantic Scholar DOI 레코드로 이중 확인 · 전문 확보(편집인 제공 PDF) · 연령 정의: 전환기 청소년·청년 19~24세(청소년기본법 9~24세와 청년기본법 19~34세가 겹치는 구간)</div>
+      <div class="body">저자는 청소년수련관·문화의집·특화시설을 묶은 청소년센터와 청년기본법상 청년센터를 제도 기반, 운영 자원, 서비스, 이용자 참여, 지역 연계의 다섯 영역에서 문헌과 2차 자료로 비교했다. 자료는 「2024 청소년백서」, 청년재단 중앙청년지원센터의 「2024년 청년센터 운영 실태 및 종사자 직무 현황조사」 등이다. 2024년 기준 청소년센터는 580개소, 청년센터는 광역 16·기초 207의 223개소다(이슬기가 인용한 2026년 8월의 250개소와는 시점이 다르다). 청년센터의 2024년 평균 총예산은 6억 5,053만 원이고 지자체 보조금이 79%다. 운영은 민간위탁 44.8%, 직영 32.3%, 공공위탁 18.8%이고, 평균 근무인력 6.47명 가운데 계약직이 64%다. 사업은 문화·교육·일자리 순이고 정책상담·연계는 53%다. 월평균 방문 1,140.8명의 절반은 공간 이용이 목적이다. 청소년센터는 법정 자격 배치기준과 청소년운영위원회(584개소)라는 제도화된 참여 구조를 갖는 반면, 청년센터의 의견수렴은 만족도 조사 중심이라고 저자는 적는다. 저자는 <b>법적으로 19~24세가 두 센터의 대상에 함께 들어가지만 두 체계는 제도적으로 분리되어 있다</b>고 보고, 전달체계의 분절, 학교 이후 지원의 단절, 활동 정보와 정책 정보의 분리, 진로체험과 취업·생활 지원의 단절이라는 네 공백을 든다. 제언은 센터 간 협약, 전환기 프로그램, 정보 연계, 동의 기반 의뢰, 청소년 참여 경험의 청년정책 참여로의 연장이다. 두 체계를 한 틀에서 비교한 국내의 드문 시도다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;저자 스스로 밝히듯 문헌·2차 자료 비교여서 두 센터를 함께 이용하는 청년의 수, 실제 의뢰 건수, 지역별 차이는 알 수 없다. 두 센터의 통계는 조사 주체와 지표가 달라 표의 많은 칸이 한쪽 수치로만 채워져 있다. 겹치는 연령이 있다는 사실이 곧 중복이나 공백을 뜻하지는 않으며, 19~24세가 두 센터 어디에도 가지 않을 가능성도 같은 자료로는 배제되지 않는다. 그래도 이 연구는 쟁점을 한 단계 앞으로 끌어온다. 청년센터와 청년미래센터의 겹침 이전에 청소년센터와 청년센터의 겹침이 있고, 셋은 다른 법률과 부처에 속한다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1007/s43151-026-00237-x">Rethinking Progress in a Fragmented Swedish Welfare System: Narrative Trajectories of NEET-Situated Young People</a></h3>
+      <div class="cite">Lundberg, C., Sjöberg, M., Larsson, M. &amp; Jonsson, F.(2026), <i>Journal of Applied Youth Studies</i>, 2026. 10. 12. 온라인 게재(CC BY). DOI 10.1007/s43151-026-00237-x · Semantic Scholar DOI 레코드와 Springer 공개 PDF로 이중 확인 · 전문 확보 · 연령 정의: 참여자 16~20세 7명, 21~29세 9명, 30~35세 11명, 40세 이상 3명(30세 이상은 서술이 16~29세 시기를 다룸) · <a href="https://claude.ai/artifact/Jr5XM49FgXc3Ux7vbQGyY4">읽기 가이드 →</a></div>
+      <div class="body">저자들은 인구 약 5만 5천 명의 스웨덴 북부 지방자치단체 외른셸스비크에서 일도 학업도 훈련도 하지 않는 청년 30명을 2025년에 면접했다. 참여자는 전문가 의뢰, 지원기관 현장 모집, 소셜미디어로 모았고 전원이 면접 시점에 기관과 접촉 중이었다. 서술 분석에서 두 유형이 겹쳐 나타났다. '갇혀 있음'에서는 노력이 출석하고 응답하고 조건을 지키는 데 쓰였고 변화를 만들지 못했다. 회의의 중복, 책임의 불명확, 기관 사이의 이관이 대기를 만들었고, 급여 규칙 때문에 새로운 시도를 두려워하는 참여자가 있었다. '불안정한 안정'에서는 진전이 일상의 규칙과 사회적 접촉을 되찾는 작은 단계로 이루어졌고, 신뢰는 특정 담당자에 묶여 있어 담당자 교체와 지원 종료에 취약했다. 저자들은 <b>지원은 있었지만 진전으로 쌓이지 않았다</b>고 적고, 이 집단의 행위 주체성은 개인의 속성이 아니라 조각난 복지 제도가 만든 것이라고 본다. 진전의 정의를 안정화와 신뢰 회복까지 넓히고, 수급 자격과 성과 목표를 청년의 변하는 역량에 맞추라고 제안한다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;참여자 전원이 기관과 접촉 중이었으므로 지원 없이 빠져나간 청년과 접촉을 끊은 청년은 없다. 지원이 있어도 진전이 없다는 결론은 이 표본에서 가장 나오기 쉽다. 대기와 서류가 기관이 여러 개여서 생긴 것인지, 기관이 하나여도 급여 조건이 있으면 생기는 것인지는 이 설계로 가릴 수 없다. 노르웨이 6개 지자체를 비교한 Thøgersen(2024)은 서비스 통합이 많은 곳의 NEET 비율이 낮았다고 보고했으나 설계가 다르다. 30세 이상 14명의 회고는 그 뒤의 결과를 알고 재구성된 서술이다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1111/j.1467-9299.2011.01933.x">One-Stop Shops for Social Welfare: The Adaptation of an Organizational Form in Three Countries</a></h3>
+      <div class="cite">Askim, J., Fimreite, A. L., Moseley, A. &amp; Pedersen, L. H.(2011), <i>Public Administration</i> 89(4), 1451–1468. DOI 10.1111/j.1467-9299.2011.01933.x · Semantic Scholar DOI 레코드(인용 132회)와 코펜하겐대·VIVE 연구정보 페이지로 확인 · 초록 확보, 본문 미열람 · 요약은 원문 재확인 대상</div>
+      <div class="body">저자들은 서유럽 복지서비스가 조정되지 않는다는 비판에 대한 처방으로 '이음새 없는(seamless)' 서비스와 원스톱 창구가 채택된 과정을 노르웨이, 덴마크, 영국에서 비교했다. 세 나라 모두 기존 기관들을 하나의 조직으로 합쳐 시민에게 하나의 입구를 두고 서비스를 가까이 가져가는 것을 목표로 삼았다. 그러나 과업의 범위, 직원과 이용자의 구성, 수단, 자율성에서 세 나라의 원스톱 창구는 크게 달랐다. 저자들은 그 차이가 중앙정부의 정치적 우선순위와 성과 목표를 둘러싼 협상과 타협에서 나왔다고 본다. 결론은 <b>전문화와 조정 사이의 오래된 상충이 원스톱 창구에서도 확인된다</b>는 것이다. 다만 정보통신기술을 쓰면 전문화된 일은 창구 뒤에 두고 이용자에게는 조정된 서비스로 보이게 할 수 있다고 적는다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;15년 전 글의 세 사례 가운데 영국은 이번 호에서 부처별로 두 개의 허브 체계를 다시 세우고 있다. 하나의 입구를 만들어도 그 뒤의 분업이 사라지지 않는다는 결론은 한국의 청년센터와 청년미래센터에도 적용된다. 두 센터는 입구를 합치지 않은 채 각각 종합상담과 사례관리를 맡는다. 이 글은 어느 쪽이 낫다고 말하지 않는다. 다만 입구를 합치는 결정이 기술적 선택이 아니라 중앙정부의 성과 목표를 둘러싼 협상의 결과라는 점을 보여 준다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 2건</span></div>
+    <ul class="news">
+      <li><b>[국내] 청년미래센터, 2026년 4개 시·도에서 17개 시·도로. 대구청년미래센터는 10월 1일 개소(사회복지사 15명, 민간위탁 2026. 10.~2029. 9.).</b> 대구시는 7월 공모를 거쳐 8월 27일 대구광역시사회복지협의회를 운영기관으로 선정했다고 밝혔다. 고립·은둔 청년팀과 가족돌봄청년팀의 두 팀이고, 복지부는 울산 센터 개소 뒤 가족돌봄청년의 돌봄 시간이 28.1% 줄었다고 밝혔다(보도). 보도에 따르면 복지부가 김미애 의원실에 낸 자료에서 기존 4개 센터의 정원은 팀장 1명과 팀원 8명이고, 센터당 80명을 기준으로 국비 3억 9천만 원이 배정되었으나 실제 등록 인원은 100~147명이었다. 선별 검사(LSNS-6+2, HQ-25)에서 탈락한 청년은 <b>지역 청년센터나 고용노동부 사업으로 연계</b>된다. 복지부 보도자료 원문은 열람하지 못했고 보도 2건을 교차했다. 등록 경로별 통계와 연계 뒤의 결과는 공개되지 않았다. <span class="src"><a href="https://www.imaeil.com/page/view/2026082711152555513">매일신문(8. 27.)</a> · <a href="https://mobile.newsis.com/view/NISX20260424_0003605841">뉴시스(5. 9.)</a></span></li>
+      <li><b>[국내] 서울시 「서울청년센터 사회성과 측정 리포트」(1. 13.): 2024년 1월~2025년 9월 사회적 가치 약 1,080억 원, 투입 예산의 5.02배. 이용자는 2021년 약 10만 명에서 2025년 96만 5,076명.</b> 임팩트리서치랩이 종사자 면접과 이용 청년 1,404명의 조사로 측정했다. 직장 적응 지원 494억 원, 정책 탐색 시간 절감 200억 원(1인당 월 1.48시간), 자기개발 89억 원 등이다. 서울시는 31개 측정 기준을 성과관리에 넣겠다고 밝혔다. 서울청년센터는 광역 1곳과 자치구 16곳이다. 보도자료 원문은 미열람, 보도 2건 교차. 같은 시기 전국 청년센터 종사자 조사는 근무 1년 미만 47.4%를 보고했다(이슬기 2026 재인용). 이용자 수와 사회적 가치가 늘어난 기간은 종사자가 1년 안에 바뀌는 기간과 같다. <span class="src"><a href="https://www.hankyung.com/article/2026011381861">한국경제(1. 13.)</a> · <a href="https://www.heraldk.com/article/2026011223301705282">헤럴드경제(1. 12.)</a></span></li>
+      <li><b>[국제] 영국: 고용연금부(DWP) '네덜란드식' Youth Hubs 약 180곳 개소 시작, 2029년까지 360곳(6. 12.). 문화미디어스포츠부(DCMS)는 Young Futures Hubs 선도 지역 8곳을 2029년 3월까지 50곳으로(중간평가 9. 16.).</b> DWP는 16~24세 NEET 100만 명 이상(2021년 대비 약 25만 명 증가)을 들어 모든 지역에 허브를 두고 교육·복지·고용에 보건·주거를 묶는 지원을 하겠다고 밝혔다. 3년 25억 파운드다. 같은 해 DCMS가 추진하는 Young Futures Hubs는 보편적 청소년활동과 전문 지원을 묶어 범죄 취약성을 줄이는 것이 목표이고, 총 7천만 파운드다. 에코리스(Ecorys)의 중간평가는 8곳이 단일 거점 3, 허브·스포크 4, 다거점 1의 모델을 택했고, 2026년 7월 시점에 <b>도달·출석에 관한 신뢰할 수 있는 모니터링 자료가 아직 없으며</b> 식별자·동의·자료 공유 체계가 갖춰지지 않아 행정자료 연계가 불가능하다고 적었다. 두 허브의 연령 정의와 주관 부처가 다르고, 두 문서는 서로를 언급하지 않는다. <span class="src"><a href="https://www.gov.uk/government/news/uk-to-roll-out-dutch-style-employment-support-across-britain">DWP(6. 12.)</a> · <a href="https://www.gov.uk/government/publications/young-futures-hubs-early-adopters-pilot-evaluation-interim-report/young-futures-hubs-early-adopters-pilot-evaluation-interim-report">DCMS 중간평가(9. 16.)</a></span></li>
+      <li><b>[국제] 핀란드: 원스톱 청년안내센터(Ohjaamo) 2025년 통계, 방문 약 21만 5천 건(개별 상담 12만 1천, 집단·행사 9만 4천), 새 센터 19곳. 2025년 1월 1일 고용서비스가 국가에서 45개 고용권역의 지자체로 이관.</b> KEHA 센터가 6월 16일 갱신한 통계에서 이용자의 54%가 18~24세, 23%가 25~29세이고, 방문 시점에 실업 상태인 사람이 51%였다. 상담 주제는 고용 36%, 교육 31%, 정신적 안녕 27%, 재정 21%였다(복수 응답). 익명 이용이 가능해 배경 정보의 결측이 많다. 2026년 5월 발표 자료에 따르면 센터는 89곳, 종사자는 약 1,500명이고 대상은 30세 미만이다. 고용서비스 이관으로 약 4,400명이 국가에서 지자체로 옮겼고, 재원은 항목 없는 일반 이전으로 바뀌었다. 지자체가 고용·교육·청년 서비스를 모두 맡게 된 뒤 Ohjaamo의 법적 지위가 어떻게 조정되는지는 1차 자료에서 확인하지 못했다. <span class="src"><a href="https://tyomarkkinatori.fi/en/employment-and-statistics/evaluation-and-research/monitoring-of-multisectoral-services/one-stop-guidance-center/one-stop-guidance-center-visitor-statistics-2025">KEHA 통계(2025)</a> · <a href="https://www.garantiainfancia.gov.pt/documents/37502/0/3b_+Laura+Kuusio_Finland_One-Stop+Guidance+Center+-+Ohjaamo.pdf/bcf85cae-c8b2-4df8-9c7e-ade9c2d1d97d">Kuusio 발표(5. 19.)</a> · <a href="https://valtioneuvosto.fi/en/-/1410877/employment-services-will-be-reformed-on-1-january-2025-municipalities-to-be-responsible-for-employment-services-with-central-government-taking-a-guiding-role">핀란드 정부(2025. 1. 1.)</a></span></li>
+      <li><b>[국제] 일본: 후생노동성 2025년도 실적평가서(안)(2026. 8.), 지역청년서포트스테이션(サポステ) 179곳, 이용 47만 9,977건(목표 50만 건의 96%), 취업등률 74.3%, 6개월 정착률 83.4%. 「청소년고용대책기본방침」(3. 31., 2026~2030년도)은 '청소년'을 35세 미만으로 두되 운용에 따라 45세 미만까지 포함할 수 있게 했다.</b> サポステ는 2020년도부터 대상을 15~39세에서 15~49세로 넓혔고, 2021~2025년도 이용 건수는 정체 상태라고 평가서는 적었다. 기본방침은 サポステ가 헬로워크와 지자체 등 관계기관과 연계해 정보 제공과 직장 체험을 늘리고 취업 뒤 정착 지원을 하도록 했다. 한국의 청년기본법(19~34세)과 견주면 일본은 전달기관의 연령 상한이 정책 대상의 정의보다 넓다. <span class="src"><a href="https://www.mhlw.go.jp/content/11601000/001735015.pdf">후생노동성 실적평가서(안)</a> · <a href="https://www.jil.go.jp/kokunai/blt/backnumber/2026/05/kokunai_02.html">JILPT 국내 동향(2026. 5.)</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 집행·전달체계</span></div>
+    <div class="lens">
+      <div class="h">두 센터는 같은 청년을 다른 법률, 다른 부처, 다른 계약으로 맡는다</div>
+      <h3>겹치는 것은 대상이고 끊어지는 것은 이관이다</h3>
+      <p>집행·전달체계의 관점에서 청년센터와 청년미래센터는 서로 다른 집행구조에 속한다. 청년센터는 청년기본법 시행령 제21조의3에 전문인력 배치만 규정되어 있고, 설치와 위탁은 지자체가 정한다. 전국 250곳 가운데 63.6%가 위탁이고 서울은 자치구가 3년 이내로 위탁한다. 청년미래센터는 「가족돌봄 등 위기아동·청년 지원에 관한 법률」에 따라 복지부가 17개 시·도에 두고, 역시 3년 단위로 민간에 위탁한다. 두 센터의 대상은 19~34세에서 겹친다. 그러나 두 센터가 서로 어떻게 연결되는지는 어느 법률에도 없다. 겹침이 실제로 일어나는 곳은 이관이다. 고립·은둔 선별에서 탈락한 청년은 지역 청년센터로 연계되고, 청년센터 종합상담에서 심리 지원을 원하는 청년은 다른 기관으로 연계된다(이슬기). 룬드베리 외의 스웨덴 연구에서 서비스는 있으나 쌓이지 않았고, 신뢰는 담당자 한 사람에 묶였다. 한국의 담당자는 전국 조사에서 절반 가까이가 1년 미만 근속이다. 아스킴 외가 15년 전에 적은 대로 입구를 합쳐도 그 뒤의 분업은 남는다. 한국은 입구를 합치지도 않았고 분업의 경계도 적지 않았다. 영국의 중간평가가 식별자와 동의 체계의 부재를 적은 것은, 겹침을 측정할 수단이 설계 단계에서 빠지면 뒤에 채우기 어렵다는 점을 보여 준다고 본다. 한국의 두 센터도 등록 경로와 연계 결과를 같은 기준으로 집계하는 통계가 없다. 전달체계의 공백은 센터 사이에 있을 수 있다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;두 센터의 분리는 분절이 아니라 기능 분화일 수 있다. 청년센터는 문턱이 낮은 보편 접점이고 청년미래센터는 선별 도구를 거친 고위험 사례관리 기관이므로, 역할이 다른 두 기관이 서로 의뢰하는 것은 전달체계가 작동한다는 증거다. 송원일이 지적한 청소년센터와의 겹침도 단계의 차이일 수 있다. 통합 창구를 만든 핀란드와 영국도 분업을 유지하며, 룬드베리 외가 본 대기와 서류는 기관의 수가 아니라 급여 조건에서 나왔을 가능성이 있다. 연계 통계의 부재는 겹침이 측정되지 않았다는 뜻이지 겹침이 크다는 뜻은 아니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">청년센터와 청년미래센터: 전달체계는 어디서 겹치는가</span></div>
+    <div class="setup">통합론은 청년에게 하나의 입구를 두고 그 뒤에서 전문 서비스를 연결해야 이관의 손실이 줄어든다고 본다. 분업론은 보편 접점과 고위험 사례관리는 인력, 선별, 비밀 보장의 요건이 달라 한 창구에 두면 어느 한쪽이 약해지므로, 분리한 채 의뢰 규칙을 명확히 하는 것이 낫다고 본다. 두 입장은 손실을 줄이는 방법에서 다르다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">입구를 합쳐야 한다</div>
+        <p class="pt"><b>근거</b>노르웨이 6개 지자체 비교에서 서비스 통합이 많은 곳의 NEET 비율이 예측치보다 낮았다(Thøgersen 2024). 스웨덴 청년 30명의 서술에서 손실은 기관 사이의 이관과 책임의 불명확에서 생겼다(Lundberg 외 2026).</p>
+        <p class="pt"><b>사례</b>핀란드 Ohjaamo는 30세 미만에게 고용·교육·정신건강·재정을 한 곳에서 다루며 한 해 21만 5천 건을 받는다. 영국 DWP는 교육·복지·고용에 보건·주거를 묶는 허브를 360곳 두기로 했다.</p>
+        <p class="pt"><b>함의</b>한국에서는 청년센터를 접점으로 삼고 청년미래센터의 사례관리를 그 뒤에 두는 설계가 해당한다. 성과는 이관 뒤 접촉 유지율과 재등록률로 잰다.</p></div>
+      <div class="col b"><div class="ch">분리하고 의뢰 규칙을 세워야 한다</div>
+        <p class="pt"><b>근거</b>아스킴 외는 원스톱 창구에서도 전문화와 조정의 상충이 남는다고 본다. 청년미래센터는 두 가지 선별 척도로 대상을 정하고 센터당 9~15명이 100명 넘는 등록 인원을 맡는다(보도). 청년센터 종사자는 자격 기준이 없고 1년 미만 근속이 47.4%다(이슬기 2026). 두 인력 체계를 한 창구에 두면 고위험 사례가 비전문 인력에게 갈 수 있다.</p>
+        <p class="pt"><b>사례</b>영국은 입구를 합치지 않고 DWP와 DCMS가 각각 허브를 세운다. 일본은 サポステ(15~49세)와 히키코모리 지원을 다른 창구에 두고 연계를 기본방침에 적었다.</p>
+        <p class="pt"><b>함의</b>성과는 의뢰의 성사율과 의뢰 뒤 첫 접촉까지의 기간으로 잰다. 의뢰 규칙과 정보 공유의 동의 절차가 법령에 있어야 한다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 청년미래센터가 17개 시·도에 들어서면 지역 청년센터와의 관계는 어떻게 되는가</div>
+      <p><b>H1 보완</b>두 센터가 서로 의뢰하면서 각자의 대상이 분명해진다<span class="pred">맞다면 → 청년센터 종합상담에서 고립·은둔 의뢰 건수가 늘고, 청년미래센터 등록 경로에서 '관계자 요청' 가운데 청년센터의 비중이 커진다.</span></p>
+      <p><b>H2 중복</b>같은 청년이 두 센터에 등록되어 실적이 두 번 집계된다<span class="pred">맞다면 → 두 센터의 등록·상담 실적 합계가 지역 청년 인구의 변화와 무관하게 늘고, 이용자 조사에서 복수 센터 이용 비율이 높게 나온다.</span></p>
+      <p><b>H3 대체</b>지자체가 청년센터의 고립·은둔 사업을 줄이고 청년미래센터로 넘긴다<span class="pred">맞다면 → 2027년 지자체 청년센터 사업계획에서 고립·은둔 과제가 줄고, 청년미래센터 설치 시·도와 미설치 시·도의 청년센터 사업 구성이 달라진다.</span></p></div>
+    <div class="close">세 가설은 두 센터의 등록 경로별 통계와 지자체 사업계획이 공개되면 가려볼 수 있다. 이 브리프는 청년미래센터의 시·도별 등록·연계 통계, 2027년 청년센터 설치·운영지침의 연계 조항, 영국 두 허브의 최종 평가(2027년 봄)를 계속 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 매주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · 청년기본법 6년과 지자체 청년기본조례: 법과 조례는 서로를 어떻게 바꾸었는가, 정책 형성·변천의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+
+</body>
+</html>
