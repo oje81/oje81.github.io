@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>21억 명은 세어진 숫자인가, 추정된 숫자인가 · Reading</title>
+<meta name="description" content="UNV 「2026 State of the World's Volunteerism Report: Volunteerism and its Measurements」(2025)를 끝까지 읽고, 세계 15세 이상 인구의 34.5%·월 21억 명이라는 수치가 어떤 자료와 모형에서 나왔는지, 같은 날 발표된 8.62억 명과는 어떤 관계인지, 한국은 이 추정에 어떤 자료로 들어가 있는지 확인합니다">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@700;800&family=Noto+Serif+KR:wght@400;600&display=swap">
+<link rel="stylesheet" href="../../assets/site.css?v=20261008d">
+</head>
+<body class="reading">
+<nav style="margin:0 auto;padding:10px 16px;font-size:13px;display:flex;gap:16px;flex-wrap:wrap" class="archive-bar">
+  <a href="./">← Reading</a><a href="../../" style="color:var(--ink3)">오지은 홈</a>
+</nav>
+<div class="wrap">
+
+<aside class="doc">
+  <div class="eyebrow">Document</div>
+  <dl>
+    <dt>문서</dt><dd>2026 State of the World's Volunteerism Report: Volunteerism and its Measurements (2026 세계자원봉사현황보고서: 자원봉사와 그 측정)</dd>
+    <dt>발행</dt><dd>유엔자원봉사단(UNV) · 2025년 12월(12월 5일 유엔 본부 공개) · 연구 파트너는 노섬브리아대 글로벌개발센터(1·2·4·5·6장), 프리토리아대 통계학과(7장), ILO 통계국(3장)</dd>
+    <dt>유형</dt><dd>국제기구 플래그십 보고서. 2011·2015·2018·2022년판에 이은 다섯 번째 SWVR이며, 이번 주제는 '측정' 자체</dd>
+    <dt>분량</dt><dd>156쪽 · 영어 · 3부 8장 + 부록 3개(방법론 노트, 글로벌 추정 방법론, GIVE 기술 노트) + 참고문헌·주석. 사례 상자 20여 개</dd>
+    <dt>원문</dt><dd><a href="https://www.unv.org/sites/default/files/The%202026%20SWVR%20Web%20Version.pdf">unv.org 전문(PDF)</a> · <a href="https://www.unv.org/sites/default/files/SWVR%20Overview.pdf">요약본(PDF)</a> · <a href="https://www.unv.org/news/2026-swvr-redefining-true-value-volunteerism">UNV 안내</a></dd>
+    <dt>함께 읽은 것</dt><dd>국제개발봉사 브리프 제5호(2026.11.2)의 쟁점 노트 「같은 날 나온 두 숫자」와 그 경쟁 가설 H1·H2·H3를 이 글의 질문으로 삼았습니다. 호주의 정의·측정 연대기(Reading 07)와 Baillie Smith 외(2022), Read(2021)를 반론으로 붙였습니다. 2022년 SWVR 원문과 IAVE 발표문은 열지 못해 이 보고서가 인용한 범위에서만 다룹니다(참고문헌에 전체 서지).</dd>
+    <dt>상세 노트</dt><dd><a href="008-notes.html">장별 요약 · 지역별 수치표 · 추정 절차와 입력자료 · GIVE 구조와 시연 결과 · 한국 관련 기록 · 용어표</a></dd>
+  </dl>
+  <ul class="toc">
+    <li><a href="#s1"><b>01</b>문서 개요</a></li>
+    <li><a href="#s2"><b>02</b>핵심 주장</a></li>
+    <li><a href="#s3"><b>03</b>제도 설계 분석</a></li>
+    <li><a href="#s4"><b>04</b>근거의 타당성</a></li>
+    <li><a href="#s5"><b>05</b>반론과 경쟁 가설</a></li>
+    <li><a href="#s6"><b>06</b>한국에 주는 시사점</a></li>
+    <li><a href="#score"><b>—</b>평가표 · 주 · 참고문헌</a></li>
+  </ul>
+</aside>
+
+<main>
+  <article>
+    <div class="meta">Reading 08 · 2026.11.19 · 읽는 데 약 16분</div>
+    <h1>21억 명은 세어진 숫자인가, 추정된 숫자인가</h1>
+    <p class="sub">UNV 「2026 State of the World's Volunteerism Report: Volunteerism and its Measurements」 (United Nations Volunteers, 2025)</p>
+
+    <div class="tldr">
+      <b>세 줄 요약</b>
+      <ol>
+        <li>UNV가 2025년 12월에 낸 다섯 번째 세계자원봉사현황보고서입니다. 이번 주제는 자원봉사 '측정' 자체이고, 표제 수치는 세계 15세 이상 인구의 <b class="num">34.5%</b>, 월 21억 명이 자원봉사 노동을 한다는 ILO의 모형 추정입니다.</li>
+        <li>가장 단단한 부분은 그 수치의 한계를 스스로 적은 3장과 부록 B입니다. 2008년 이후 국가 통계로 자원봉사를 잰 나라는 193개국 중 64개국, 4주 기준기간을 쓰는 설문은 약 20%, 나머지는 변환·보정·모형으로 채웠고, 2022년판의 14.9%와는 비교할 수 없다고 명시합니다. 가장 약한 부분은 그런데도 국가별 추정치와 변환 계수를 공개하지 않은 것, 그리고 합성 자료로 시연한 새 지수 GIVE입니다.</li>
+        <li>한국 독자가 가져갈 물음. 같은 날 발표된 IAVE의 '월 8.62억 명'은 이 보고서의 주 85에 따르면 2022년 SWVR의 추정치입니다. 그러면 '두 숫자'가 아니라 한 모형의 두 판본인데, 그 사이에서 바뀐 것은 봉사인가 측정인가. 그리고 한국은 이 모형에 어떤 자료로 들어가 있는가.</li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><b>01</b>문서 개요</h2>
+    <p>세계자원봉사현황보고서(State of the World's Volunteerism Report, SWVR)는 UNV가 네다섯 해 간격으로 내는 플래그십 보고서입니다. 2011년 첫 판 이후 2015·2018·2022년판이 사회통합, 회복력, 거버넌스, 평등과 포용을 차례로 다뤘고, 이번 2026년판은 "개념과 방법의 우선순위가 어떻게 변해 왔는지를 반영해" 측정 자체를 주제로 삼았다고 1장은 적습니다.<sup class="fn"><a href="#n1" id="r1">1</a></sup> 유엔 총회가 2026년을 '지속가능발전을 위한 세계 자원봉사자의 해'로 선포한 것이 발간 시점의 배경이고, 12월 5일 세계 자원봉사자의 날에 유엔 본부에서 공개되었습니다. 재원은 2022~2024년 UNV 특별자발기금에 낸 13개국(방글라데시, 중국, 체코, 프랑스, 독일, 인도, 아일랜드, 카자흐스탄, 스페인, 스웨덴, 스위스, 태국, 튀르키예)의 기여금입니다.</p>
+    <p>집필은 세 기관이 나눠 맡았습니다. 노섬브리아대 글로벌개발센터가 주제별 장(1·2·4·5·6장)을 남반구와 북반구 연구자 공동 집필로 조정했고, 프리토리아대 통계학과가 7장의 새 지수 GIVE를, ILO 통계국이 3장의 글로벌 추정을 맡았습니다. 주제별 장의 1차 자료는 2025년 3~4월 두 달간 공모한 사례연구이고, 권고는 2025년 9월 캄보디아 시엠레아프에서 16명이 참석한 정책 워크숍을 거쳤습니다.<sup class="fn"><a href="#n2" id="r2">2</a></sup> 노섬브리아 컨소시엄의 대표가 '남반구 자원봉사의 위계'를 비판해 온 Matt Baillie Smith라는 점은 뒤의 반론 절에서 다시 짚겠습니다.</p>
+    <p>구성은 3부 8장입니다. 1부(1~3장)가 측정이 왜 필요한지, 측정 도구가 어떻게 발전해 왔는지, 그리고 세계 참여율의 새 추정치를 다루고, 2부(4~6장)가 개인의 건강·역량, 개발 성과(경제·보건·교육·불평등), 복합 위기라는 세 맥락에서 측정 사례를 모으며, 3부(7~8장)가 GIVE 지수와 권고를 내놓습니다. 이 글은 보고서의 표제 수치가 만들어진 3장과 부록 B, 그리고 그 수치를 받아 든 7장을 중심에 놓고 나머지 장은 그 둘을 읽는 맥락으로 씁니다.</p>
+    <p>용어를 먼저 정리해 둡니다. 보고서는 두 개의 정의를 씁니다. 하나는 2001년 유엔 총회 결의 56/38의 넓은 정의로, "전통적 상호부조와 자조, 공식 서비스 제공, 그 밖의 시민 참여를 포함하는 넓은 범위의 활동으로서, 자유의사로, 공공선을 위해, 금전적 보상이 주된 동기가 아닌" 활동입니다. 보고서 전체와 GIVE가 이 정의를 따릅니다. 다른 하나는 2013년 제19차 국제노동통계인회의(ICLS)의 좁은 통계 정의로, "생산가능연령 인구가 짧은 기준기간 동안 타인을 위해 재화를 생산하거나 서비스를 제공하는 무급·비강제 활동을 수행한 것"을 '자원봉사 노동(volunteer work)'이라 부릅니다. 3장의 21억 명은 이 좁은 정의로 잰 숫자입니다. 시위, 보이콧, 헌혈처럼 "본질적으로 개인적인" 활동은 노동이 아니므로 여기서 빠지고, 조직을 거치는 '조직 기반 봉사'와 이웃을 직접 돕는 '직접 봉사'는 둘 다 들어갑니다.<sup class="fn"><a href="#n3" id="r3">3</a></sup></p>
+
+    <h2 id="s2"><b>02</b>핵심 주장</h2>
+    <p>보고서의 전제는 2장 서두의 한 문장에 있습니다.</p>
+    <blockquote>
+      <p>"While standardized indicators are essential for comparability – one of the goals addressed by the GIVE framework in chapter 7 – it is crucial to understand that no measurement tool is neutral." (표준화된 지표는 비교 가능성에 필수적이지만, 어떤 측정 도구도 중립적이지 않다는 점을 이해하는 것이 결정적으로 중요하다.)</p>
+      <cite>2026 SWVR, p. 28, 필자 번역<sup class="fn"><a href="#n4" id="r4">4</a></sup></cite>
+    </blockquote>
+    <p>1장은 같은 생각을 더 길게 적습니다. 자원봉사의 영향을 재는 일은 "무엇보다 먼저 자원봉사를 어떻게 정의하는가에 달려 있고, 거꾸로 측정은 무엇이 자원봉사로 여겨지는지에 대한 인식을 만든다." 1990년대 이후 신공공관리와 시장 지향 정책이 자원봉사의 가치를 화폐로 환산하도록 밀었고, 그 통계가 정책에 도움이 되었지만 남반구에서 가장 두드러지는 공동체 기반의 연대와 상호부조를 옆으로 밀어냈다는 것입니다. "세어지지 않는 것은 중요하지 않다"는 격언은 참여율을 비교할 때는 맞지만 한계가 있고, "자원봉사의 모든 것을 셀 수는 없지만, 그렇다고 고려하지 말아야 하는 것은 아니다"라고 씁니다.<sup class="fn"><a href="#n5" id="r5">5</a></sup> 이 전제 위에서 보고서가 내놓는 주장은 넷입니다.</p>
+    <ul>
+      <li><strong>재지 않아서 과소평가되었고, 그래서 더 재야 한다.</strong> 1장은 신뢰할 수 있는 증거가 없어 "정책은 조각나 있고 투자 결정은 정보 없이 이루어진다"고 진단하고, 측정이 "일상의 연대 행위를 투자를 끌어내고 정책을 바꾸고 봉사자를 세우는 증거로 바꾸는 도구"라고 선언합니다. 표 1.1은 공동체, 봉사자, 정부, 시민사회, 국제기구, 연구자, 민간부문이 측정에서 각각 무엇을 얻는지를 일곱 줄로 적었습니다.<sup class="fn"><a href="#n6" id="r6">6</a></sup></li>
+      <li><strong>세계 15세 이상의 셋 중 하나가 매달 봉사하고, 그 대부분은 조직 바깥에서 한다.</strong> 3장의 추정은 월간 참여율 <b class="num">34.5%</b>(남성 36.9%, 여성 32.1%), 생산가능인구 61억 명 가운데 약 21억 명입니다. 아프리카 58.5%, 아시아·태평양 31.8%, 미주 30.3%, 유럽·중앙아시아 24.2%, 아랍국가 24%. 직접 봉사 <b class="num">25%</b>가 조직 기반 봉사 11.7%의 두 배를 넘고, 보고서는 이 2:1 비율을 "세계 인구 대부분에게 회복력과 사회적 자본은 공식·비공식 기관을 통해 수직으로가 아니라 또래 네트워크를 통해 수평으로 만들어진다는 강력한 지표"로 읽습니다. 자원을 "압도적으로 등록된 공식 조직을 통해" 흘려보내는 개발 파트너들이 "많은 공동체의 활기 있고 신뢰받는 시민 행동 형태를 놓치고 있을 수 있다"는 함의가 뒤따릅니다.<sup class="fn"><a href="#n7" id="r7">7</a></sup></li>
+      <li><strong>숫자만으로는 이야기가 끝나지 않는다.</strong> 2·4·5·6장은 시간 집계와 화폐 환산에서 출발한 측정이 참여적·질적 방법으로 넓어져 왔다고 정리하고, 멕시코의 전국 연대·자발행동 조사(ENSAV), 요르단의 국가 영향평가 틀, 뉴질랜드 VSA의 360도 평가, 우간다 청년 난민 조사 같은 사례를 붙입니다. 경제적 가치평가만 쓰면 "자원봉사를 유급 노동의 단순한 대체물로 축소할 위험"이 있다는 경고가 2장과 5장에 되풀이됩니다.<sup class="fn"><a href="#n8" id="r8">8</a></sup></li>
+      <li><strong>네 차원을 같은 무게로 재는 지수를 만들자.</strong> 7장은 개인에 대한 가치, 공동체에 대한 가치, 경제적 가치, 지원 환경의 네 차원을 각 25%로 두고 기하평균으로 묶는 세계 자원봉사 참여 지수(GIVE)를 제안합니다. 8장의 권고는 '왜·무엇을·어떻게·누가·언제·어디서'의 여섯 묶음이고, 그 가운데 국가통계기구가 "2030년까지" 노동력조사나 가구조사에서 자원봉사 노동 통계를 생산할 역량을 갖추라는 항목과 GIVE를 채택하라는 항목이 들어 있습니다.<sup class="fn"><a href="#n9" id="r9">9</a></sup></li>
+    </ul>
+    <div class="verdict"><b>판단</b><span>보고서는 '더 넓게 재자'와 '측정 도구는 중립적이지 않다'를 함께 들고 있는데, 21억 명을 표제로 세운 순간 두 번째 명제가 첫 번째에 눌립니다. 네 주장 가운데 첫째와 둘째는 세 번째 주장이 경고하는 바로 그 방식, 곧 하나의 큰 숫자로 설득하는 방식에 기대고 있습니다.</span></div>
+
+    <h2 id="s3"><b>03</b>제도 설계 분석</h2>
+    <p>행정학의 눈으로 보면 이 보고서가 설계한 것은 자원봉사 제도가 아니라 <mark>자원봉사를 재는 제도</mark>입니다. 그래서 거버넌스, 성과관리, 참여, 자원의 네 질문을 측정 체계 자체에 던집니다.</p>
+    <p><strong>누가 숫자를 만드는가.</strong> 표제 수치의 생산 사슬은 이렇습니다. 국가통계기구들이 ILOSTAT에 올린 64개국의 자원봉사율 자료, UNV가 2021년 갤럽과 함께 8개국에서, 2025년에 다시 8개국에서 실시한 임시 설문, 이 둘을 입력으로 ILO 통계국이 노동시장 지표 추정에 쓰는 모형을 돌려 189개국의 2008~2025년 연도별 참여율을 추정하고, 인구 가중으로 지역·세계 값을 만듭니다.<sup class="fn"><a href="#n10" id="r10">10</a></sup> 여기서 눈에 띄는 것은 2025년 설문의 자리입니다. 볼리비아, 중국, 에티오피아, 인도, 이라크, 요르단, 나이지리아, 우간다의 여덟 나라인데, 보고서 스스로 "인구가 많은 남반구의 자료 공백을 메우도록 특별히 설계"되었고 인구 가중 때문에 "전체 수치에 강하게 영향을 미쳤으며" 다른 나라를 추정하는 데 쓰이는 지역 평균에도 "크게 영향을 준다"고 적습니다.<sup class="fn"><a href="#n11" id="r11">11</a></sup> 자원봉사를 옹호하는 기구가 설계한 설문이 그 기구의 표제 수치를 끌어올린 주된 입력이라는 구조입니다. ILO의 이름은 이 구조에 통계적 권위를 더합니다. 고위 자문단의 ILO 수석통계관은 "ILO 통계 표준과 도구가 포괄적 측정과 비교 가능성을 보장한다"고 추천사를 썼습니다.</p>
+    <p><strong>무엇을 위한 숫자인가.</strong> 3장은 새 추정이 "국가 개발전략과 자발적 국가 검토(VNR)에 자원봉사를 더 많이 포함시키라고 옹호하는 데 꼭 필요한 기준선(baseline)"이라고 씁니다.<sup class="fn"><a href="#n12" id="r12">12</a></sup> 성과관리의 언어로 옮기면 이것은 추세를 재기 위한 기준선이 아니라 수준을 보여 주기 위한 기준선입니다. 보고서는 2022년판의 14.9%와 비교할 수 없다고 못 박고, 더 나아가 더 많은 나라가 ICLS 모듈을 도입하면 "시계열의 단절이 불가피하게 생긴다"며 "개별 자료의 정확성과 장기 추세 감시 능력 사이의 상충"을 인정합니다.<sup class="fn"><a href="#n13" id="r13">13</a></sup> 그러니까 이 기준선은 다음 판에서도 비교되지 않을 가능성을 안고 태어났습니다. 보고서가 권고하는 대로 모든 나라가 4주 모듈을 쓰게 되는 날, 그 수치는 또 한 번 뛰거나 떨어질 것이고, 그때도 그것은 "측정의 변화"일 것입니다.</p>
+    <p><strong>GIVE는 어떻게 설계되었는가.</strong> 7장과 부록 C의 지수 설계를 요약하면 다음과 같습니다. 네 차원을 각 25%로 두고, 차원 안에서는 지표를 균등 가중 산술평균으로, 차원 사이는 기하평균으로 묶어 0~100점을 냅니다. 기하평균을 택한 것은 한 차원의 높은 점수가 다른 차원의 낮은 점수를 상쇄하지 못하게 하려는 선택이고, 인간개발지수(HDI)와 다차원빈곤지수(MPI)를 선례로 듭니다. 각 차원의 지표는 4~10개를 권하고, 가중치는 "1 나누기 지표 수"입니다.<sup class="fn"><a href="#n14" id="r14">14</a></sup> 문제는 지표의 내용입니다. 시연에 쓰인 '개인에 대한 가치'의 열 개 지표는 세계가치관조사(WVS)에서 봉사자가 봉사 이유의 중요도를 1~5점으로 답한 문항(어려운 사람을 돕기 위해, 새 기술을 얻기 위해 등)입니다. 곧 개인에게 돌아간 결과가 아니라 동기의 자기 평가입니다. '공동체에 대한 가치'의 일곱 지표는 사회복지, 종교, 지역 정치, 보건, 교육·문화, 청년·여성, 환경·동물의 일곱 영역 가운데 어디서 봉사했는지를 0/1로 센 것이어서, 한 사람이 한 영역에서만 봉사하면 7분의 1점, 모두가 그렇다면 나라 점수는 14.3이 됩니다. '경제적 가치'는 월 봉사 시간을 1~160시간 사이에, 대체비용을 "세계 월 임금의 최저·최고"인 250~4,500달러 사이에 놓고 정규화합니다. '지원 환경'은 법, 정책, 프로그램, 제도(scheme)의 유무를 0/1로 센 네 항목이라, 네 가지가 모두 있으면 100점입니다.<sup class="fn"><a href="#n15" id="r15">15</a></sup></p>
+    <p>이 설계로 시연한 두 나라의 결과가 부록 C에 있습니다. '국가 A'는 개인 50, 공동체 1.7, 경제 81, 지원 환경 100으로 GIVE <b class="num">28</b>, '국가 B'는 개인 77, 공동체 11.7, 경제 42~47, 지원 환경 75로 <b class="num">41</b>입니다. 두 나라 모두 공동체 차원이 지수를 끌어내렸는데, 그것은 공동체 가치가 낮아서가 아니라 영역 수를 세는 지표의 구조 때문입니다. 그리고 두 나라는 실제 나라가 아닙니다. 보고서는 "실제 자료와 인공 자료를 결합한 하이브리드 합성 데이터셋"으로 계산 방법을 보였다고 적고, 상세 방법론과 Stata 코드는 "곧 공개", 자료 출처 매트릭스는 "UNV에 요청하면 제공"이라고 씁니다. 실행 계획은 자료 수집·질 평가, 지수 구축, 검증·협의, 보고·확산, 제도화의 5단계이고 UNV 아래 'GIVE 기술 태스크포스'를 두겠다고 하는데, 일정은 없습니다.<sup class="fn"><a href="#n16" id="r16">16</a></sup></p>
+    <p><strong>누가 참여하고 돈은 어디서 오는가.</strong> 보고서는 측정의 전 주기에 공동체와 봉사자를 참여시키라고 권고하고(표 2.3), 1차 자료인 사례연구를 공모로 모았습니다. 다만 GIVE의 차원과 지표를 정한 협의는 "유엔 기구의 통계가와 지수 개발자, 학계, 지역 그룹"과 아프리카개발은행의 통계가들이었고, 그 과정에서 봉사자나 공동체가 어떤 지표를 요구했는지는 적혀 있지 않습니다. 돈은 앞서 적은 13개국의 자발 기여금입니다. 그 가운데 중국과 인도는 2025년 설문의 대상국이자, 7장이 '국가 주도형 모델'로 분류한 나라입니다.<sup class="fn"><a href="#n17" id="r17">17</a></sup></p>
+    <div class="verdict"><b>판단</b><span>추정 절차와 지수의 계산 규칙은 투명하게 적혀 있지만, 공개된 것은 집계값뿐입니다. 189개국의 국가별 추정치, 기준기간 변환 계수, 불확실성 구간, GIVE의 코드와 자료 목록이 모두 "요청 시" 또는 "곧"입니다. 측정의 거버넌스를 말하는 보고서가 자기 수치의 거버넌스는 열어 두지 않았습니다.</span></div>
+
+    <h2 id="s4"><b>04</b>근거의 타당성</h2>
+    <p>표제 수치의 근거는 부록 B에 가장 자세히 적혀 있고, 그 내용은 3장 본문보다 훨씬 겸손합니다. 하나씩 확인합니다.</p>
+    <p><strong>입력자료의 크기.</strong> 2008년 이후 국가 통계로 자원봉사 노동을 잰 나라는 193개 회원국 가운데 <b class="num">64개국</b>이고 대부분 고소득국입니다. 한 나라당 평균 두 번 측정했으며, 64개국 가운데 총 참여율(직접 봉사 포함)을 가진 나라는 40개국뿐입니다. 모든 출처를 합친 국가-연도 설문은 총 참여율 156개, 직접 봉사 135개, 조직 기반 131개이고, 성별로 나누고 검토를 거친 '국가 측정값'은 각각 352개, 350개, 435개입니다. 이 자료로 189개국 × 18년(2008~2025) = 3,402개 칸을 채웁니다. 실측이 있는 칸은 아무리 많아도 156개, 20분의 1이 안 됩니다. 나머지는 GDP, 인간개발지수, 세계가치관조사의 시민자본과 종교성, 노동참가율, 실업률, 그리고 적십자 등록 봉사자 비율과 헌혈자 비율을 설명변수로 쓰는 회귀모형이 채우고, 아무 자료도 없는 나라는 지역 평균을 기준점으로 삼습니다. 모형은 교차검증으로 고르고, 참여율은 로짓 변환 뒤 추정합니다.<sup class="fn"><a href="#n18" id="r18">18</a></sup> 적십자 등록 명부가 이웃을 돕는 직접 봉사의 예측변수가 된다는 것은 모형의 논리로는 자연스럽지만, 조직 밖 봉사를 보이게 하겠다는 보고서의 취지와는 묘하게 어긋납니다.</p>
+    <p><strong>기준기간의 변환.</strong> ICLS 정의는 4주 기준기간을 쓰지만, 그 기준을 따르는 국가-연도 자료는 약 <b class="num">20%</b>입니다. 56%는 1년 기준기간(주로 국가 통계와 2021년 갤럽 설문), 나머지는 1주 또는 12주입니다. 보고서는 기준기간별 평균 참여율의 비율로 변환 계수를 만들어 모든 자료를 4주 등가로 바꿨습니다. 이 방식은 "서로 다른 기준기간의 참여율이 비슷하게 대표성 있는 표본에서 나왔다"는 가정을 깔고 있고, 보고서는 그 가정이 "완전히 성립할 가능성은 낮다"고 인정합니다. 가정을 옹호하는 근거는 기준기간이 길어질수록 평균 참여율이 커지는 패턴이 보이므로 "국가 구성에 큰 체계적 편향은 없는 것 같다"는 것인데, 이는 방향을 확인한 것이지 크기를 검증한 것은 아닙니다. 변환 계수의 값 자체는 보고서 어디에도 없습니다.<sup class="fn"><a href="#n19" id="r19">19</a></sup></p>
+    <p><strong>기간 선택.</strong> 최종 수치는 2022~2025년 평균입니다. 부록 B의 표 A4는 다른 기간으로 계산한 대안을 함께 보여 줍니다. 2018~2021년 평균은 세계 30.9%, 2018~2025년은 32.7%, 2022~2025년은 34.5%입니다. 아프리카는 52.4→58.5, 미주는 23.4→30.3으로 올랐고, 아랍국가(25.3→24.0)와 유럽·중앙아시아(24.4→24.2)는 그대로입니다.<sup class="fn"><a href="#n20" id="r20">20</a></sup> 본문이 2025년 설문의 영향을 설명한 문장과 나란히 놓으면, 세계 수치가 2018~2021년 평균보다 3.6%p 높은 것은 그 사이 봉사가 늘었기 때문이 아니라 2025년 설문이 들어간 네 해를 골랐기 때문이라고 읽는 것이 보고서 자체의 설명에 가장 충실한 독법입니다.</p>
+    <p><strong>2022년판과의 비교, 그리고 8.62억 명.</strong> 3장은 새 수치가 2022년판의 14.9%보다 "현저히 높지만" "직접 비교할 수 없다"고 쓰고, 그 차이가 "자원봉사 붐"이 아니라 측정 방법의 변화라고 설명합니다. 다음 쪽의 결론은 더 분명합니다. <mark>"새롭고 더 높은 세계 참여율은 측정의 변화를 반영하는 것이며, 반드시 시간에 따른 실제 증가를 뜻하지는 않는다."</mark><sup class="fn"><a href="#n21" id="r21">21</a></sup> 여기까지는 브리프 제5호가 이미 전한 내용입니다. 이번에 끝까지 읽으며 새로 확인한 것은 주 85입니다. "2022년 SWVR은 4주 기준기간으로 14.9%의 세계 참여율을 제시했고, 이는 세계적으로 자원봉사 노동에 참여한다고 추정된 <b class="num">8억 6,200만 명</b>에 해당한다." 브리프 제5호가 같은 날 IAVE 발표문에서 확인한 "월 8.62억 명"과 같은 숫자입니다.<sup class="fn"><a href="#n22" id="r22">22</a></sup> IAVE 문서를 직접 열지 못해 출처 표기를 확인하지는 못했지만, 숫자가 일치하는 이상 가장 간명한 설명은 IAVE가 2022년 SWVR의 추정치를 인용했다는 것입니다. 그렇다면 12월 5일 유엔 본부에서 나온 '두 숫자'는 서로 다른 두 측정이 아니라 같은 UNV·ILO 추정의 2022년판과 2026년판입니다.</p>
+    <p>이 사실은 제5호의 세 가설을 다시 세우게 합니다. H2(기준기간)는 기각됩니다. 두 수치 모두 4주 기준기간입니다. H3(모형 추정 대 응답 근거)도 원래 형태로는 성립하지 않습니다. 둘 다 모형 추정이고, 달라진 것은 모형에 들어간 자료입니다. 남는 것은 H1(정의)의 변형, 곧 '무엇을 포착했는가'입니다. 보고서는 국가 설문 대부분이 조직 기반 봉사만 묻고 직접 봉사를 빼며, 2025년 설문은 ICLS 정의에 따라 "모든 형태의 자원봉사 노동을 포착"해 "많은 국가 설문보다 현저히 높은 추정치"를 냈다고 적습니다.<sup class="fn"><a href="#n23" id="r23">23</a></sup> 제5호가 제안한 검증, 곧 조직 기반 추정(11.7%, 약 7.1억 명)이 8.62억 명에 가까운지를 보는 검증은 이렇게 됩니다. 두 숫자는 1.2배 차이로 가깝지만 같지 않고, 2022년판이 어떤 자료와 정의로 14.9%를 냈는지는 2022년 원문을 봐야 알 수 있습니다. 이 글에서는 거기까지입니다.</p>
+    <p><strong>주제별 장의 근거.</strong> 2·4·5·6장의 사례는 공모로 모인 자기 보고입니다. 로터리의 연 8억 5,000만 달러 '지역사회 절감', 스카우트의 27억 봉사시간과 수혜자 1인당 0.001달러, 멕시코 ENSAV의 네 차례 조사 같은 수치는 모두 해당 조직이나 연구자가 자기 도구로 낸 값이고 보고서가 검증한 것은 아닙니다. 보고서가 인과 해석의 한계를 스스로 적은 대목은 평가할 만합니다. 봉사가 건강을 좋게 하는지 건강한 사람이 봉사하는지 "많은 경우 불분명하다"고 쓰고, 사전·사후 비교가 봉사의 효과를 다른 요인에서 떼어 내기 어렵다고 인정합니다.<sup class="fn"><a href="#n24" id="r24">24</a></sup> 반면 수치 검토가 덜 된 자리도 있습니다. 5장은 중국의 자원봉사 노동 가치가 "약 270억 달러, GDP의 15.82%"라고 적는데, 두 수치는 산술적으로 함께 성립할 수 없습니다. 부록 C는 본문에서 개인 지표 7개와 공동체 지표 6개를 기록했다고 쓰고 표에서는 10개와 7개를 보여 주며, 국가 B의 경제 차원 점수가 본문(45%)과 표(47.02)에서 다릅니다.<sup class="fn"><a href="#n25" id="r25">25</a></sup> 표제 수치의 신뢰도와는 별개의 문제지만, 기술 부록이 교정을 다 거치지 않은 채 나왔다는 신호입니다.</p>
+    <div class="verdict"><b>판단</b><span>3장과 부록 B는 자기 한계를 성실하게 적었습니다. 그 한계를 다 받아들이면 34.5%는 세계의 추세가 아니라 '2022~2025년의 입력자료가 만든 수준'이고, 그 수준의 상당 부분은 UNV가 여덟 나라에서 한 번 실시한 설문에 기대고 있습니다. 이 수치가 뒷받침하는 것은 "조직 바깥의 봉사가 조직 안의 봉사보다 많다"는 방향이지, 21억이라는 크기가 아닙니다.</span></div>
+
+    <h2 id="s5"><b>05</b>반론과 경쟁 가설</h2>
+    <p><strong>측정을 넓혀야 한다는 쪽.</strong> 보고서 자신의 논리입니다. 좁은 정의와 조직 중심의 설문은 남반구의 상호부조를 통계에서 지웠고, 그 결과 정책과 투자에서 자원봉사가 과소평가되어 왔다. 시계열이 끊기는 것은 더 정확한 현재를 얻는 값이다. 3장의 상충 인정은 이 입장에서 보면 정직한 비용 공시입니다. 이 논리의 가장 강한 근거는 2:1이라는 비율입니다. 아프리카에서 직접 봉사 38.3% 대 조직 기반 16.9%, 아시아·태평양 26.4% 대 9.9%라는 격차는 변환 계수나 모형의 세부가 달라져도 뒤집히기 어려운 크기입니다.<sup class="fn"><a href="#n26" id="r26">26</a></sup></p>
+    <p><strong>넓히면 쓸 수 없게 된다는 쪽.</strong> 두 갈래가 있습니다. 하나는 통계적 반론입니다. ILO의 모형 추정은 100여 개국이 매년 노동력조사를 하는 노동시장 지표를 위해 만들어진 방법인데, 18년에 156개 관측치인 자료에 같은 방법을 쓰면 추정치의 대부분은 지역 평균과 설명변수의 산물이 됩니다. 보고서는 이를 부인하지 않고 "주의해서 해석해야 한다"고 쓰지만, 불확실성의 크기를 숫자로 보여 주지는 않습니다. 다른 하나는 측정의 정치에 대한 반론이고, 흥미롭게도 그 반론은 보고서 안에 있습니다. 6장 끝의 한 문단은 비공식적·연대적·정치적으로 민감한 봉사를 측정에 포함하는 일이 "개인과 집단을 원치 않는 주목이나 감시에 노출"시킬 수 있고, 자료가 자발적 노동의 역량을 드러내면 "서비스 제공을 위한 무급 노동에 대한 기대를 높일 수 있으며", "지원이나 자원의 철회를 정당화하는 데 쓰일 위험"이 있다고 적습니다.<sup class="fn"><a href="#n27" id="r27">27</a></sup> 브리프 제5호가 '다시 읽기'로 소개한 Baillie Smith 외(2022)의 논지, 곧 '봉사자'로 분류된 사람의 일부는 사실상 저임금 노동자이며 분류가 그들의 노동을 보이지 않게 한다는 비판은, 그 저자가 주제별 장을 이끈 이 보고서에서 이렇게 자기 경고로 흡수되었습니다. 영국 자선단체에서 생산성 목표가 봉사자의 노동 강도를 높이는 과정을 관찰한 Read(2021)도 같은 편에 섭니다. 측정 체계가 갖춰지면 인정이 따른다는 주장과, 측정이 도입되면 무급 노동이 관리된다는 관찰은 같은 현상의 두 면입니다.<sup class="fn"><a href="#n28" id="r28">28</a></sup></p>
+    <p><strong>표준이 실행을 보장하는가.</strong> 보고서의 8장은 모든 나라가 ICLS 4주 모듈을 노동력조사에 붙이는 것을 해법으로 제시합니다. Reading 07에서 읽은 호주의 연대기는 이 해법의 한계를 미리 보여 줍니다. 호주 통계청은 2011년 ILO 매뉴얼을 만든 기술전문가그룹에 참여했지만 그 모듈을 완전히 도입하지 않았고, 정의의 언어는 국제적으로 수렴하는데 조작적 관행은 국가가 매개하는 "정렬된 분기"가 생겼습니다.<sup class="fn"><a href="#n29" id="r29">29</a></sup> 2013년 결의 이후 12년이 지나 4주 기준을 쓰는 자료가 20%라는 이 보고서의 숫자는 호주의 사례가 예외가 아니었음을 보여 줍니다.</p>
+    <p><strong>경쟁 가설의 재구성.</strong> 제5호의 질문은 "두 수치는 왜 벌어졌는가"였습니다. 앞 절에서 확인한 대로 두 수치가 한 모형의 두 판본이라면, 질문은 "2022년판과 2026년판 사이에서 무엇이 바뀌었는가"로 바뀝니다. 보고서가 주는 답은 2025년 설문(여덟 나라, 직접 봉사 포착)의 투입입니다. 남는 경쟁 가설은 둘입니다. 하나는 그 설문이 포착한 것이 다른 나라에서도 같은 비율로 존재하는가(지역 평균을 통한 외삽의 타당성)이고, 다른 하나는 2022년판이 쓴 입력자료와 변환 방식이 이번과 어떻게 달랐는가입니다. 둘 다 국가별 추정치와 2022년 원문이 있어야 가릴 수 있고, 둘 다 이 보고서 안에서는 가릴 수 없습니다.</p>
+    <div class="verdict"><b>판단</b><span>가장 강한 반론은 보고서 바깥이 아니라 안에 있습니다. 90쪽의 '측정의 위험'과 47~48쪽의 '비교 불가' 경고를 표제와 같은 크기로 읽으면, 이 문서는 21억을 주장하는 보고서가 아니라 21억을 어떻게 읽지 말아야 하는지 가르치는 보고서가 됩니다. 문제는 발표문과 추천사가 전자로 읽히게 쓰였다는 것입니다.</span></div>
+
+    <h2 id="s6"><b>06</b>한국에 주는 시사점</h2>
+    <p><strong>한국은 이 모형에 어떤 자료로 들어가 있는가.</strong> 부록 B의 표 A2에 한국이 있습니다. '측정하는 64개국' 가운데 하나입니다. 다만 한국 칸에 적힌 자료는 조직 기반 참여율만이고, 연도는 2009, 2011, 2013, 2015, 2017, 2019, 2021, 2023입니다. 총 참여율과 직접 봉사 칸은 비어 있습니다.<sup class="fn"><a href="#n30" id="r30">30</a></sup> 두 해 간격의 이 연도는 사회조사(통계청, 현 국가데이터처)의 주기와 일치하고, 사회조사의 문항은 "지난 1년간 자원봉사 활동에 참여한 적이 있는가"입니다. 그러므로 보고서의 절차를 그대로 따르면 한국의 자료는 ① 1년 기준기간이어서 공개되지 않은 계수로 4주 등가로 변환되고, ② 조직 기반 값만 있어서 총 참여율은 3단계 모형이 채웠으며, ③ 직접 봉사는 모형이 추정한 값입니다. <mark>한국의 '월간 자원봉사율'은 어느 기관도 직접 잰 적이 없는 숫자</mark>인데, 그 숫자가 아시아·태평양 31.8%의 일부로 들어가 있습니다. 사회조사 문항이 조직을 거친 봉사만 묻는 것으로 ILOSTAT에 분류된 경위, 그리고 국가데이터처가 그 분류에 동의하는지는 이 글에서 확인하지 못한 과제로 남깁니다.</p>
+    <p><strong>어떤 조사에 4주 모듈을 붙일 것인가.</strong> 보고서의 권고는 분명합니다. 국가통계기구가 2030년까지 노동력조사나 가구조사에서 ICLS 정의로 자원봉사 노동을 재라는 것입니다. 한국에는 세 통계가 있습니다. 사회조사(1년, 표본), 1365 자원봉사포털(등록·실적 행정자료), 행정안전부 실태조사(2020·2023). 셋 가운데 ICLS의 4주 기준, 직접 봉사 포함, 15세 이상이라는 세 조건을 다 갖춘 것은 없습니다. 경제활동인구조사 부가조사로 붙일지, 사회조사 문항을 고칠지, 실태조사를 정례화할지는 각각 다른 비용과 다른 단절을 낳습니다. 어느 쪽을 택하든 Reading 07의 결론이 다시 적용됩니다. 정의를 바꾸는 주체와 측정을 지키는 주체가 다르면 그 간격에서 누군가의 봉사가 지워집니다.</p>
+    <p><strong>내일 국회포럼에서 어떤 숫자가 인용될 것인가.</strong> 11월 20일 국회포럼의 주제는 "규모의 확대에서 포용성과 책무성으로"입니다. 21억 명이 인용된다면 그 옆에 세 가지가 함께 적혀야 합니다. ICLS의 좁은 정의(무급·비강제·타인을 위한 생산활동)로 잰 값이라는 것, 2022년판의 8.62억 명과 비교할 수 없다는 것, 그리고 한국 사회조사의 10.6%(2023년, 1년 기준)와도 나란히 놓을 수 없다는 것입니다. 책무성을 말하는 자리에서 가장 먼저 책임을 물어야 할 것은 숫자의 출처 표기입니다.</p>
+    <p><strong>해외봉사와 GIVE.</strong> 두 가지가 더 남습니다. 첫째, World Friends Korea 단원처럼 생활비를 받는 파견 봉사자는 ICLS의 '무급' 정의와 총회 결의의 '금전적 보상이 주된 동기가 아닌' 정의 사이 어디에 놓이는지입니다. ILO 매뉴얼이 시장 임금에 못 미치는 수당을 허용하는 것으로 알려져 있으나 이 글에서 원문을 확인하지 못했습니다. 한국의 해외봉사 통계가 세계 추정에 들어가는 길이 있는지, 들어가야 하는지의 출발점이 될 질문입니다. 둘째, GIVE의 '지원 환경' 차원은 법·정책·프로그램·제도의 유무를 세는 네 항목입니다. 자원봉사활동 기본법(2005), 국가기본계획, 1365 포털과 센터 체계를 가진 한국은 이 차원에서 100점을 받을 것입니다. 그 100점이 재는 것은 지원 환경의 질이 아니라 문서의 존재입니다. 보고서가 지수를 "질적 기준과 결합해야 한다"고 스스로 쓴 이유를 한국이 가장 먼저 보여 주는 사례가 될 수 있습니다.<sup class="fn"><a href="#n31" id="r31">31</a></sup></p>
+    <p>더 확인하고 싶은 것. 2022년 SWVR이 14.9%를 낸 입력자료와 변환 방식, IAVE 발표문의 8.62억 명 출처 표기, ILOSTAT의 한국 시리즈가 사회조사인지와 그것이 조직 기반으로 분류된 근거, 그리고 ILO 매뉴얼의 수당 기준 원문입니다. 분과가 할 수 있는 일은 제5호의 제안에서 바뀌지 않았습니다. 세계 수치의 격차를 좁히는 일은 UNV와 ILO가 국가별 추정치를 공개할 때까지 기다려야 하지만, 한국의 사업 하나에서 누가 봉사자로 집계되고 누가 집계되지 않는지를 한 장의 표로 적는 일은 오늘 할 수 있습니다.</p>
+
+    <section class="notes" id="score" aria-label="평가표, 주, 참고문헌">
+      <h2>평가표</h2>
+      <table class="score">
+        <thead><tr><th>기준</th><th>평가</th><th>이유</th></tr></thead>
+        <tbody>
+          <tr><td>주장의 명료성</td><td class="dots">●●●●○</td><td>"측정 도구는 중립적이지 않다"는 전제와 여섯 묶음의 권고는 분명하다. 다만 총회 결의의 넓은 정의로 서술하고 ICLS의 좁은 정의로 표제 수치를 재면서, 둘의 차이가 독자에게 충분히 전달되지 않는다.</td></tr>
+          <tr><td>제도 설계의 구체성</td><td class="dots">●●○○○</td><td>추정 4단계와 설명변수, GIVE의 계산 규칙은 적혀 있다. 그러나 국가별 추정치·변환 계수·불확실성 구간이 없고, GIVE는 합성 자료 시연에 코드와 자료 목록은 '공개 예정'이다.</td></tr>
+          <tr><td>근거의 타당성</td><td class="dots">●●○○○</td><td>64개국, 실측 국가-연도 156개로 189개국 18년을 채웠다. 비교 불가와 가정의 한계를 스스로 밝힌 정직성은 높지만, 그 정직성이 표제 수치의 쓰임을 제약하지는 못했다. 산술 오류와 부록의 불일치가 있다.</td></tr>
+          <tr><td>한국 맥락 적용 가능성</td><td class="dots">●●●○○</td><td>부록 B로 한국 자료가 세계 추정에 들어간 경로를 추적할 수 있고, ICLS 모듈 도입 논의의 출발점이 된다. GIVE는 당장 쓸 수 없고, '지원 환경' 지표는 한국에서 변별력이 없다.</td></tr>
+        </tbody>
+      </table>
+
+      <h2>주</h2>
+      <ol>
+        <li id="n1">2026 SWVR, p. 20(1장 "Why this Report and why now?"; 이전 판들이 사회 포용, 회복력, 변혁적 거버넌스, 평등과 포용을 다뤘다는 서술과 "step change"). 세계 자원봉사자의 해 선포는 p. 21, 재원과 기여국은 p. 4(Acknowledgements). <a class="back" href="#r1" aria-label="본문으로">↩</a></li>
+        <li id="n2">집필 분담은 pp. 4–5와 부록 A(p. 114). 사례연구 공모(2025년 3~4월)와 시엠레아프 정책 워크숍(참석자 16명)은 pp. 114–115. <a class="back" href="#r2" aria-label="본문으로">↩</a></li>
+        <li id="n3">총회 결의 56/38 정의는 p. 22(1.1.2절)와 p. 95(7.2절). ICLS 정의와 Box 3.1 "What is volunteer work?", Box 3.2 "Organization-based and direct volunteer work"는 pp. 42–43. 번역은 필자. <a class="back" href="#r3" aria-label="본문으로">↩</a></li>
+        <li id="n4">2026 SWVR, p. 28(2.1절). <a class="back" href="#r4" aria-label="본문으로">↩</a></li>
+        <li id="n5">p. 22("Measuring the impact of volunteering depends first and foremost on how volunteering is defined. In turn, measurement shapes perceptions of what counts as volunteering"; "what is not counted does not count"의 한계). 신공공관리와 화폐 환산은 p. 21(1.1.1절). <a class="back" href="#r5" aria-label="본문으로">↩</a></li>
+        <li id="n6">p. 20("policy remains fragmented and investment decisions remain ill-informed"), p. 21("measurement is the tool that transforms these daily acts of solidarity into actionable evidence"), 표 1.1은 p. 24. <a class="back" href="#r6" aria-label="본문으로">↩</a></li>
+        <li id="n7">3장 핵심 메시지 p. 42, 지역·성별 수치 p. 46(그림 3.2), 절대 수 p. 47(그림 3.3: 아프리카 5.39억/9.22억, 미주 2.52억, 아시아·태평양 11억/35억, 유럽·중앙아시아 1.88억/7.77억, 아랍국가 0.32억), 직접·조직 기반 비율과 "built horizontally", 개발 파트너에 대한 함의는 p. 48(3.7절). <a class="back" href="#r7" aria-label="본문으로">↩</a></li>
+        <li id="n8">"reducing volunteering to a mere substitute for paid labour"는 p. 29(2.2.1절), "portraying volunteering as a substitute for paid work"는 p. 67(5.2.1절). 사례는 Box 2.1(멕시코 ENSAV, p. 30), Box 2.2(요르단, p. 31), Box 2.3(VSA 360도, p. 33), Box 6.4(우간다, p. 87). <a class="back" href="#r8" aria-label="본문으로">↩</a></li>
+        <li id="n9">GIVE 네 차원은 p. 22와 pp. 95–96, 균등 가중과 기하평균은 pp. 99–100과 p. 127. 권고 여섯 묶음은 그림 8.1(p. 109), "by 2030" 항목은 p. 109, GIVE 채택 권고는 p. 111. <a class="back" href="#r9" aria-label="본문으로">↩</a></li>
+        <li id="n10">입력자료의 구성(ILOSTAT 64개국, 2021년 UNV-갤럽 8개국, 2025년 UNV 설문 8개국)은 부록 B p. 118, 모형 189개국 2008~2025년은 p. 121, 인구 가중 집계와 2024년 세계인구전망은 pp. 122–123. <a class="back" href="#r10" aria-label="본문으로">↩</a></li>
+        <li id="n11">2025년 설문 대상국은 표 A3(p. 120). "specifically designed to fill critical data gaps in the Global South with large populations", "strongly influence the overall figures", "heavily influence the regional averages used to estimate rates for other countries"는 p. 47(3.6절). ILO 수석통계관 Rafael Diez de Medina의 추천사는 p. 6. <a class="back" href="#r11" aria-label="본문으로">↩</a></li>
+        <li id="n12">p. 42(3.1절, "a much-needed baseline to advocate for the greater inclusion of volunteerism in national development strategies and Voluntary National Reviews"). <a class="back" href="#r12" aria-label="본문으로">↩</a></li>
+        <li id="n13">p. 46(3.4절, "these improvements inevitably generate breaks in time series"; "a trade-off between achieving greater accuracy in individual data snapshots and the capacity to monitor long-term developments"). <a class="back" href="#r13" aria-label="본문으로">↩</a></li>
+        <li id="n14">pp. 99–100(7.5절), 부록 C pp. 127–129(각 차원 25%, 지표 4~10개, 가중치 1/n, 차원 안 산술평균·차원 간 기하평균, HDI·MPI 선례, 부분적 비보상성). <a class="back" href="#r14" aria-label="본문으로">↩</a></li>
+        <li id="n15">지표 목록과 정규화 공식은 부록 C pp. 129–130(리커트 1~5점, 공동체 7개 영역의 0/1, 시간 1~160, 대체비용 250~4,500달러, 지원 환경 4항목)과 표 A7·A8(pp. 132–133). 세계가치관조사의 14개 동기 문항은 p. 100(7.5.2절). <a class="back" href="#r15" aria-label="본문으로">↩</a></li>
+        <li id="n16">국가 A·B 결과는 p. 130과 표 A7·A8. "two hybrid synthetic datasets that integrate real-world data with artificial data"는 p. 129(p. 101에도 같은 서술). Stata do-file "available soon"은 p. 127, 자료 매트릭스 "available upon request from UNV"는 p. 100. 5단계 실행 계획과 GIVE Technical Task Force는 pp. 104–105. <a class="back" href="#r16" aria-label="본문으로">↩</a></li>
+        <li id="n17">표 2.3(참여적 접근의 단계별 배치)은 p. 38. GIVE 협의 참여자는 p. 101(7.5.3절). 국가 주도형·시민사회 주도형 분류는 p. 98. 기여국은 p. 4. <a class="back" href="#r17" aria-label="본문으로">↩</a></li>
+        <li id="n18">64개국·평균 2회·40개국은 p. 43(3.2절). 국가-연도 설문 156/135/131개와 검토 후 국가 측정값 352/350/435개는 pp. 118, 121. 설명변수 목록과 교차검증, 로짓 변환은 pp. 121–122, 자료 출처는 표 A5(p. 124). 189개국 × 18년의 계산은 필자. <a class="back" href="#r18" aria-label="본문으로">↩</a></li>
+        <li id="n19">20%·56%와 변환 절차 네 단계, "unlikely to hold fully", 기준기간이 길수록 평균 참여율이 커진다는 방어는 pp. 120–121. 본문의 "only about 20 per cent of national surveys adhere to this standard"는 p. 44. <a class="back" href="#r19" aria-label="본문으로">↩</a></li>
+        <li id="n20">표 A4 "Alternative estimates of overall volunteering rates", p. 123. 2022~2025년 평균을 택한 이유(연간 변동 완화, 자료 희소성)는 p. 45와 p. 123. <a class="back" href="#r20" aria-label="본문으로">↩</a></li>
+        <li id="n21">p. 47("these figures cannot be directly compared"; "does not indicate a 'volunteering boom' but is instead due to a change in methodology"), p. 48("The new, higher global volunteer rates therefore reflect a change in measurement, not necessarily a real-world increase in volunteering over time"). 필자 번역. <a class="back" href="#r21" aria-label="본문으로">↩</a></li>
+        <li id="n22">주 85, p. 151("The 2022 SWVR presented an estimated global volunteer rate of 14.9 per cent on a four-week reference period, for a total of 862 million people estimated to engage in volunteer work globally (see UNV, 2021)"). IAVE의 8.62억 명은 국제개발봉사 브리프 제5호 쟁점 노트가 IAVE 발표문(2025.12.5)에서 확인한 수치이며, 제5호는 함께 발간된 Insights Paper 본문에는 이 수치가 없다고 적었다. <a class="back" href="#r22" aria-label="본문으로">↩</a></li>
+        <li id="n23">p. 44(3.2절 b: "Most national surveys that measure volunteering focus only on organization-based volunteer work and neglect direct volunteer work"; 2025년 설문이 "significantly higher estimates of volunteering compared to many national surveys"를 냈다는 서술). 조직 기반 11.7% × 61억 ≈ 7.1억의 계산은 필자. <a class="back" href="#r23" aria-label="본문으로">↩</a></li>
+        <li id="n24">로터리 8.5억 달러는 p. 29, 스카우트 27억 시간과 0.001달러는 Box 5.4(p. 72), 멕시코 ENSAV는 Box 2.1(p. 30). 역인과의 불명확성은 p. 54(4.2.1절, "it is unclear whether volunteering improves health or whether healthier people are simply more likely to volunteer"), 사전·사후 비교의 한계는 p. 69. 사례연구 선정 방식은 p. 114. <a class="back" href="#r24" aria-label="본문으로">↩</a></li>
+        <li id="n25">중국 "approximately US$ 27 billion, equivalent to 15.82 per cent of GDP"는 p. 65(5.2절; 주 156·157에 출처가 따로 달려 있어 두 수치의 출처가 다른 것으로 보이나 본문은 하나의 문장으로 묶었다). 부록 C의 "seven individual dimension indicators and six community dimension indicators"는 p. 129, 표 A7·A8의 지표 수는 pp. 132–133, 국가 B 경제 차원 45%는 p. 130, 47.02는 표 A8. <a class="back" href="#r25" aria-label="본문으로">↩</a></li>
+        <li id="n26">지역별 직접·조직 기반 참여율은 p. 48(그림 3.4): 아프리카 38.3/16.9, 미주 12.1/13.2, 아랍국가 15.3/7.4, 아시아·태평양 26.4/9.9, 유럽·중앙아시아 18.3/12.6. 미주만 조직 기반이 직접 봉사를 넘는다. <a class="back" href="#r26" aria-label="본문으로">↩</a></li>
+        <li id="n27">p. 90(6.3절, "risks exposing individuals and groups to unwanted attention or scrutiny"; "could also increase expectations of unpaid labour for 'service delivery' if data reveals capacities for voluntary work"; "a risk that data could be used to justify the withdrawal of support or resources"). "should be interpreted with caution"은 p. 45. <a class="back" href="#r27" aria-label="본문으로">↩</a></li>
+        <li id="n28">Baillie Smith, Fadel, O'Loghlen &amp; Hazeldine (2022); Read (2021). 두 문헌의 요지는 국제개발봉사 브리프 제5호의 '다시 읽기'와 '확장해서 읽기'를 따랐고, 이 글에서 원문을 다시 열지는 않았다. Baillie Smith가 노섬브리아 컨소시엄 대표라는 사실은 2026 SWVR p. 4. <a class="back" href="#r28" aria-label="본문으로">↩</a></li>
+        <li id="n29">Oppenheimer 외(2026), Reading 07에서 확인한 범위. ILO 기술전문가그룹 참여와 모듈 미도입, "aligned divergence"는 Reading 07의 02절과 상세 노트 A부. <a class="back" href="#r29" aria-label="본문으로">↩</a></li>
+        <li id="n30">표 A2 "Availability of volunteer rates data from national statistics", p. 119. 한국의 연도는 조직 기반 참여율 열에만 있다. 그림 3.1의 측정국 목록(p. 44)에도 한국이 있다. 사회조사 문항과 2023년 10.6%는 Reading 07 상세 노트 D부(국가데이터처 지표누리 인용). <a class="back" href="#r30" aria-label="본문으로">↩</a></li>
+        <li id="n31">"it must be combined with qualitative criteria"는 p. 102(7.6절). 지원 환경 4항목은 p. 130. 「자원봉사활동 기본법」은 Reading 07 참고문헌. ILO 매뉴얼의 수당 기준은 미확인. <a class="back" href="#r31" aria-label="본문으로">↩</a></li>
+      </ol>
+
+      <h2>참고문헌</h2>
+      <ul>
+        <li>United Nations Volunteers (UNV) (2025). <i>2026 State of the World's Volunteerism Report: Volunteerism and its Measurements</i>. Bonn: UNV. 156 pp. <a href="https://www.unv.org/sites/default/files/The%202026%20SWVR%20Web%20Version.pdf">https://www.unv.org/sites/default/files/The%202026%20SWVR%20Web%20Version.pdf</a></li>
+        <li>United Nations Volunteers (UNV) (2025). <i>2026 State of the World's Volunteerism Report: Overview</i>. <a href="https://www.unv.org/sites/default/files/SWVR%20Overview.pdf">https://www.unv.org/sites/default/files/SWVR%20Overview.pdf</a> (미열람; 본문의 인용은 전문 기준)</li>
+        <li>United Nations Volunteers (UNV) (2021). <i>2022 State of the World's Volunteerism Report: Building Equal and Inclusive Societies</i>. Bonn: UNV. (미열람; 2026 SWVR 주 85를 통해 인용)</li>
+        <li>United Nations General Assembly (2002). Resolution A/RES/56/38, Recommendations on support for volunteering. (2026 SWVR p. 22·95를 통해 인용)</li>
+        <li>International Labour Organization (2013). Resolution concerning statistics of work, employment and labour underutilization, 19th International Conference of Labour Statisticians. (2026 SWVR pp. 42–43을 통해 인용)</li>
+        <li>International Labour Organization (2011). <i>Manual on the Measurement of Volunteer Work</i>. Geneva: ILO. (미열람)</li>
+        <li>International Association for Volunteer Effort (IAVE) (2025.12.5). 「자원봉사의 미래를 위한 행동 촉구」 발표문 및 Millora, C. (2025). <i>Insights Paper</i>. (미열람; 국제개발봉사 브리프 제5호를 통해 인용)</li>
+        <li>Baillie Smith, M., Fadel, B., O'Loghlen, A. &amp; Hazeldine, S. (2022). Volunteering Hierarchies in the Global South: Remuneration and Livelihoods. <i>Voluntas</i>, 33(1), 93–106. <a href="https://doi.org/10.1007/s11266-020-00254-1">https://doi.org/10.1007/s11266-020-00254-1</a></li>
+        <li>Read, R. (2021). Unwaged labour intensified: Volunteer management and work targets at a UK charity. <i>The Sociological Review</i>, 69(1), 223–239. <a href="https://doi.org/10.1177/0038026120938291">https://doi.org/10.1177/0038026120938291</a></li>
+        <li>Oppenheimer, M., Davies, A., Holmes, K., Lockstone-Binney, L., Maher, A. &amp; Oren, D. (2026). What Counts as Volunteering? Evolving Definitions and Measures of Volunteering in Australia (1970s–2025). <i>Nonprofit and Voluntary Sector Quarterly</i>, online first. <a href="https://doi.org/10.1177/08997640261466262">https://doi.org/10.1177/08997640261466262</a></li>
+        <li>오지은 (2026.11.2). 국제개발봉사 브리프 제5호 「같은 날 나온 두 숫자」. <a href="../../newsletter/issues/005.html">../../newsletter/issues/005.html</a></li>
+        <li>오지은 (2026.10.5). 국제개발봉사 브리프 제3호 「무엇을 봉사로 셀 것인가」. <a href="../../newsletter/issues/003.html">../../newsletter/issues/003.html</a></li>
+        <li>오지은 (2026.11.2). Reading 07 「정의는 누가 바꾸고, 숫자는 누가 지키는가」와 상세 노트. <a href="007.html">007.html</a> · <a href="007-notes.html">007-notes.html</a></li>
+      </ul>
+    </section>
+  </article>
+</main>
+<footer class="site" style="margin-top:36px">© 2026 Jieun Oh · <a href="../../">오지은 홈</a></footer>
+</div>
+</body>
+</html>
