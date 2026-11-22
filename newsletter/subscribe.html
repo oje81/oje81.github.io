@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>브리프 받아보기 · 국제개발봉사 브리프</title>
+<meta name="description" content="국제개발봉사 브리프를 이메일로 받아보시려면 성함·소속·이메일을 남겨 주세요.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Nanum+Myeongjo:wght@700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+form.sub{max-width:34em;margin:6px 0 0;padding:20px 20px 18px;background:var(--paper);border:1px solid var(--rule)}
+form.sub label.f{display:block;margin:0 0 14px;font-size:.9rem;font-weight:600;color:var(--ink)}
+form.sub label.f small{font-weight:400;color:var(--ink3);margin-left:6px}
+form.sub input[type=text],form.sub input[type=email]{display:block;width:100%;margin-top:6px;padding:10px 12px;font:16px var(--sans);color:var(--ink);background:var(--ground);border:1px solid var(--rule);border-radius:0}
+form.sub input:focus{outline:2px solid var(--teal);outline-offset:1px}
+.consent{margin:6px 0 16px;padding:12px 14px;background:var(--tint);border:1px solid var(--rule);font-size:.84rem;line-height:1.65;color:var(--ink2)}
+.consent dl{margin:0 0 10px;display:grid;grid-template-columns:5.5em 1fr;gap:2px 10px}
+.consent dt{font-weight:600;color:var(--ink)}
+.consent dd{margin:0}
+.consent label{display:flex;gap:8px;align-items:flex-start;font-weight:600;color:var(--ink);cursor:pointer}
+.consent input{margin-top:5px}
+button.go{font:600 .95rem var(--sans);padding:11px 22px;border:0;background:var(--teal);color:#fff;cursor:pointer}
+button.go[disabled]{opacity:.55;cursor:wait}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+#msg{margin:16px 0 0;font-size:.92rem;line-height:1.7;color:var(--ink2)}
+#msg.ok{padding:12px 14px;border-left:3px solid var(--teal);background:var(--tint);color:var(--ink)}
+#msg.warn{padding:12px 14px;border-left:3px solid var(--ochre);background:var(--tint);color:var(--ink)}
+#msg a{color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside class="side">
+  <h1 class="name">국제개발봉사 브리프<small>Development Volunteering Brief</small></h1>
+  <div class="role"><span lang="ko">격주 월요일 오전 9시 · 편집 오지은</span><span lang="en">Biweekly on Mondays, 9 a.m. KST · Edited by Jieun Oh (in Korean)</span></div>
+  <nav class="toc" aria-label="Site">
+    <a href="../"><span lang="ko">← 오지은 홈</span><span lang="en">← Jieun Oh</span></a>
+    <a href="./"><span lang="ko">국제개발봉사 브리프</span><span lang="en">Volunteering brief</span></a>
+    <a href="subscribe.html" class="here"><span lang="ko">브리프 받아보기</span><span lang="en">Subscribe</span></a>
+    <a href="../youth/"><span lang="ko">글로벌 청년정책 브리프</span><span lang="en">Youth policy brief</span></a>
+    <a href="../notes/"><span lang="ko">기록</span><span lang="en">Notes</span></a>
+  </nav>
+  <div class="langbtn" role="group" aria-label="Language">
+    <button type="button" data-l="ko" aria-pressed="true">한국어</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+</aside>
+
+<main>
+  <section>
+    <h2 class="sh"><span lang="ko">브리프 받아보기</span><span lang="en">Subscribe</span></h2>
+    <p class="body" lang="ko">국제개발봉사 브리프는 격주 월요일 오전 9시에 이메일로 발송됩니다. 아래에 성함, 소속, 이메일을 남겨 주시면 다음 호부터 보내 드립니다. 신청하신 분의 주소는 숨은참조로 넣어 다른 수신자에게 보이지 않습니다.</p>
+    <p class="body" lang="en">The brief (in Korean) is emailed every other Monday at 9 a.m. KST. Leave your name, affiliation and email below and you will receive it from the next issue. Your address is sent as Bcc and is not visible to other recipients.</p>
+
+    <form class="sub" id="sub" novalidate>
+      <label class="f"><span lang="ko">성함</span><span lang="en">Name</span>
+        <input type="text" name="name" autocomplete="name" required maxlength="60"></label>
+      <label class="f"><span lang="ko">소속</span><span lang="en">Affiliation</span><small lang="ko">기관·학교, 직위는 선택</small><small lang="en">organization; title optional</small>
+        <input type="text" name="affiliation" autocomplete="organization" required maxlength="120"></label>
+      <label class="f"><span lang="ko">이메일</span><span lang="en">Email</span>
+        <input type="email" name="email" autocomplete="email" required maxlength="120"></label>
+      <div class="hp" aria-hidden="true"><label>leave empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="consent">
+        <dl lang="ko">
+          <dt>수집 항목</dt><dd>성함, 소속, 이메일</dd>
+          <dt>이용 목적</dt><dd>국제개발봉사 브리프 발송과 수신 관리</dd>
+          <dt>보유 기간</dt><dd>수신을 그만두실 때까지. 수신 거부 회신을 받는 즉시 발송 명단에서 제외합니다.</dd>
+          <dt>저장 위치</dt><dd>입력하신 내용은 편집인의 Google 설문지 응답 시트에 저장되며, 편집인과 발송 준비 작업만 열람합니다.</dd>
+        </dl>
+        <dl lang="en">
+          <dt>Collected</dt><dd>Name, affiliation, email</dd>
+          <dt>Purpose</dt><dd>Sending the brief and managing the mailing list</dd>
+          <dt>Retention</dt><dd>Until you unsubscribe; removed as soon as you ask.</dd>
+          <dt>Storage</dt><dd>Stored in the editor's Google Forms response sheet, read only by the editor.</dd>
+        </dl>
+        <label><input type="checkbox" name="consent" required><span><span lang="ko">위 내용에 동의합니다. 동의하지 않으시면 신청이 접수되지 않습니다.</span><span lang="en">I agree. Without consent the request cannot be processed.</span></span></label>
+      </div>
+
+      <button type="submit" class="go"><span lang="ko">신청하기</span><span lang="en">Subscribe</span></button>
+      <div id="msg" role="status" aria-live="polite"></div>
+    </form>
+
+    <p class="body" lang="ko" style="margin-top:22px">제보·기고, 공동연구 제안은 <a href="mailto:oje@yonsei.ac.kr">oje@yonsei.ac.kr</a>로 보내 주세요. 수신을 원치 않으시면 브리프에 회신해 주시면 바로 제외하겠습니다.</p>
+    <p class="body" lang="en">For tips, contributions or collaboration, write to <a href="mailto:oje@yonsei.ac.kr">oje@yonsei.ac.kr</a>. To unsubscribe, reply to any issue.</p>
+  </section>
+</main>
+<footer class="site"><span lang="ko">이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.</span><span lang="en">Produced with Claude (Anthropic); the editor decides what to include and how to read it.</span></footer>
+</div>
+<script src="../assets/site.js"></script>
+<script>
+(function(){
+  var TO='oje@yonsei.ac.kr', SUBJ='[브리프 신청] 국제개발봉사 브리프';
+  var FORM='https://docs.google.com/forms/d/e/1FAIpQLSfIMR5uVwVnDtfbNDO8GKDUsDld020SRuWZavHkal2Qy8g4vA/formResponse';
+  var f=document.getElementById('sub'), E=f.elements, msg=document.getElementById('msg'), btn=f.querySelector('button.go');
+  function ko(){return document.documentElement.getAttribute('data-lang')!=='en';}
+  function say(cls,html){msg.className=cls;msg.innerHTML=html;}
+  function mailtoLink(d){
+    var body='국제개발봉사 브리프 구독을 신청합니다.\n\n성함: '+d.name+'\n소속: '+d.affiliation+'\n이메일: '+d.email+'\n개인정보 수집·이용 동의: 동의\n';
+    return 'mailto:'+TO+'?subject='+encodeURIComponent(SUBJ+' — '+d.name)+'&body='+encodeURIComponent(body);
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(E['_honey'].value){return;}
+    var d={name:E['name'].value.trim(),affiliation:E['affiliation'].value.trim(),email:E['email'].value.trim()};
+    var emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email);
+    if(!d.name||!d.affiliation||!emailOk){say('warn',ko()?'성함, 소속, 올바른 이메일 주소를 모두 적어 주세요.':'Please fill in name, affiliation and a valid email.');return;}
+    if(!E['consent'].checked){say('warn',ko()?'개인정보 수집·이용에 동의해 주셔야 신청이 접수됩니다.':'Please tick the consent box.');return;}
+    btn.disabled=true; say('',ko()?'보내는 중입니다…':'Sending…');
+    var fd=new URLSearchParams();
+    fd.append('entry.368217325',d.name);
+    fd.append('entry.709385646',d.affiliation);
+    fd.append('entry.107571645',d.email);
+    fd.append('entry.1649596790','동의');
+    fetch(FORM,{method:'POST',mode:'no-cors',body:fd})
+      .then(function(){
+        f.reset();
+        say('ok',ko()?'신청이 접수되었습니다. 다음 호(격주 월요일 오전 9시)부터 보내 드립니다. 감사합니다.':'Thank you. You will receive the brief from the next issue.');
+      })
+      .catch(function(){
+        say('warn',(ko()?'자동 접수가 지금 되지 않았습니다. 아래 버튼을 누르면 입력하신 내용이 담긴 메일 창이 열립니다. 그대로 보내 주시면 접수됩니다. 메일 창이 열리지 않으면 <b>'+TO+'</b>로 성함·소속·이메일을 적어 보내 주세요.':'Automatic submission did not go through. Click below to open an email with your details, or write to <b>'+TO+'</b>.')+
+          '<br><a href="'+mailtoLink(d)+'">'+(ko()?'메일로 신청하기 →':'Subscribe by email →')+'</a>');
+      })
+      .then(function(){btn.disabled=false;});
+  });
+})();
+</script>
+</body>
+</html>
