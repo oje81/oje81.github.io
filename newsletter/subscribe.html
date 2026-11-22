@@ -50,8 +50,8 @@ button.go[disabled]{opacity:.55;cursor:wait}
 <main>
   <section>
     <h2 class="sh"><span lang="ko">브리프 받아보기</span><span lang="en">Subscribe</span></h2>
-    <p class="body" lang="ko">국제개발봉사 브리프는 격주 월요일 오전 9시에 이메일로 발송됩니다. 아래에 성함, 소속, 이메일을 남겨 주시면 다음 호부터 보내 드립니다. 신청하신 분의 주소는 숨은참조로 넣어 다른 수신자에게 보이지 않습니다.</p>
-    <p class="body" lang="en">The brief (in Korean) is emailed every other Monday at 9 a.m. KST. Leave your name, affiliation and email below and you will receive it from the next issue. Your address is sent as Bcc and is not visible to other recipients.</p>
+    <p class="body" lang="ko">국제개발봉사 브리프는 격주 월요일 오전 9시에 이메일로 발송됩니다. 아래에 성함, 소속, 이메일을 남겨 주시면 다음 호부터 보내 드립니다. 신청하시면 반나절 안에 접수 확인 메일이 자동으로 발송됩니다. 신청하신 분의 주소는 숨은참조로 넣어 다른 수신자에게 보이지 않습니다.</p>
+    <p class="body" lang="en">The brief (in Korean) is emailed every other Monday at 9 a.m. KST. Leave your name, affiliation and email below and you will receive it from the next issue. An automatic confirmation email follows within half a day. Your address is sent as Bcc and is not visible to other recipients.</p>
 
     <form class="sub" id="sub" novalidate>
       <label class="f"><span lang="ko">성함</span><span lang="en">Name</span>
@@ -116,7 +116,7 @@ button.go[disabled]{opacity:.55;cursor:wait}
     fetch(FORM,{method:'POST',mode:'no-cors',body:fd})
       .then(function(){
         f.reset();
-        say('ok',ko()?'신청이 접수되었습니다. 다음 호(격주 월요일 오전 9시)부터 보내 드립니다. 감사합니다.':'Thank you. You will receive the brief from the next issue.');
+        say('ok',ko()?'신청이 접수되었습니다. 반나절 안에 접수 확인 메일이 자동으로 발송되며, 다음 호(격주 월요일 오전 9시)부터 브리프를 보내 드립니다. 확인 메일이 보이지 않으면 스팸함도 확인해 주세요.':'Thank you. You will receive the brief from the next issue.');
       })
       .catch(function(){
         say('warn',(ko()?'자동 접수가 지금 되지 않았습니다. 아래 버튼을 누르면 입력하신 내용이 담긴 메일 창이 열립니다. 그대로 보내 주시면 접수됩니다. 메일 창이 열리지 않으면 <b>'+TO+'</b>로 성함·소속·이메일을 적어 보내 주세요.':'Automatic submission did not go through. Click below to open an email with your details, or write to <b>'+TO+'</b>.')+
