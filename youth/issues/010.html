@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>글로벌 청년정책 브리프 제10호</title>
+<style>
+  :root{
+    --bg:#F7F4EE; --card:#FFFFFF; --ink:#1F1B16; --ink2:#5C554B; --ink3:#8A8276;
+    --accent:#B4482A; --label:#3D5A80; --rule:#D9D2C6; --tint:#F1EBE1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .title small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:var(--ink3);margin-top:4px;}
+  .rules{margin-top:13px;border-top:2px solid var(--accent);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);border-left:4px solid var(--accent);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .lens{margin-top:13px;padding:15px 18px;background:var(--tint);border:1px solid var(--rule);}
+  .lens .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;}
+  .lens h3{margin:5px 0 0;font-size:15px;line-height:1.45;font-weight:700;}
+  .lens p{margin:8px 0 0;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .lens p.counter{padding-left:11px;border-left:2px solid var(--accent);color:var(--ink2);font-size:11.5px;line-height:1.7;}
+  .lens p.counter b{color:var(--accent);font-size:10.5px;letter-spacing:0.8px;}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:12px;font-weight:700;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .two p:last-child{margin-bottom:0}
+  .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+  .a .pt b{color:var(--accent)}.b .pt b{color:var(--label)}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:12px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 9px;font-size:12.5px;line-height:1.75;color:var(--ink);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);margin-right:7px;}
+  .pred{display:block;margin-top:2px;color:var(--accent)}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:13mm;}
+    body{background:#fff;font-size:8.7pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    .two,.hyp,.lead,.lens{break-inside:avoid;} .item,section{break-inside:auto;} .shead{break-after:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:21pt;margin-top:4px;}
+    .title small{font-size:8.5pt;}
+    .eyebrow{font-size:7pt;}
+    .issueline{font-size:7.6pt;margin-top:6px;}
+    .blurb{font-size:8.2pt;line-height:1.6;margin-top:7px;}
+    .rules{margin-top:9px;}
+    .lead{margin-top:11px;padding:10px 12px;}
+    .lead h2{font-size:14.5pt;}
+    .lead p{font-size:8.5pt;line-height:1.6;margin-top:5px;}
+    .stats{margin-top:10px;}
+    .stats .cell{padding:8px 10px;}
+    .stats .n{font-size:12.5pt;}
+    .stats .c{font-size:7pt;line-height:1.4;}
+    section{margin-top:12px;}
+    .shead .num{font-size:7pt;}
+    .shead .name{font-size:11pt;}
+    .shead .note{font-size:7pt;}
+    .item{margin-top:8px;}
+    .item + .item{margin-top:8px;}
+    .tag{font-size:6.4pt;padding:0 4px;}
+    .item h3{font-size:9.4pt;line-height:1.4;margin-top:4px;}
+    .cite{font-size:7.2pt;line-height:1.45;margin-top:2px;}
+    .body{font-size:8.3pt;line-height:1.5;margin-top:3px;}
+    .check{font-size:7.6pt;line-height:1.46;margin-top:3px;padding-left:8px;}
+    .check b{font-size:7pt;}
+    ul.news{margin-top:8px;}
+    ul.news li{font-size:8.3pt;line-height:1.5;margin-top:6px;}
+    ul.news li .src{font-size:7pt;}
+    .lens{margin-top:8px;padding:9px 11px;}
+    .lens .h{font-size:7pt;}
+    .lens h3{font-size:10pt;}
+    .lens p{font-size:8.3pt;line-height:1.5;margin-top:5px;}
+    .lens p.counter{font-size:7.6pt;line-height:1.46;}
+    .setup{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    .two{margin-top:8px;}
+    .two .col{padding:9px 11px;}
+    .two .ch,.hyp .h{font-size:7.4pt;margin-bottom:5px;}
+    .two p,.hyp p{font-size:7.7pt;line-height:1.48;margin-bottom:3px;color:var(--ink2);}
+    .pt b{font-size:6.6pt;padding:0 3px;margin-right:4px;}
+    .hyp{margin-top:8px;padding:9px 11px;}
+    .hyp b{font-size:7.5pt;margin-right:4px;}
+    .pred{display:inline;margin-left:4px;}
+    .close{font-size:8.3pt;line-height:1.5;margin-top:7px;}
+    footer{margin-top:11px;padding-top:7px;font-size:7.1pt;line-height:1.55;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+    .two .col.b{margin-top:12px;border-top:1px solid var(--rule);}
+  }
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}}
+  :root[data-theme="dark"]{--bg:#171310;--card:#1F1A16;--ink:#EFE8DF;--ink2:#C4B9AB;--ink3:#948A7C;--accent:#E07A57;--label:#8FB0D6;--rule:#3A322B;--tint:#28211C}
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="eyebrow">글로벌 청년정책 브리프 · 매주 발행 · 제도와 거버넌스의 눈으로 읽는 청년정책</div>
+  <div class="title">글로벌 청년정책 브리프<small>Global Youth Policy Brief</small></div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제10호 &nbsp;·&nbsp; 2026. 11. 23. &nbsp;·&nbsp; 연구 4편 · 정책 5건 · 제도의 눈 1편 · 쟁점 1건 · 읽기 가이드 1편</div>
+  <div class="blurb">국제기구와 주요국의 청년정책 동향을 한국 청년정책과 나란히 놓고, 행정학의 관점(제도, 거버넌스, 성과관리, 참여)에서 읽습니다. 같은 물음을 붙들고 있는 분을 찾습니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>청년기본법 6년과 청년기본조례: 법과 조례는 서로를 어떻게 바꾸었는가</h2>
+    <p>청년기본법은 2020년 2월 4일 공포되어 그해 8월 5일 시행되었습니다. 법보다 조례가 먼저 있었습니다. 서울시의회는 2014년 12월 전국 처음으로 청년기본조례를 발의했고, 기초자치단체 226곳은 2015년부터 2024년 사이에 모두 청년기본조례를 두었습니다. 법이 청년을 19~34세로 정한 뒤에도 조례는 다른 길을 갔습니다. 국회입법조사처가 2025년 2월에 집계한 기초자치단체 226곳 가운데 법과 같은 34세 상한을 둔 곳은 9곳이었고, 39세가 130곳, 45세가 47곳, 49세가 40곳이었습니다. 이번 호는 제20·21대 국회의 청년기본법 표결을 분석한 연구, 청년기본조례의 확산을 S자 곡선으로 본 연구, 지방의 혁신이 국가 정책이 되는 조건을 비교한 연구, 그리고 도시의 조례가 주법으로 올라가는 경로를 다룬 고전으로, 법과 조례가 서로를 바꾸어 온 6년을 정책 형성·변천의 관점에서 읽습니다. 대만은 올해 1월 청년기본법을 공포했고, 국회 정무위원회에는 청년정책진흥원을 두는 개정안이 11월 19일 상정되었습니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">9 · 130 · 47 · 40</div><div class="c">기초자치단체 226곳의 청년 연령 상한 분포(34세 · 39세 · 45세 · 49세, 2025. 2. 기준)<br>(청년기본법은 19~34세, 조례는 달리 정할 수 있음 · 국회입법조사처 보고서의 보도 인용, 원문 미열람)</div></div>
+    <div class="cell"><div class="n">18~35세 · NT$100억</div><div class="c">대만 청년기본법(2026. 1. 21. 공포·시행)의 청년 연령과 5년 안에 조성할 청년발전기금<br>(한국 청년기본법 19~34세, EU 청년전략 15~29세와 정의가 다름 · 교육부 법령 페이지)</div></div>
+    <div class="cell"><div class="n">11 / 32</div><div class="c">32개국 가운데 별도의 청년법을 둔 나라의 수(전략은 25개국, 청년영향평가는 3개국)<br>(제네바 국제개발대학원 워킹페이퍼, 2025. 1. · 한국은 조사 대상에 없음 · 연령 정의는 나라마다 다름)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 3편(국내 2 + 국제 1) + 다시 읽기 1편</span></div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://m.riss.kr/search/detail/DetailView.do?p_mat_type=1a0202e37d52c72d&amp;control_no=091385f7f3a5ef1847de9c1710b0298d">누가 청년기본법에 반대하였는가?: 제20-21대 국회 본회의 표결 분석</a></h3>
+      <div class="cite">정다빈(2026), 『동서연구』 38(3), 31–60. 연세대학교 동서문제연구원(KCI 등재). DOI 미표시 · RISS 상세 레코드로 확인, 학술지 사이트와 DOI 경로는 자동 접근이 되지 않아 2차 확인 미완 · 초록만 확보, 본문 미열람 · 연령 정의: 청년기본법 19~34세, '청년의원'은 저자의 정의를 본문에서 확인하지 못함</div>
+      <div class="body">저자는 여야 합의로 통과한 청년기본법을 대상으로, 제정과 개정 표결에서 반대와 기권이 어떤 조건에서 나왔는지를 분석했다. 초록에 따르면 청년의 기술적 대표성과 관련된 세대 요인은 유의하지 않았다. 표결 시점의 여야 지위가 결정 요인이었다. 개정안에 반대했던 야당 의원들은 자기 정당이 여당이 된 뒤의 표결에서 모두 찬성으로 돌아섰다. 저자는 청년의 참여를 넓히려는 개정안에 유일한 청년의원이 반대표를 던진 사실도 적고, 청년 대표성을 어떻게 실현할지에 대한 견해 차이가 있을 수 있다고 본다. 결론은 <b>청년 입법은 청년 대표성보다 정당과 여야 관계로 더 잘 설명된다</b>는 것이다. 국내 연구는 청년기본법 제정과정을 대상집단의 사회적 형성으로 읽거나(신보라·박형준 2023) 청년의원의 법안 발의를 세었는데(정회옥 2022), 이 연구는 본회의 표결이라는 결과 자료로 같은 질문을 다룬 점이 다르다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;초록만 확보해 표결의 수, 분석한 개정안의 수, 통계 모형은 확인하지 못했다. 여야 합의로 통과한 법은 반대표가 적어 이탈 분석의 사례 수가 작을 수 있다. 여야 지위가 결정 요인이라는 발견은 청년 입법에 고유한 것이 아니라 한국 국회의 표결 일반에 해당할 가능성이 있고, 이 설계로는 두 해석을 가를 수 없다. 유일한 청년의원의 반대는 한 표이므로 일반화하기 어렵다. 다만 이 연구는 법이 '누구의 요구로' 만들어졌는지를 묻는 질문에, 적어도 표결 단계에서는 청년이 아니라 정당이 답이었다는 자료를 남긴다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국내</span>
+      <h3><a href="https://doi.org/10.17703/jcct.2025.11.4.195">자치단체 조례제정의 현상적 분석: 청년기본조례의 확산</a></h3>
+      <div class="cite">이정철(2025), 『문화기술의 융합』 11(4), 195–201. 국제문화기술진흥원(KCI 등재). DOI 10.17703/jcct.2025.11.4.195 · RISS 상세 레코드와 KoreaScience 학술지 페이지로 이중 확인 · 초록 확보, 본문 PDF는 자동 접근이 막혀 미열람 · 연령 정의: 조례마다 다름(초록은 연령 정의의 다양성을 결과로 보고함)</div>
+      <div class="body">저자는 서울시 기획조정실의 정책분석 담당자다. 2015년부터 2024년까지 전국의 모든 기초자치단체가 청년기본조례를 채택한 과정이 정책 확산의 세 가지 현상적 특성을 보이는지를 검토했다. 시간 차원에서 연도별 채택 빈도는 확산 중기에 가장 많고 초기보다 많으며 후기에 줄어들어, 누적 채택은 S자 곡선을 그렸다. 공간 차원에서 같은 광역자치단체 안의 기초자치단체들이 4~5년 사이에 집중적으로 채택했다. 내용 차원에서 대부분의 조례가 명칭, 목적, 단체장의 책무, 기본계획이라는 핵심 요소를 공유했으나, 같은 해에 제정된 조례도 명칭, 연령 정의, 시행계획, 참여 기구에서 달랐다. 저자는 이를 <b>'공통성 속 다양성'</b>이라고 부르고, 청년기본조례의 확산이 세 특성을 모두 갖춘 국내 정책 확산 연구의 사례라고 본다. 국내 연구는 청년기본조례의 제정 요인을 인구감소지역 중심으로 회귀분석하거나(임태경 2023) 서울·광주·대구의 제·개정 과정을 비교했는데(천용길 외 2026, 제5호), 이 연구는 226곳 전체의 채택 시점과 내용을 함께 본 점이 다르다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;초록에는 채택 수의 연도별 분포, 자료 출처, 내용 비교의 코딩 방법이 없다. 통계 검정도 보고되지 않아 S자 곡선과 지역 집중은 기술적 관찰로 남는다. 같은 광역 안의 집중은 이웃 모방일 수도 있고, 광역 조례와 중앙의 지침이 같은 시기에 내려온 결과일 수도 있다. 2020년 청년기본법 제정 전후로 채택 동기가 달라졌는지가 이 쟁점의 핵심인데, 초록은 법 제정을 분기점으로 다루지 않는다. 연령 정의의 다양성을 결과로 적은 점은, 조례가 법을 따르지 않고 각자 정해 왔다는 사실을 226곳 자료로 확인했다는 뜻이다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://doi.org/10.1371/journal.pone.0325811">How could local environmental innovations become a national policy? A qualitative comparative study on the factors influencing the diffusion of bottom-up environmental policy innovations</a></h3>
+      <div class="cite">Zhang, J. &amp; Xing, S.(2025), <i>PLOS ONE</i> 20(6), e0325811(CC BY 4.0). DOI 10.1371/journal.pone.0325811 · PubMed Central 전문과 PLOS 학술지 페이지로 이중 확인 · 전문 확보 · 청년을 다룬 연구가 아니며 조례가 법이 되는 경로의 방법론적 참고로 실음 · <a href="https://claude.ai/artifact/JCtkAaA1GemreY3zoB5Bw5">읽기 가이드 →</a></div>
+      <div class="body">저자들은 중국에서 지방정부가 먼저 시작해 뒤에 국가 정책이 된 환경정책 17건을 퍼지셋 질적비교분석(fsQCA)으로 비교했다. 하천장(河長)제, 환경보호 수직관리, 천촌시범·만촌정비 같은 사례이고, 시작 연도는 1956년부터 2020년까지다. 결과변수는 지방의 시작에서 전국 추진까지 걸린 햇수이고, 조건은 중앙의 의제 설정, 중앙부처의 인정, 초점사건, 혁신의 비용과 난이도, 지방정부 사이의 확산 다섯 가지다. 필요조건 분석에서 다섯 조건 모두 일관성이 0.9에 못 미쳐 혼자서 필수인 조건은 없었다. 충분조건 분석에서는 다섯 경로가 나왔고 전체 일관성은 0.84, 적용 범위는 0.78이었다. 저자들은 경로를 중앙 유도형, 중앙·사회 추동형, 지방 자율형의 세 모형으로 묶는다. 환경보호 수직관리는 전국 시범 지침까지 약 14년, 천촌시범·만촌정비는 약 17년이 걸렸고, 하천장제는 2007년 타이후 녹조 사태 뒤 2016년 전국 시행으로 이어졌다. <b>지방정부 사이의 확산은 보고된 모든 경로에 들어 있었다.</b> 저자들은 지방 사이에 자연히 퍼지는 속도는 느리므로 중앙이 지방 혁신을 체계적으로 모아 적절한 시점에 국가 정책으로 올리면 시간을 줄일 수 있다고 적는다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;17건은 모두 결국 국가 정책이 된 사례다. 올라가지 못한 지방 혁신은 표본에 없으므로, 이 연구는 속도는 말해도 성패는 말할 수 없다. 중앙의 의제 설정이 가장 높은 일관성을 보였다는 결과는 중앙이 원하는 방향의 지방 실험이 선별되어 올라갔다는 해석과도 맞는다. 중국의 '시범사업 지정'에 해당하는 절차가 한국의 조례에는 없다. 그래도 이 연구는 이정철이 본 기초자치단체 사이의 확산이 법 제정의 조건 가운데 하나였을 가능성을 검토할 틀을 준다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://doi.org/10.1111/j.1540-5907.2006.00218.x">Bottom-Up Federalism: The Diffusion of Antismoking Policies from U.S. Cities to States</a></h3>
+      <div class="cite">Shipan, C. R. &amp; Volden, C.(2006), <i>American Journal of Political Science</i> 50(4), 825–843. DOI 10.1111/j.1540-5907.2006.00218.x · Semantic Scholar DOI 레코드(인용 583회)와 노스캐롤라이나대 강의용 공개 PDF로 이중 확인 · 전문 확보 · 연령 정의: 청년을 다룬 연구가 아님(담배 포장 외 판매 제한은 청소년 접근 규제)</div>
+      <div class="body">저자들은 정책 확산 연구가 주에서 주로 퍼지는 수평 확산만 보고, 도시의 조례가 주법에 미치는 영향을 묻지 않았다고 지적한다. 도시의 조례는 주의 입법을 재촉할 수도 있고(눈덩이 효과), 압력을 미리 빼서 주의 입법을 늦출 수도 있다(압력밸브 효과). 1975년부터 2000년까지 50개 주와 인구 5만 명 이상 도시의 금연 정책 세 가지(관공서 금연, 식당 금연, 담배 포장 외 판매 제한)를 사건사 분석으로 추적했다. 분석 단위는 2,256개 주·정책·연도다. 전체 표본에서 도시 조례의 적용 인구 비율은 주법 채택에 유의한 독립 효과가 없었다. 두 효과가 서로 상쇄된 것이다. 효과는 주의회의 전문성에 따라 달라졌다. 전문성이 낮은 주의회에서는 조례 적용 인구가 1%p 늘 때 주법 채택 확률이 약 4% 낮아졌고, 전문성이 높은 주의회에서는 효과가 양으로 바뀌었다. 보건단체가 주의 유력 로비집단일 때도 조례는 주법으로 이어졌다. 저자들은 <b>조례가 법이 되는지는 조례의 수가 아니라 상위 의회의 역량과 옹호집단의 힘이 정한다</b>고 본다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;20년 전 미국 연방제의 연구다. 한국의 지방의회는 주의회가 아니고, 청년기본조례는 금연 조례처럼 주민의 행동을 규제하는 정책이 아니다. 그러나 두 효과의 구분은 한국에 옮길 수 있다. 2015년부터 2019년까지 조례가 퍼진 것이 법 제정을 재촉했는지, 아니면 조례가 있으니 법은 급하지 않다는 압력밸브로 작동했는지는 아직 아무도 재지 않았다. 정다빈이 본 여야 합의와 이정철이 본 S자 곡선은 이 질문의 양쪽 자료다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 2건</span></div>
+    <ul class="news">
+      <li><b>[국내] 청년정책진흥원을 두는 청년기본법 개정안(김동아 의원, 7. 22. 발의), 11월 19일 정무위원회 전체회의 상정.</b> 보도에 따르면 개정안은 민간재단인 청년재단과 한국고용정보원으로 나뉜 청년정책 지원 기능을 국가가 세우는 진흥원으로 합치고, 기획예산처 장관이 예산을 편성할 때 청년정책 기본계획을 존중하도록 했다. 정무위 수석전문위원 검토보고는 입법 취지는 타당하나 국고가 들어가는 특수법인이므로 공공 목적에 꼭 필요한지 면밀히 검토할 필요가 있다고 적었고, 국무조정실은 분산된 전달체계를 하나로 묶을 전담기관이 필요하다는 의견을 냈다. 제2차 청년정책 기본계획(2026~2030)은 61쪽에 '한국청년정책진흥원 신설 추진'을 적었으나 법적 근거는 밝히지 않았다. 검토보고서 원문과 회의록은 미열람, 보도 3건 교차. 제5호에서 다룬 전담기관 개정안이 상임위 심사 단계로 들어갔다. <span class="src"><a href="https://supple.kr/news/cmwokxzzfoptbkwp899ewyb39">서플(11. 20.)</a> · <a href="https://biz.sbs.co.kr/article/20000347773">SBS Biz(11. 20.)</a> · <a href="https://view.asiae.co.kr/article/2026072211285848355">아시아경제(7. 22.)</a> · <a href="https://www.opm.go.kr/_res/opm/etc/opm_youth_plan2.pdf">제2차 기본계획</a></span></li>
+      <li><b>[국내] 청년 연령: 법은 19~34세, 기초자치단체 226곳 가운데 34세 상한은 9곳(2025. 2.). 제2차 기본계획은 연령 기준을 "연구와 사회적 논의를 거쳐 검토"하겠다고 적었다.</b> 국회입법조사처 보고서(2025. 3. 보도)에 따르면 광역 17곳 가운데 15곳이 39세, 강원과 전남이 45세다. 기초는 39세 130곳, 45세 47곳, 49세 40곳이고, 49세 상한은 전남 22곳 가운데 14곳, 강원·경북·경남 각 6곳 등이다. 보고서는 국가 기준을 39세로 올리는 방안을 검토하되 단일 기준으로 통일하기보다 상한의 가이드라인을 두라고 제언했다. 국토교통부 추산으로 상한을 39세로 올리면 청년버팀목전세자금 대상이 약 320만 명, 예산이 약 6조 6천억 원 는다. 머니투데이방송은 10월 26일 자체 조사로 226곳 가운데 포항시 1곳만 19~34세를 유지한다고 보도했으나 조사 방법은 밝히지 않았다. 보고서 원문은 미열람(nars.go.kr 자동 접근 차단), 보도 2건 교차. <span class="src"><a href="https://mobile.newsis.com/view/NISX20250321_0003107852">뉴시스(2025. 3. 22.)</a> · <a href="https://www.ibabynews.com/news/articleView.html?idxno=130698">베이비뉴스(2025. 4. 23.)</a> · <a href="https://news.mtn.co.kr/article/2026102614393067977">MTN(10. 26.)</a> · <a href="https://www.opm.go.kr/_res/opm/etc/opm_youth_plan2.pdf">제2차 기본계획 60쪽</a></span></li>
+      <li><b>[국제] 대만: 청년기본법 2026년 1월 21일 공포·시행. 청년은 18~35세, 중앙 주관기관은 교육부, 각급 정부는 청년사무 전담단위를 두고 지방은 청년 대표가 절반 이상인 청년사무발전회보를 둔다.</b> 입법원은 2025년 12월 26일 3독으로 통과시켰다. 법은 중앙정부가 5년 안에 NT$100억의 청년발전기금을 조성하고, 18세 공민권(선거·파면·창제·복결)을 위한 법제를 2년 안에 갖추며, 4년마다 청년정책백서를 내고 전국청년회의를 열도록 했다. 교육부는 7월 2일 핑둥에서 22개 현·시의 청년사무 담당자가 참석한 첫 전국 청년사무 전담단위 주관회의를 열었다. 기금 조항은 여당의 반대 속에 야당 다수로 통과했다(자유시보). 한국과 반대로 법이 먼저 지방의 전담 조직과 회의체를 의무화한 사례다. 연령 정의는 "다른 법령에 규정이 있으면 그에 따른다"는 단서를 두어 한국 청년기본법과 같은 구조다. <span class="src"><a href="https://edu.law.moe.gov.tw/LawContent.aspx?id=GL002384">교육부 법령</a> · <a href="https://news.ltn.com.tw/news/politics/breakingnews/5290668">자유시보(2025. 12. 26.)</a> · <a href="https://udn.com/news/story/7327/9603397">연합보(7. 2.)</a></span></li>
+      <li><b>[국제] 유럽연합: 2028년부터 적용할 차기 EU 청년전략 공개 협의(7. 16. 마감), 집행위원회 「세대 간 공정 전략」(3월, COM(2026) 110), 11월 19일 이사회 결론 「청년 공간」.</b> 집행위원회는 2019~2027 청년전략의 평가를 진행하면서 차기 전략의 우선순위와 협력 방식을 묻는 설문을 열었다. 「세대 간 공정 전략」은 15개 실행과제를 두고 유스체크와 청년정책대화로 정책의 청년 영향을 살피겠다고 했으며, 진행보고서는 2028년 유엔총회에 낸다. 11월 19일 교육·청년·문화·체육 이사회는 청년이 운영하는 물리적 공간이 여러 회원국에서 줄고 있다고 보고, 회원국에 증거 기반의 범정부 전략과 청년 주류화를, 집행위원회에 유스체크 적용을 권고했다(문서 15577/26). EU의 청년 연령은 15~29세다. 차기 전략의 채택 시점은 확인하지 못했다. <span class="src"><a href="https://data.consilium.europa.eu/doc/document/ST-15577-2026-INIT/en/pdf">이사회 15577/26</a> · <a href="https://youth.europa.eu/intergenerational-fairness_en">유럽청년포털</a> · <a href="https://futurium.ec.europa.eu/en/border-focal-point-network/news/have-your-say-eu-youth-strategy-post-2027-consultation-open">협의 안내</a></span></li>
+      <li><b>[국제] 영국(잉글랜드): 국가청년전략 「Youth Matters」(2025. 12. 10.), 법 대신 전략. 지방정부의 청년서비스 법정 의무를 지방 법정 의무 전반의 검토 속에서 재검토하고, 청년서비스 규제를 검토하며, 전국에 청년의회를 둔다.</b> 10~21세(특수교육요구는 25세까지) 1만 4천 명이 참여해 만들었다. 2027년 중간 이행보고서와 청년이 진행하는 연례 청문회를 두었다. 청년보장(16~24세) 3년 8억 2천만 파운드, Young Futures Hubs 2029년 3월까지 50곳(제9호) 등 재정 약속은 있으나 청년법 제정 계획은 없다. 제네바 국제개발대학원 워킹페이퍼(2025. 1.)의 32개국 조사에서 영국은 별도 청년법이 없는 14개국에 들었고, 독일·프랑스·덴마크도 같았다. <span class="src"><a href="https://www.gov.uk/government/publications/youth-matters-your-national-youth-strategy/youth-matters-your-national-youth-strategy">DCMS(2025. 12. 10.)</a> · <a href="https://www.graduateinstitute.ch/sites/internet/files/2025-02/WP4_AHCD_Monti_Cioffi_Ghazi_Lutringerpdf_1.pdf">Monti 외(2025)</a></span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">제도의 눈</span><span class="note">이번 호의 렌즈: 정책 형성·변천</span></div>
+    <div class="lens">
+      <div class="h">조례가 법을 만들었고, 법은 조례를 묶지 않았다</div>
+      <h3>법 제정 뒤 조례는 법보다 넓어졌고, 이제 법이 조례를 따라가려 한다</h3>
+      <p>정책 형성·변천의 관점에서 청년기본법 6년은 세 단계로 나뉜다. 첫째는 조례의 확산이다. 2014년 서울시의회 발의에서 2020년 법 제정까지 기초자치단체의 조례 채택은 S자 곡선을 그렸다(이정철 2025). 샤이판과 볼든의 구분으로 말하면 이 시기의 조례가 눈덩이였는지 압력밸브였는지는 측정되지 않았다. 정다빈(2026)은 적어도 표결 단계에서는 청년 대표성이 아니라 여야 관계가 결과를 정했다고 본다. 둘째는 법의 제정과 단서다. 법은 청년을 19~34세로 정하면서 다른 법령과 조례가 달리 정할 수 있게 했다. 이 단서는 조례를 묶지 않았고, 조례는 인구감소에 따라 상한을 39세, 45세, 49세로 올렸다. 법은 하나의 정의를 세우는 대신 정의의 다양성을 승인했다. 셋째는 역류다. 제2차 기본계획은 지자체 조례가 대부분 39세 이하라는 사실을 들어 법의 연령 기준을 검토하겠다고 적었다. 조례가 법을 만들었고, 법의 단서가 조례를 넓혔고, 넓어진 조례가 다시 법을 바꾸려는 근거가 된다. 대만은 반대 순서다. 법이 먼저 지방의 전담단위와 회의체를 의무화했고, 지방의 자치법규는 그 뒤에 온다. 영국은 법 없이 전략과 법정 의무의 검토로 간다. 세 나라의 차이는 어느 쪽이 낫다기보다, 법과 조례 가운데 무엇이 먼저 있었느냐가 그 뒤의 변천 방향을 정한다는 점을 보여 준다고 본다. 한국에서 남은 공백은 법이 조례의 연령을 따라갈 때 누가 그 비용을 지는지를 정하는 규칙이다. 국토교통부 추산으로 상한을 39세로 올리면 전세자금 대상이 320만 명 는다.</p>
+      <p class="counter"><b>반대 해석</b> &nbsp;조례가 법을 만들었다는 서술은 순서를 인과로 읽은 것일 수 있다. 조례의 확산과 법 제정은 둘 다 청년 실업과 인구감소라는 같은 원인에서 나왔을 수 있고, 같은 광역 안의 집중 채택은 지방의 자발적 혁신이 아니라 광역과 중앙의 지침이 내려온 결과일 수 있다(이정철의 초록은 동기를 다루지 않는다). 연령 상한의 상향도 법의 단서가 열어 준 것이 아니라 인구감소지역이 수혜 대상을 넓히려고 택한 것이고, 단서가 없었어도 다른 이름의 조례로 같은 일을 했을 수 있다. 법이 조례를 따라가는 것은 역류가 아니라 중앙이 지방의 수요를 뒤늦게 확인한 정상적인 조정일 수도 있다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">청년 연령 기준: 법으로 맞출 것인가, 조례에 맡길 것인가</span></div>
+    <div class="setup">통일론은 법의 연령을 올리고 상한의 가이드라인을 두어 지역과 사업마다 다른 기준이 만드는 혼선과 형평 문제를 줄여야 한다고 본다. 자치론은 인구구조가 다른 지역이 조례로 대상을 정하는 것이 청년기본법의 단서가 예정한 바이고, 법이 기준을 올리면 조례는 다시 그보다 올라가므로 통일은 이루어지지 않는다고 본다. 두 입장은 '청년'을 통계의 범주로 보는지 서비스의 대상으로 보는지에서 나뉜다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">법으로 맞춰야 한다</div>
+        <p class="pt"><b>근거</b>국회입법조사처는 중앙부처와 대부분의 지자체가 39세를 쓰므로 법을 39세로 올리고 상한의 가이드라인을 두라고 제언했다(2025). 같은 수도권 안에서도 도봉구는 45세, 이웃 구는 39세다. 조례의 상한은 2025년 2월 9곳의 34세에서 2026년 10월 1곳으로 줄었다는 보도가 있다(MTN).</p>
+        <p class="pt"><b>사례</b>대만 청년기본법은 18~35세를 두고 다른 법령에 규정이 있으면 그에 따르게 했다. 한국의 청년고용촉진특별법은 2026년 9월 시행령을 고쳐 상한을 29세에서 34세로 올려 청년기본법에 맞췄다(제7호).</p>
+        <p class="pt"><b>함의</b>법의 연령을 올리면 전세자금 320만 명, 월세지원 4만 명이 늘어 예산이 든다(국토교통부 추산). 통일의 비용은 중앙이 지고, 혜택은 지방이 받는 구조가 된다.</p></div>
+      <div class="col b"><div class="ch">조례에 맡겨야 한다</div>
+        <p class="pt"><b>근거</b>청년기본법은 처음부터 조례가 달리 정할 수 있게 했고, 226곳 모두가 그 단서를 써서 조례를 만들었다(이정철 2025). 전남 22곳 가운데 14곳이 49세인 것은 혼선이 아니라 그 지역의 청년 인구가 그만큼 적다는 사실의 반영일 수 있다. 샤이판과 볼든은 상위 의회의 역량이 낮을 때 조례의 확산이 상위 입법을 오히려 늦춘다고 보았다.</p>
+        <p class="pt"><b>사례</b>영국은 청년법 없이 전략과 지방 법정 의무의 검토로 가고, 32개국 가운데 14개국은 별도 청년법이 없다(Monti 외 2025). 일본의 청소년고용대책기본방침은 35세 미만을 두되 운용으로 45세 미만까지 넓혔다(제9호).</p>
+        <p class="pt"><b>함의</b>통계와 중앙 사업은 법의 연령으로, 지역 서비스는 조례의 연령으로 나누는 기능 분화가 해당한다. 성과는 연령이 다른 두 체계 사이에서 청년이 겪는 신청 혼선의 빈도로 잰다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 법이 청년 연령을 39세로 올리면 조례는 어떻게 되는가</div>
+      <p><b>H1 수렴</b>조례가 법의 새 기준으로 모인다<span class="pred">맞다면 → 개정 뒤 2년 안에 45세·49세 조례의 수가 줄고, 신규 개정 조례의 상한이 39세에 몰린다.</span></p>
+      <p><b>H2 재상향</b>조례는 법보다 한 단계 더 올라간다<span class="pred">맞다면 → 39세 조례였던 곳이 45세로 올리고, 광역 조례의 상한이 45세로 이동하며, 법과 조례의 격차는 그대로 남는다.</span></p>
+      <p><b>H3 분화</b>법의 연령과 조례의 연령이 다른 용도로 굳는다<span class="pred">맞다면 → 중앙 사업과 통계는 39세, 지방 서비스는 조례 연령으로 운영되고, 조례 개정은 연령보다 사업 조항 중심으로 바뀐다.</span></p></div>
+    <div class="close">세 가설은 법의 연령 개정이 실제로 이루어진 뒤 조례 개정의 시점과 내용을 추적하면 가려볼 수 있다. 이 브리프는 청년기본법 개정안(청년정책진흥원)의 정무위 심사, 제2차 기본계획이 예고한 연령 기준 연구, 대만 청년발전기금의 첫 예산 편성, EU 차기 청년전략의 채택을 계속 추적한다.</div>
+  </section>
+
+  <footer>
+    <b>발행·편집</b> 오지은 (연세대 공공문제연구소 전문연구원 · 행정학 박사) &nbsp;·&nbsp; 매주 월요일 오전 9시 &nbsp;·&nbsp; 아카이브 <a href="https://oje81.github.io/youth/">oje81.github.io/youth</a><br>
+    다음 호 예고 · 청년정책 전담기관 논쟁: 청년재단, 청년정책조정위원회, 청년정책진흥원 사이에서, 거버넌스·조정의 렌즈로<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+
+</body>
+</html>
