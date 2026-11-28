@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>국제개발봉사 브리프 제6호</title><style>
+  :root{
+    --bg:#F2F5F4; --card:#FFFFFF; --ink:#131C1A; --ink2:#4E5F5C; --ink3:#7C8D8A;
+    --accent:#0E6B5D; --label:#8A6516; --rule:#C9D4D1; --tint:#EAEFEE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;}
+  .sheet{max-width:820px;margin:0 auto;background:var(--card);border-left:1px solid var(--rule);border-right:1px solid var(--rule);padding:34px 44px 40px 44px;}
+
+  .eyebrow{font-size:10.5px;letter-spacing:2.2px;color:var(--accent);font-weight:700;}
+  .title{font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-0.5px;margin-top:7px;}
+  .rules{margin-top:13px;border-top:2px solid var(--ink);}
+  .rules div{border-top:1px solid var(--rule);margin-top:3px;}
+  .issueline{margin-top:9px;font-size:11.5px;color:var(--ink3);letter-spacing:0.4px;}
+  .blurb{margin-top:11px;font-size:12.5px;line-height:1.75;color:var(--ink2);max-width:62ch;}
+
+  .lead{margin-top:24px;padding:18px 20px;background:var(--tint);border:1px solid var(--rule);}
+  .lead .kicker{font-size:10.5px;letter-spacing:1.6px;color:var(--label);font-weight:700;}
+  .lead h2{margin:7px 0 0;font-size:21px;line-height:1.4;font-weight:700;letter-spacing:-0.3px;}
+  .lead p{margin:8px 0 0;font-size:13px;line-height:1.75;color:var(--ink2);}
+
+  .stats{display:table;width:100%;margin-top:16px;border:1px solid var(--rule);border-collapse:collapse;}
+  .stats .cell{display:table-cell;width:33.33%;padding:12px 14px;border-right:1px solid var(--rule);vertical-align:top;background:var(--tint);}
+  .stats .cell:last-child{border-right:0}
+  .stats .n{font-size:19px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;letter-spacing:-0.5px;}
+  .stats .c{font-size:10.5px;line-height:1.5;color:var(--ink2);padding-top:3px;}
+
+  section{margin-top:26px;}
+  .shead{border-top:1px solid var(--ink);padding-top:8px;}
+  .shead .num{font-size:10.5px;font-weight:700;color:var(--accent);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;}
+  .shead .name{font-size:15.5px;font-weight:700;padding-left:7px;letter-spacing:-0.2px;}
+  .shead .note{font-size:10.5px;color:var(--ink3);padding-left:8px;}
+
+  .item{margin-top:14px;padding-top:2px;}
+  .item + .item{margin-top:15px;}
+  .tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:1.2px;color:var(--accent);border:1px solid var(--accent);padding:1px 5px;vertical-align:2px;}
+  .tag.re{color:var(--label);border-color:var(--label);}
+  .item h3{margin:6px 0 0;font-size:14px;line-height:1.5;font-weight:700;letter-spacing:-0.2px;}
+  .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+  .cite{margin-top:4px;font-size:11px;line-height:1.6;color:var(--ink3);}
+  .body{margin-top:6px;font-size:12.5px;line-height:1.78;color:var(--ink);}
+  .check{margin-top:6px;padding-left:11px;border-left:2px solid var(--rule);font-size:11.5px;line-height:1.7;color:var(--ink2);}
+  .check b{color:var(--label);font-size:10.5px;letter-spacing:0.8px;}
+
+  ul.news{margin:12px 0 0;padding:0;list-style:none;}
+  ul.news li{padding:0 0 0 13px;position:relative;font-size:12.5px;line-height:1.78;margin-top:11px;}
+  ul.news li:before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;background:var(--accent);}
+  ul.news li b{font-weight:700;}
+  ul.news li .src{font-size:10.5px;color:var(--ink3);}
+  ul.news li .src a{color:var(--ink3);}
+
+  .also{margin-top:12px;padding:12px 14px;background:var(--tint);border:1px solid var(--rule);font-size:11.5px;line-height:1.75;color:var(--ink2);}
+  .also .h{font-size:10.5px;letter-spacing:1.2px;color:var(--label);font-weight:700;display:block;margin-bottom:5px;}
+  .also a{color:var(--ink2);}
+
+  .setup{margin-top:13px;font-size:12.5px;line-height:1.78;}
+  .two{display:table;width:100%;margin-top:13px;border-collapse:collapse;}
+  .two .col{display:table-cell;width:50%;vertical-align:top;padding:13px 15px;border:1px solid var(--rule);}
+  .two .col:first-child{border-right:0;}
+  .two .ch{font-size:10.5px;font-weight:700;letter-spacing:1.2px;margin-bottom:7px;}
+  .two .a .ch{color:var(--accent);}
+  .two .b .ch{color:var(--label);}
+  .two p{margin:0 0 7px;font-size:11.5px;line-height:1.72;color:var(--ink2);}
+  .two p:last-child{margin-bottom:0}
+  .hyp{margin-top:13px;padding:13px 15px;border:1px solid var(--ink);}
+  .hyp .h{font-size:10.5px;letter-spacing:1.2px;font-weight:700;color:var(--ink);margin-bottom:7px;}
+  .hyp p{margin:0 0 6px;font-size:11.5px;line-height:1.72;color:var(--ink2);}
+  .hyp p:last-child{margin-bottom:0}
+  .hyp b{color:var(--ink);font-family:Consolas,Monaco,'DejaVu Sans Mono',monospace;font-size:11px;}
+  .close{margin-top:12px;font-size:12.5px;line-height:1.78;}
+
+  footer{margin-top:24px;border-top:1px solid var(--ink);padding-top:12px;font-size:11px;line-height:1.75;color:var(--ink3);}
+  footer b{color:var(--ink2);}
+  a{color:var(--accent);}
+
+  @media print{
+    @page{size:A4;margin:11mm;}
+    body{background:#fff;font-size:8.2pt;}
+    .sheet{max-width:none;border:0;padding:0;}
+    section,.item,.two,.hyp,.lead{break-inside:avoid;}
+    a{text-decoration:none;}
+    .title{font-size:18pt;margin-top:3px;}
+    .eyebrow{font-size:6.6pt;}
+    .issueline{font-size:7.1pt;margin-top:5px;}
+    .blurb{font-size:7.5pt;line-height:1.5;margin-top:5px;}
+    .rules{margin-top:7px;}
+    .lead{margin-top:9px;padding:8px 10px;}
+    .lead .kicker{font-size:6.6pt;}
+    .lead h2{font-size:12.5pt;}
+    .lead p{font-size:7.9pt;line-height:1.52;margin-top:4px;}
+    .stats{margin-top:8px;}
+    .stats .cell{padding:6px 8px;}
+    .stats .n{font-size:11pt;}
+    .stats .c{font-size:6.5pt;line-height:1.35;}
+    section{margin-top:10px;}
+    .shead{padding-top:6px;}
+    .shead .num{font-size:6.6pt;}
+    .shead .name{font-size:10pt;}
+    .shead .note{font-size:6.6pt;}
+    .item{margin-top:6px;}
+    .item + .item{margin-top:6px;}
+    .tag{font-size:6pt;padding:0 3px;}
+    .item h3{font-size:8.7pt;line-height:1.35;margin-top:3px;}
+    .cite{font-size:6.7pt;line-height:1.4;margin-top:2px;}
+    .body{font-size:7.65pt;line-height:1.44;margin-top:3px;}
+    .check{font-size:7.1pt;line-height:1.4;margin-top:3px;padding-left:7px;}
+    .check b{font-size:6.6pt;}
+    ul.news{margin-top:6px;}
+    ul.news li{font-size:7.65pt;line-height:1.44;margin-top:5px;padding-left:11px;}
+    ul.news li:before{top:7px;width:4px;height:4px;}
+    ul.news li .src{font-size:6.6pt;}
+    .also{font-size:7.1pt;line-height:1.44;padding:7px 9px;margin-top:6px;}
+    .also .h{font-size:6.6pt;margin-bottom:3px;}
+    .setup{font-size:7.65pt;line-height:1.44;margin-top:6px;}
+    .two{margin-top:6px;}
+    .two .col{padding:7px 9px;}
+    .two .ch{font-size:6.6pt;margin-bottom:4px;}
+    .two p{font-size:7.2pt;line-height:1.42;margin-bottom:3px;}
+    .hyp{margin-top:6px;padding:7px 9px;}
+    .hyp .h{font-size:6.6pt;margin-bottom:4px;}
+    .hyp p{font-size:7.2pt;line-height:1.42;margin-bottom:3px;}
+    .hyp b{font-size:7pt;}
+    .close{font-size:7.65pt;line-height:1.44;margin-top:6px;}
+    footer{margin-top:9px;padding-top:6px;font-size:6.7pt;line-height:1.5;}
+  }
+  @media (max-width:640px){
+    .sheet{padding:24px 18px 30px;}
+    .title{font-size:27px}
+    .stats,.stats .cell,.two,.two .col{display:block;width:100%;}
+    .stats .cell{border-right:0;border-bottom:1px solid var(--rule);}
+    .two .col:first-child{border-right:1px solid var(--rule);border-bottom:0;}
+  }
+  :root:not([data-theme="light"]) body{background:var(--bg);}
+</style><style>
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101615;--card:#161E1C;--ink:#E8EEEC;--ink2:#B4C2BF;--ink3:#8A9A97;--accent:#5CC1B0;--label:#D9B45B;--rule:#2C3936;--tint:#1C2624}}
+:root[data-theme="dark"]{--bg:#101615;--card:#161E1C;--ink:#E8EEEC;--ink2:#B4C2BF;--ink3:#8A9A97;--accent:#5CC1B0;--label:#D9B45B;--rule:#2C3936;--tint:#1C2624}
+</style><style>
+.debate .two .ch,.debate .hyp .h{letter-spacing:0;font-size:12px}
+.debate .two p,.debate .hyp p{font-size:12.5px;line-height:1.75;color:var(--ink);margin-bottom:9px}
+.debate .pt b{display:inline-block;margin-right:7px;font-size:11px;padding:0 5px;border:1px solid currentColor;vertical-align:1px}
+.debate .a .pt b{color:var(--accent)}.debate .b .pt b{color:var(--label)}
+.debate .hyp b{font-family:inherit;font-size:12.5px;margin-right:7px}
+.debate .pred{display:block;margin-top:2px;color:var(--accent)}
+@media (max-width:640px){
+ .debate .two p,.debate .hyp p{margin-bottom:10px}
+ .debate .two .col{padding:14px 15px}
+ .debate .two .col.b{margin-top:12px;border-top:1px solid var(--rule)}
+ .debate .two .col:first-child{border-bottom:1px solid var(--rule)}
+}
+@media print{
+ .debate .two .ch,.debate .hyp .h{font-size:7pt}
+ .debate .two p,.debate .hyp p{font-size:7.2pt;line-height:1.42;margin-bottom:3px;color:var(--ink2)}
+ .debate .pt b{font-size:6.2pt;padding:0 3px;margin-right:4px}
+ .debate .hyp b{font-size:7pt;margin-right:4px}
+ .debate .pred{display:inline;margin-left:4px}
+}
+</style>
+<style>@media print{.archive-bar{display:none!important}}</style>
+</head>
+<body>
+<!-- nav:top --><nav class="archive-bar" style="max-width:820px;margin:0 auto;padding:10px 16px;font:13px 'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;display:flex;gap:14px;flex-wrap:wrap;align-items:center"><a href="../" style="color:var(--accent,#0E6B5D);text-decoration:none">← 브리프 아카이브</a><a href="../../" style="color:var(--ink3,#7C8D8A);text-decoration:none">오지은 홈</a><a href="../subscribe.html" style="color:var(--accent,#0E6B5D);text-decoration:none">브리프 신청하기</a><span style="margin-left:auto;display:flex;gap:14px"><a href="005.html" style="color:var(--accent,#0E6B5D);text-decoration:none">← 제5호</a></span><a href="javascript:window.print()" style="color:var(--ink3,#7C8D8A);text-decoration:none">PDF로 저장·인쇄</a></nav><!-- /nav:top -->
+<div class="sheet">
+  <div class="eyebrow">국제개발협력학회 국제개발봉사분과 · 격주 발행</div>
+  <div class="title">국제개발봉사 브리프</div>
+  <div class="rules"><div></div></div>
+  <div class="issueline">제6호 &nbsp;·&nbsp; 2026. 11. 30. &nbsp;·&nbsp; 연구 2편 · 확장 2편 · 정책 4건</div>
+  <div class="blurb">국제개발봉사의 연구·정책·제도 동향과 인접 분야의 읽을거리를 격주로 정리합니다. 함께 읽고 논의할 분, 공동연구를 찾는 분을 기다립니다.</div>
+
+  <div class="lead">
+    <div class="kicker">이번 호의 쟁점</div>
+    <h2>5개월과 2년 사이: 단기화는 포용인가</h2>
+    <p>11월 20일 국회포럼에서 KOICA 봉사단 지출 가운데 장기(1~2년) 일반봉사단의 비중이 10년 사이 절반 가까이 줄었다는 자료가 제시되었습니다. 같은 자리에서 단기·프로젝트형 파견이 청년과 장애 청년의 참여 문턱을 낮춘다는 설명도 나왔습니다. 파견 기간의 변화를 포용의 확대로 볼지, 수용기관과의 관계를 약화시키는 변화로 볼지를 이번 호에서 검토합니다.</p>
+  </div>
+
+  <div class="stats">
+    <div class="cell"><div class="n">86% → 44%</div><div class="c">KOICA 봉사단 지출 중 장기(1~2년) 일반봉사단 비중<br>2015년과 2025년 비교(국회포럼 발표, ODA 통계 기준)</div></div>
+    <div class="cell"><div class="n">20 / 4,059</div><div class="c">2024년 WFK 해외봉사단원 가운데 장애인 수<br>0.5%에 미치지 못한다(국회포럼 토론)</div></div>
+    <div class="cell"><div class="n">15%</div><div class="c">국가 단위 개발협력 사업 가운데 장애 포용을 목표로 삼도록 하자는 목표치<br>2028년까지(암만·베를린 선언, 2025)</div></div>
+  </div>
+
+  <section>
+    <div class="shead"><span class="num">01</span><span class="name">연구 동향</span><span class="note">최신 1편 + 다시 읽기 1편 · 이번 호도 국내 최신 논문을 싣지 못하였다</span></div>
+
+    <div class="item">
+      <span class="tag">국제</span>
+      <h3><a href="https://reference-global.com/article/10.15566/cjgh.v12i1.389">The Exchange is Two-way: Experiences of Hosting Visiting Volunteers Participating in Short-term Experiences in Global Health</a></h3>
+      <div class="cite">Bishop, N., Riley, M., Manoth, S., Wearn, J. &amp; Grills, N.(멜버른대 노살국제보건연구소, 호주가톨릭대 등), <i>Christian Journal for Global Health</i> 12(1), 61–73, 2025. DOI 10.15566/cjgh.v12i1.389 · 오픈액세스(CC BY 4.0) · 2025.03.19 공개</div>
+      <div class="body">단기 보건 봉사자를 받아 온 수용기관의 경험을 직접 조사한 질적 연구이다. 저자들은 호주 NGO Enabled와 협력하는 북인도 지역 NGO 가운데 단기 봉사자를 두 차례 이상 수용한 기관의 책임자 10명을 목적적으로 표집하여 반구조화 면담을 수행하고 주제분석을 적용하였다. 수용 형태는 2주 단체 방문, 최장 2개월의 대학 연수, 최장 6개월의 보건 봉사로 다양하였다. 수용기관 책임자들은 직원의 전문성 향상과 세계관의 변화를 이득으로 꼽았고, 연구 제목도 "교류는 양방향"이라는 한 응답자의 진술에서 가져왔다. 효과를 좌우한 요인으로는 봉사자의 특성, 사전 준비, 조정, 관계 형성에 필요한 시간이 제시되었다. 체류 기간에 관한 진술은 일관되었다. "1주는 충분하지 않다. 6주 정도면 이해하고 일할 수 있다"는 응답이 있었고, 저자들은 집단의 규모보다 체류 기간이 효과의 차이를 더 크게 만들었다고 정리하였다. 동시에 방문자가 일상 업무를 방해한다는 진술과 "오래 머물수록 그들에게 의존하게 된다"는 진술도 함께 보고되었다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;수용기관이 긴 체류를 선호한다는 결과는 지난 호의 Habashy 외(2024)가 주민에게서 확인한 요구와 같은 방향이다. 다만 이 연구에서 '길다'의 기준은 6주에서 6개월 수준이며, 한국의 1~2년 장기 파견과 같은 범주로 다루기는 어렵다. 저자들은 사회적 바람직성 편향으로 어려움이 과소 보고되었을 가능성, 책임자만 면담하고 일반 직원은 포함하지 않은 점, 지역 특수성을 한계로 밝혔다. 의존에 관한 진술은 장기 파견을 옹호하는 근거로만 쓰기 어렵다는 점을 보여준다. 한국 사업에 적용하면, 5개월 단원과 2년 단원을 함께 받아 본 수용기관에 같은 문항으로 업무 부담과 관계의 지속을 묻는 조사가 가능하다.</div>
+    </div>
+
+    <div class="item">
+      <span class="tag re">다시 읽기</span>
+      <h3><a href="https://link.springer.com/article/10.1007/s11266-017-9902-9">How do International Volunteering Characteristics Influence Outcomes? Perspectives from Partner Organizations</a></h3>
+      <div class="cite">Lough, B. J.(일리노이대 사회복지대학) &amp; Tiessen, R.(오타와대 국제개발학), <i>Voluntas</i> 29(1), 104–118, 2018. DOI 10.1007/s11266-017-9902-9 · 오픈액세스(CC BY 4.0)</div>
+      <div class="body">파견 기간과 숙련도가 수용 측 성과에 어떤 차이를 만드는지를 수용기관 설문으로 검토한 연구이다. 저자들은 46개 파견기관과 6개 국제봉사 네트워크를 통해 68개국 개발 분야 수용기관 288곳의 응답을 분석하였다. 응답 기관이 받은 봉사자의 출신국은 한국(44%), 미국(35%), 독일(26%) 순이었다. 저자들은 기간·숙련도 등을 기준으로 봉사 유형을 다섯 가지로 나누었다. 전문 단기, 장기 개발, 저숙련 단기, 저숙련 장기, 중숙련 중기이다. 분석 결과 조직 역량 강화에서는 기간보다 숙련도의 영향이 컸고, 숙련된 봉사자는 단기와 장기 모두 높게 평가되었다. 관계 형성에서는 장기 개발 봉사자가 저숙련 단기 봉사자보다 높게 평가되었으나 전문 단기 봉사자와의 차이는 유의하지 않았다. 개인보다 집단을 수용한 경우 관계 형성 평가가 높았다는 결과도 보고되었다.</div>
+      <div class="check"><b>짚어볼 점</b> &nbsp;이 연구는 '단기는 관계를 남기지 못한다'는 통념을 숙련도라는 변수로 다시 나누어 볼 것을 요구한다. 국회포럼에서 KOICA가 제시한 투트랙 구상, 곧 장기는 기존 봉사의 가치에, 단기·중기는 사업 성과와 경력 탐색에 두는 설계도 이 분류와 비교할 수 있다. 다만 표본이 개발 분야 네트워크를 거쳐 모집되어 편향 가능성이 있고, 수용기관의 자기보고에 의존하며, 같은 유형 안의 편차가 크다는 점은 해석에 제약이 된다. 응답 기관의 봉사자 출신국 가운데 한국이 가장 많았다는 사실은 이 연구 결과를 한국 사업의 자료로 다시 분석할 여지가 있음을 뜻한다.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">02</span><span class="name">정책·제도 동향</span><span class="note">국제 3건 + 국내 1건</span></div>
+    <ul class="news">
+      <li><b>[국제] 호주 봉사 프로그램(AVP) 독립평가: 수용기관 181곳에 물었고 봉사자에게는 묻지 않았다.</b> 호주 외교통상부(DFAT)는 Tetra Tech에 의뢰한 AVP 독립평가 보고서(2025년 2월)와 관리 대응(2025년 6월)을 공개하였다. AVP는 2018년 1월부터 2027년 6월까지 최대 2억 6,400만 호주달러 규모로 운영되며, 1960년대 이후 1만 7천 명 이상을 50여 개국에 파견하였다. 평가는 수용기관 181곳을 설문하였고, 보고서는 봉사자에게서 직접 자료를 수집하지 않았다고 밝혔다. 보고서는 AVP가 효과적이고 전략적으로 중요한 사업이라고 결론지었으나, 비용이 늘면서 봉사자 수가 줄었다가 다시 증가하는 중이라는 점, 장기·반복 봉사자의 활용이 전략적 운영에 대한 우려를 낳는다는 점, 원주민 참여 경로(Indigenous Pathways)가 포용의 접근을 개척하였으나 참여 인원은 적다는 점을 지적하였다. 수용기관 설문 결과가 긍정적으로 치우쳤을 수 있다는 평가자의 진술도 포함되었다. DFAT는 권고 8개 가운데 다수를 수용하고 일부를 부분 수용하였으며, 차기 단계 설계에서 사업 논리를 재검토하겠다고 밝혔다. 한국의 제4차 WFK 통합로드맵 수립 시기와 겹친다는 점에서 비교의 의미가 있다. <span class="src"><a href="https://www.dfat.gov.au/sites/default/files/independent-evaluation-australian-volunteers-program.pdf">평가 보고서(PDF)</a> · <a href="https://www.dfat.gov.au/sites/default/files/management-response-2025-evaluation-australian-volunteers-program.pdf">관리 대응(PDF)</a></span></li>
+      <li><b>[국제] 암만·베를린 선언: 개발협력 사업의 15%에 장애 포용 목표를.</b> 2025년 4월 베를린에서 열린 제3차 세계장애정상회의(GDS)에서 요르단·독일·국제장애연맹이 마련한 선언이다. 서명 주체는 국가 단위에서 시행되는 국제개발 사업 가운데 최소 15%가 장애 포용을 목표로 삼도록 노력한다는 데 동의하며, 시한은 2028년 제4차 정상회의까지이다. 선언문은 그 성격을 순수하게 정치적인 약속이라고 명시하였다. 2025년 11월까지 정부와 국제기구 101곳이 지지하였다. 이 목표는 봉사 사업에 직접 적용되는 기준은 아니지만, 해외봉사가 ODA 재원으로 운영되는 이상 사업 설계에서 장애 포용을 어떻게 표기하고 보고할지의 문제로 이어진다. 한국 정부의 지지 여부는 이번에 확인하지 못하였다. <span class="src"><a href="https://www.globaldisabilitysummit.org/amman-berlin-declaration/">선언 안내(GDS)</a></span></li>
+      <li><b>[국제] 세계 자원봉사자의 해 폐막을 앞두고: 총회 결의 79/148의 장애 포함 조항.</b> 2024년 12월 17일 채택된 UN 총회 결의 A/RES/79/148은 세계 자원봉사자의 해를 앞두고 채택된 가장 최근의 자원봉사 결의이다. 결의는 '누구도 소외되지 않는' 자원봉사를 강화할 것을 요청하고, 봉사자의 안전과 보안 확보의 중요성, 청년의 역할을 인정하였다. 또한 장애인이 현장 및 온라인 UN 봉사자로 참여하는 것을 환영하고, 자원봉사에서 장애 포용의 주류화가 진전되었다는 점을 명시하였다. 국제 규범이 장애인의 국제봉사 참여를 이미 환영하고 있다는 점에서, 0.5%에 미치지 못하는 한국의 참여율은 규범과 실행 사이의 간격으로 정리된다. <span class="src"><a href="https://www.unv.org/news/un-general-assemblys-newest-resolution-volunteering">UNV 해설(2025.1.13)</a></span></li>
+      <li><b>[국내] 국제개발봉사 국회포럼(11.20): 세 국가계획에 모두 들어 있으나 어느 계획도 책임지지 않는다.</b> 분과가 주관한 포럼은 김기웅·김동아·차지호 의원실 공동주최, 지구촌나눔운동 후원으로 열렸고 현장과 생중계로 약 160명이 참여하였다. 강대구 KOICA 해외봉사총괄팀장은 KOICA 봉사단 파견이 2023년 1,152명에서 2025년 목표 1,520명으로 늘었으나 2026년 해외봉사 예산은 11.7%, 단기봉사단은 30% 수준의 삭감이 예상된다고 밝혔다. 포용·성과·공공외교를 축으로 한 '청년 이니셔티브 플러스'는 내년 초 발표될 예정이다. 발표2는 자원봉사·국제개발협력·청년정책 세 계획이 같은 사업을 각각 예산, 경력 사다리, 일경험으로만 기록하였고, 장기 일반봉사단 비중이 86%에서 44%로 줄어든 변화를 결정한 계획이나 위원회가 없었다고 지적하였다. 토론에서 김혜경 지구촌나눔운동 이사장은 장애 청년 참여가 모집 대상의 확대가 아니라 사업 설계 단계의 지원과 예산으로 가능하였다고 밝혔고, 정헌주 교수는 법률별 목적에 맞춘 지표 분리와 정책 조정을 제안하였다. 이재강 의원은 국무총리실 산하 ODA 사업 통합 논의에 이 문제를 올리고 필요하면 법안을 마련하겠다고 말하였다. 참석자들은 2027년에 함께 작성되는 자원봉사기본법 시행령, WFK 통합로드맵, 청년정책 시행계획에 앞서 한 차례 합동 협의를 거치자는 데 뜻을 모았다. <span class="src"><a href="https://www.youtube.com/live/uwh3aZjWyow">포럼 다시보기</a> · 분과 보도자료(2026.11.25)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="shead"><span class="num">03</span><span class="name">확장해서 읽기</span><span class="note">함께 연구할 주제를 찾습니다</span></div>
+
+    <div class="item">
+      <h3><a href="https://www.cambridge.org/core/journals/voluntas/article/enhancing-social-participation-and-recognition-through-volunteering-for-people-with-disabilities-in-thailand/06A4FB9B84A1212AD39756B40794082F">Enhancing Social Participation and Recognition through Volunteering for People with Disabilities in Thailand</a></h3>
+      <div class="cite">Cheasuwantavee, T. 외(마히돌대 인구사회연구소·라마티보디병원 의과대학), <i>Voluntas</i> 37(3), 386–394, 2026. DOI 10.1017/S0957876526000586 · 오픈액세스 · 2026.06.01 공개</div>
+      <div class="body">장애인이 도움을 받는 사람에서 기여하는 사람으로 인정받는 경로로서 자원봉사를 검토한 질적 연구이다. 저자들은 사회적 역할 가치화(Social Role Valorization) 이론을 틀로 삼아 방콕 등 태국 5개 지역에서 조직 대표 25명, 조직에 소속된 장애인 봉사자 30명, 소속이 없는 장애인 봉사자 10명 등 65명을 심층면담하고 참여관찰하였다(2023년 9월~2024년 5월). 장애인 봉사자는 자존감, 기술, 공동체와의 연결이 향상되었다고 진술하였다. 반면 태도, 물리적 접근성, 이동 수단, 가족, 정부와 민간의 지원 부족이 참여를 가로막는 요인으로 확인되었다. 저자들은 긍정적 사례가 언론에 거의 소개되지 않아 대중의 수용이 제한된다는 점도 지적하고, 포용적 자원봉사에는 정부와 민간 부문의 지원이 필요하다고 결론지었다.</div>
+      <div class="check"><b>이어볼 지점</b> &nbsp;국내 봉사 연구이지만, 국회포럼에서 확인된 장애 청년 해외봉사의 쟁점과 구조가 같다. 참여를 가로막는 요인이 개인의 역량이 아니라 지원 체계에 있다는 결과는, 동행 인력과 수어통역 비용을 수행기관이 부담하는 현재 구조를 검토할 근거가 된다. 저자들은 참여자 대부분이 시각·지체 장애인이고 지적·청각 장애인은 적었다는 점, 목적적·눈덩이 표집으로 일반화가 제한된다는 점을 한계로 밝혔다. 청각장애 단원이 참여하는 한국 사업과 비교하면 이 공백을 보완하는 연구가 될 수 있다.</div>
+    </div>
+
+    <div class="item">
+      <h3><a href="https://www.mdpi.com/2076-0760/15/12/816">Disability-Inclusive Financing During Currency Crises: Evidence from Ten Low- and Middle-Income Countries</a></h3>
+      <div class="cite">Naimy, V., Kassamany, T. &amp; Abou Chedid, T.(노트르담대 루와이제 경영경제학부, 레바논), <i>Social Sciences</i> 15(12), 816, 2026. DOI 10.3390/socsci15120816 · 오픈액세스 · 2026.11.24 공개</div>
+      <div class="body">경제위기가 장애 포용 원조에 어떤 변화를 주는지를 OECD DAC 채권자보고체계(CRS)의 장애 마커 자료로 분석한 연구이다. 저자들은 10개 중저소득국의 2018~2023년 패널(60개 국가·연도, 그중 위기 연도 27개)에 이원 고정효과 모형을 적용하였다. 표본에서 장애 마커가 부착된 ODA의 평균 비중은 2.49%였다. 분석 결과 인플레이션이 높아질수록 장애 포용 원조의 비중이 늘어나는 경향이 확인되었고, 레바논과 튀르키예에서는 위기 연도에 약 4%p 증가하였다. 반면 위기 연도에 이 원조 가운데 NGO가 받는 비중은 14.0%로 평시의 17.4%보다 낮았다. 저자들은 이 결과가 인과효과가 아니라 연관성이라고 명시하였다.</div>
+      <div class="check"><b>이어볼 지점</b> &nbsp;위기 시 장애 포용 원조가 공공 부문으로 집중되고 NGO 몫이 줄어든다는 결과는, 민간협력 예산 감소로 해외봉사 수행 NGO 사이의 경쟁이 시작되었다는 국회포럼의 진술과 비교할 만하다. 15% 목표(02 참조)와 견주면 표본 평균 2.49%는 목표와 현실의 거리를 보여준다. 다만 표본이 10개국 6년이고, 상위중소득국의 결과가 주로 레바논과 튀르키예에 기대며, 마커가 공여국의 자기 보고라는 점은 저자들이 밝힌 제약이다. 한국 ODA의 장애 마커 자료에서 봉사단 사업이 어떻게 표기되는지를 확인하는 작업이 분과의 공동 과제가 될 수 있다.</div>
+    </div>
+  </section>
+
+  <section class="debate">
+    <div class="shead"><span class="num">04</span><span class="name">쟁점 노트</span><span class="note">5개월과 2년 사이: 단기화는 포용인가</span></div>
+    <div class="setup">국회포럼에서 제시된 자료에 따르면 KOICA 봉사단 지출에서 장기(1~2년) 일반봉사단의 비중은 2015년 86%에서 2025년 44%로 낮아졌고, 2025년 코디네이터 지출은 일반봉사단 지출의 58%에 이르렀다. KOICA는 2024년 프로젝트봉사단을 재설계할 때 4~5개월 단원의 효과를 둘러싼 반발이 컸으나, 청년의 부담과 사회 진출 시기를 고려하여 장기와 단기·중기의 투트랙으로 가기로 하였다고 설명하였다. 쟁점은 파견 기간의 단축을 참여의 확대로 볼 것인가, 수용 측과의 관계와 책무성의 약화로 볼 것인가이다. <b>접근성, 수용 측 성과, 책임 소재</b>의 세 축으로 정리한다.</div>
+    <div class="two">
+      <div class="col a"><div class="ch">단기화는 참여를 넓힌다</div>
+        <p class="pt"><b>접근성</b>1~2년 파견은 학업과 취업 시기를 늦추어 참여할 수 있는 청년을 제한한다. 5개월 과정이 없으면 아예 가지 않는 청년이 있다는 지적이 포럼에서 나왔다. 장애 청년의 경우에도 짧고 팀 단위인 파견이 안전과 지원을 설계하기에 유리하다.</p>
+        <p class="pt"><b>수용 측 성과</b>Lough &amp; Tiessen(2018)에서 조직 역량 강화는 기간보다 숙련도의 영향이 컸고, 전문 단기 봉사자는 관계 형성에서도 장기 봉사자와 차이가 유의하지 않았다. 국별 사업과 연계한 프로젝트형은 계량 지표를 확보하기 쉽다.</p>
+        <p class="pt"><b>책임 소재</b>프로젝트형은 성과와 사후관리 책임이 사업 단위로 정해진다. 예산이 줄어드는 시기에 선택과 집중은 불가피하다.</p></div>
+      <div class="col b"><div class="ch">단기화는 관계와 책무를 약화시킨다</div>
+        <p class="pt"><b>접근성</b>2024년 WFK 단원 4,059명 가운데 장애인은 20명이었다. 기간을 줄이는 것만으로 포용이 실현되지는 않으며, 동행 인력과 수어통역 비용을 수행기관이 지는 구조가 그대로라면 참여의 문은 넓어지지 않는다.</p>
+        <p class="pt"><b>수용 측 성과</b>북인도 수용기관은 1주로는 부족하고 체류 기간이 효과의 차이를 만든다고 진술하였다(Bishop 외 2025). 국회포럼 플로어에서도 5개월 단원과 2년 단원이 현장에 남기는 것이 다르다는 귀국 단원의 증언이 있었다.</p>
+        <p class="pt"><b>책임 소재</b>장기 비중이 절반 가까이 줄어든 변화를 결정한 계획이나 위원회는 확인되지 않았다. 정책 선택이 아닌 누적된 집행의 결과라면 그 책임을 물을 주체도 없다.</p></div>
+    </div>
+    <div class="hyp"><div class="h">경쟁 가설: 장기 비중은 왜 줄었는가</div>
+      <p><b>H1 수요</b>청년이 장기 파견을 기피하여 지원 자체가 줄었다.<span class="pred">이 가설이 맞다면 장기 일반봉사단의 지원자 수와 경쟁률이 같은 기간 하락하였어야 한다. 경쟁률이 유지되었다면 수요로는 설명되지 않는다.</span></p>
+      <p><b>H2 성과관리</b>계량 지표를 확보하기 쉬운 프로젝트형과 운영 인력에 예산이 이동하였다.<span class="pred">이 가설이 맞다면 지출 구성의 변화가 성과관리 강화 요구와 프로젝트봉사단 재설계(2024) 시점에 집중되어야 한다. 변화가 코로나 이전부터 완만하게 진행되었다면 가설은 약해진다.</span></p>
+      <p><b>H3 단위 비용</b>안전·보험·관리 비용이 늘어 같은 예산으로 장기 단원을 유지하기 어려워졌다. 호주 AVP 평가도 비용 증가와 봉사자 수 감소를 함께 보고하였다.<span class="pred">이 가설이 맞다면 장기 단원 1인당 비용이 같은 기간 뚜렷하게 상승하였어야 한다. 1인당 비용이 안정적이라면 비용으로는 설명되지 않는다.</span></p></div>
+    <div class="close">세 가설을 가리는 자료는 ① 연도별 봉사단 유형별 지원자 수와 경쟁률, ② 유형별 단원 1인당 지출, ③ 2015년 이후 봉사단 운영 방침을 바꾼 내부 결정 문서이다. ①과 ②는 KOICA 통계와 ODA 시행계획에서 상당 부분 확인할 수 있다. 어느 가설이 맞는지와 별개로, 국회포럼이 제기한 물음은 기간을 누가 정하는가에 있다. 장기와 단기를 함께 운영하는 투트랙이 정책으로 정당화되려면, 각 트랙의 목적과 성과지표가 2027년 통합로드맵에 명시되고 수용기관의 평가가 그 지표에 포함될 필요가 있다. 판단은 독자의 몫으로 남긴다.</div>
+  </section>
+
+  <div class="also"><span class="h">분과 소식</span>
+    <b>국회포럼 후속</b> · 11월 20일 포럼의 다시보기는 <a href="https://www.youtube.com/live/uwh3aZjWyow">유튜브</a>에서 보실 수 있습니다. 발제·토론 정리록과 자료집이 필요하신 분은 편집인에게 회신해 주세요.<br>
+    <b>동계학술대회</b> · 12월 12일(토) · 한국외국어대학교 · 분과 세션에서 국회포럼의 논의를 이어 갑니다.<br>
+    <b>세계 자원봉사자의 해 폐막식</b> · 12월 4일(금, 뉴욕 현지) · UN 본부 · <a href="https://webtv.un.org/en/asset/k18/k18h56d9jk">UN Web TV</a> 중계 예정.<br>
+    <b>찾습니다</b> · 이번 호도 교차 확인이 되는 2026년 국내 학술논문을 찾지 못해 연구 동향의 국내 칸을 비웠습니다. 해외봉사·장애 포용·귀국 단원을 다룬 최근 논문이나 추천하실 글이 있으면 편집인에게 알려 주세요.
+  </div>
+
+  <footer>
+    <b>발행</b> 국제개발협력학회 국제개발봉사분과 &nbsp;·&nbsp; <b>편집인</b> 오지은 &nbsp;·&nbsp; 격주 월요일 오전 9시<br>
+    다음 호 예고 · 제7호(12월 14일)는 동계학술대회 분과 세션의 논의와 세계 자원봉사자의 해 폐막 이후의 과제를 다룹니다.<br>
+    제보·기고, 그리고 브리프를 함께 받으실 분(성함·소속·이메일) 추천은 편집인에게 회신해 주세요. 수신을 원치 않으시면 알려주시면 바로 제외하겠습니다.<br>
+    브리프 구독 신청: <a href="https://oje81.github.io/newsletter/subscribe.html">https://oje81.github.io/newsletter/subscribe.html</a><br>
+    이 브리프는 Claude(Anthropic)와 함께 만듭니다. 무엇을 실을지와 어떻게 읽을지는 편집인이 정합니다.
+  </footer>
+</div>
+<!-- nav:bottom --><nav class="archive-bar" style="max-width:820px;margin:0 auto;padding:10px 16px;font:13px 'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:16px 16px 28px;border-top:1px solid var(--rule,#C9D4D1)"><a href="005.html" style="color:var(--accent,#0E6B5D);text-decoration:none;flex:1 1 45%;min-width:0;line-height:1.5"><span style="font-size:11px;color:var(--ink3,#7C8D8A);display:block">← 이전 호 · 제5호 · 2026.11.02</span>같은 날 나온 두 숫자</a><span style="flex:1 1 45%;min-width:0;line-height:1.5;text-align:right;color:var(--ink3,#7C8D8A);font-size:12px">최신 호입니다</span><div style="flex-basis:100%;margin-top:6px;font-size:12px"><a href="../" style="color:var(--ink3,#7C8D8A);text-decoration:none">브리프 아카이브</a> &nbsp;·&nbsp; <a href="../../" style="color:var(--ink3,#7C8D8A);text-decoration:none">오지은 홈</a> &nbsp;·&nbsp; <a href="../subscribe.html" style="color:var(--accent,#0E6B5D);text-decoration:none">브리프를 이메일로 받아보기</a></div></nav><!-- /nav:bottom -->
+</body></html>
